@@ -1,0 +1,3519 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Part 1: Alignment of fingerprint-derived clusters with structural and biosynthetic classes
+
+```{r}
+#Load libraries
+library(aricode)
+library(mclust)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(pheatmap)
+library(ggplot2)
+library(dplyr)
+```
+
+
+```{r}
+#NMI/ARI calculation at Structural class level
+df<-read.csv("Cluster_results_new.csv", header = T, check.names = F)
+as.data.frame(df)->df
+ground_truth <- df$Structural_class
+cluster_cols <- colnames(df)[4:ncol(df)]
+results_Str <- data.frame(
+  Method = character(),
+  NMI = numeric(),
+  ARI = numeric(),
+  stringsAsFactors = FALSE
+)
+for (col in cluster_cols) {
+  clusters <- df[[col]]
+  valid_idx <- !is.na(clusters) & !is.na(ground_truth)
+  clusters_clean <- as.vector(clusters[valid_idx])
+  truth_clean <- as.vector(ground_truth[valid_idx])
+  nmi_val <- NMI(clusters_clean, truth_clean)
+  ari_val <- adjustedRandIndex(clusters_clean, truth_clean)
+  results_Str <- rbind(results_Str, data.frame(
+    Method = col,
+    NMI = nmi_val,
+    ARI = ari_val,
+    stringsAsFactors = FALSE
+  ))
+}
+
+results_Str
+
+#NMI/ARI calculation at Biosynthetic class level
+ground_truth <- df$Biosynthetic_class
+cluster_cols <- colnames(df)[4:ncol(df)]
+results_bio <- data.frame(
+  Method = character(),
+  NMI = numeric(),
+  ARI = numeric(),
+  stringsAsFactors = FALSE
+)
+for (col in cluster_cols) {
+  clusters <- df[[col]]
+  valid_idx <- !is.na(clusters) & !is.na(ground_truth)
+  clusters_clean <- as.vector(clusters[valid_idx])
+  truth_clean <- as.vector(ground_truth[valid_idx])
+  nmi_val <- NMI(clusters_clean, truth_clean)
+  ari_val <- adjustedRandIndex(clusters_clean, truth_clean)
+  results_bio <- rbind(results_bio, data.frame(
+    Method = col,
+    NMI = nmi_val,
+    ARI = ari_val,
+    stringsAsFactors = FALSE
+  ))
+}
+
+results_bio
+
+#Plotting NMI versus ARI to check for the best or optimal clusters
+#For Structural classes:
+Method<-results_Str$Method
+Str <- results_Str %>% 
+  separate(Method,            
+           into  = c("Type", "Cluster", "Method"),
+           sep   = "_",      
+           remove = TRUE) %>% 
+  mutate(
+    Cluster = as.integer(Cluster),            
+  )
+
+#Plot in graph
+Str <- Str %>%
+  mutate(Cluster = as.integer(Cluster))     
+k_breaks <- sort(unique(Str$Cluster))
+p_nmi <- ggplot(Str,
+                aes(x = Cluster,
+                    y = NMI,
+                    colour = Method,
+                    group  = Method)) +
+  geom_line(size = 1) +
+  geom_point(size = 3) +
+  facet_wrap(~ Type, nrow = 1) +
+  scale_x_continuous(breaks = k_breaks) + 
+  labs(x = "Number of clusters (k)",
+       y = "Normalized Mutual Information (NMI)",
+       colour = "Clustering method") +
+  theme_bw(base_size = 12) +
+  theme(panel.spacing  = unit(1, "lines"),
+        legend.position = "bottom")
+
+p_nmi
+
+#Plot ARI
+p_ari <- ggplot(Str,
+                aes(x = Cluster,
+                    y = ARI,
+                    colour = Method,
+                    group  = Method)) +
+  geom_line(size = 1) +
+  geom_point(size = 3) +
+  facet_wrap(~ Type, nrow = 1) +
+  scale_x_continuous(breaks = k_breaks) +     
+  labs(x = "Number of clusters (k)",
+       y = "Adjusted rand index (ARI)",
+       colour = "Clustering method") +
+  theme_bw(base_size = 12) +
+  theme(panel.spacing  = unit(1, "lines"),
+        legend.position = "bottom")
+
+p_ari
+
+#Plots for Biosynthetic classes
+#NMI plots
+Method<-results_bio$Method
+Bio <- results_bio %>% 
+  separate(Method,            
+           into  = c("Type", "Cluster", "Method"),
+           sep   = "_",      
+           remove = TRUE) %>% 
+  mutate(
+    Cluster = as.integer(Cluster),              
+  )
+
+#NMI:Biosynthetic: All
+Bio <- Bio %>%
+  mutate(Cluster = as.integer(Cluster))        
+k_breaks <- sort(unique(Bio$Cluster))
+#plot
+p_nmi <- ggplot(Bio,
+                aes(x = Cluster,
+                    y = NMI,
+                    colour = Method,
+                    group  = Method)) +
+  geom_line(size = 1) +
+  geom_point(size = 3) +
+  facet_wrap(~ Type, nrow = 1) +
+  scale_x_continuous(breaks = k_breaks) +     # << makes every k tick appear
+  labs(x = "Number of clusters (k)",
+       y = "Normalized Mutual Information (NMI)",
+       colour = "Clustering method") +
+  theme_bw(base_size = 12) +
+  theme(panel.spacing  = unit(1, "lines"),
+        legend.position = "bottom")
+
+p_nmi
+
+#ARI:Biosynthetic: All
+p_ari <- ggplot(Bio,
+                aes(x = Cluster,
+                    y = ARI,
+                    colour = Method,
+                    group  = Method)) +
+  geom_line(size = 1) +
+  geom_point(size = 3) +
+  facet_wrap(~ Type, nrow = 1) +
+  scale_x_continuous(breaks = k_breaks) +     
+  labs(x = "Number of clusters (k)",
+       y = "Adjusted Rand Index (ARI)",
+       colour = "Clustering method") +
+  theme_bw(base_size = 12) +
+  theme(panel.spacing  = unit(1, "lines"),
+        legend.position = "bottom")
+p_ari
+
+#Contingency heatmaps for all combinations: k-means clustering for structural classes across fingerprint types
+#Reading the dataframe
+df<-read.csv("Clusters_Kmeans_FPs.csv", header = T, check.names = F, stringsAsFactors=FALSE)
+generate_cluster_heatmap <- function(df, class_col = "Structural_class") {
+  df_long <- df %>%
+    pivot_longer(
+      cols = starts_with("EXT"):last_col(),  
+      names_to = "fingerprint_k",
+      values_to = "cluster"
+    ) %>%
+    mutate(
+      fingerprint = str_extract(fingerprint_k, "^[a-zA-Z]+"),
+      k = str_extract(fingerprint_k, "k\\d+") %>% str_remove("k") %>% as.integer()
+    )
+  heatmap_data <- df_long %>%
+    group_by(!!sym(class_col), fingerprint, k, cluster) %>%
+    summarise(n = n(), .groups = "drop") %>%
+    group_by(!!sym(class_col), fingerprint, k) %>%
+    mutate(percentage = 100 * n / sum(n)) %>%
+    ungroup()
+  heatmap_data <- heatmap_data %>%
+    mutate(
+      cluster = factor(cluster),
+      class = as.factor(!!sym(class_col)),
+      label = sprintf("%.1f", percentage)  
+    )
+
+#Plot
+  ggplot(heatmap_data, aes(x = cluster, y = class, fill = percentage)) +
+    geom_tile(color = "white") +
+    geom_text(aes(label = label), size = 3) +
+    scale_fill_gradient(low = "white", high = "steelblue") +
+    facet_grid(k ~ fingerprint, scales = "fixed", space = "free_x") +
+    labs(x = "Cluster", y = class_col, fill = "% in cluster") +
+    theme_minimal(base_size = 12) +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      strip.text = element_text(face = "bold")
+    )
+}
+
+# For K-means clustering vs structural class
+generate_cluster_heatmap(df, class_col = "Structural_class")
+
+#Contingency heatmaps for all combinations: k-means clustering for biosynthetic classes across fingerprint types
+generate_cluster_heatmap <- function(df, class_col = "Biosynthetic_class", class_order = NULL) {
+  df_long <- df %>%
+    pivot_longer(
+      cols = starts_with("EXT"):last_col(),
+      names_to = "fingerprint_k",
+      values_to = "cluster"
+    ) %>%
+    mutate(
+      fingerprint = str_extract(fingerprint_k, "^[a-zA-Z]+"),
+      k = str_extract(fingerprint_k, "k\\d+") %>% str_remove("k") %>% as.integer()
+    )
+
+  heatmap_data <- df_long %>%
+    group_by(!!sym(class_col), fingerprint, k, cluster) %>%
+    summarise(n = n(), .groups = "drop") %>%
+    group_by(!!sym(class_col), fingerprint, k) %>%
+    mutate(percentage = 100 * n / sum(n)) %>%
+    ungroup()
+
+  heatmap_data <- heatmap_data %>%
+    mutate(
+      cluster = factor(cluster),
+      class = !!sym(class_col),
+      class = if (!is.null(class_order)) factor(class, levels = class_order) else factor(class),
+      label = sprintf("%.1f", percentage)
+    )
+
+  ggplot(heatmap_data, aes(x = cluster, y = class, fill = percentage)) +
+    geom_tile(color = "white") +
+    geom_text(aes(label = label), size = 1.5) +
+    scale_fill_gradient(low = "white", high = "steelblue") +
+    facet_grid(k ~ fingerprint, scales = "free_x", space = "free_x") +
+    labs(x = "Cluster", y = class_col, fill = "% in cluster") +
+    theme_minimal(base_size = 6) +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      strip.text = element_text(face = "bold")
+    )
+}
+
+biosynthetic_order <-c("Shikimate_derived_Aromatics", "Terpenoids", "FADs", "Others")
+
+
+generate_cluster_heatmap(
+  df = df,
+  class_col = "Biosynthetic_class",
+  class_order = biosynthetic_order
+)
+
+#Contingency heatmaps for all combinations: Agglomerative clustering for structural classes across fingerprint types
+df<-read.csv("Clusters_Agglo_FPs.csv", header = T, check.names = F, stringsAsFactors=FALSE)
+
+generate_cluster_heatmap <- function(df, class_col = "Structural_class", class_order = NULL) {
+  df_long <- df %>%
+    pivot_longer(
+      cols = starts_with("EXT"):last_col(),
+      names_to = "fingerprint_k",
+      values_to = "cluster"
+    ) %>%
+    mutate(
+      fingerprint = str_extract(fingerprint_k, "^[a-zA-Z]+"),
+      k = str_extract(fingerprint_k, "k\\d+") %>% str_remove("k") %>% as.integer()
+    )
+
+  heatmap_data <- df_long %>%
+    group_by(!!sym(class_col), fingerprint, k, cluster) %>%
+    summarise(n = n(), .groups = "drop") %>%
+    group_by(!!sym(class_col), fingerprint, k) %>%
+    mutate(percentage = 100 * n / sum(n)) %>%
+    ungroup()
+
+  heatmap_data <- heatmap_data %>%
+    mutate(
+      cluster = factor(cluster),
+      class = !!sym(class_col),
+      class = if (!is.null(class_order)) factor(class, levels = class_order) else factor(class),
+      label = sprintf("%.1f", percentage)
+    )
+
+  ggplot(heatmap_data, aes(x = cluster, y = class, fill = percentage)) +
+    geom_tile(color = "white") +
+    geom_text(aes(label = label), size = 1.5) +
+    scale_fill_gradient(low = "white", high = "steelblue") +
+    facet_grid(k ~ fingerprint, scales = "free", space = "free") +
+    labs(x = "Cluster", y = class_col, fill = "% in cluster") +
+    theme_minimal(base_size = 6) +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      strip.text = element_text(face = "bold")
+    )
+}
+
+structural_order <-c("BP","Aromatic_N/S","NonAromatic_N/S","MT", "ST","Diterpenes","Irregular terpene","Aliphatics and C5 branched","Others")
+
+
+generate_cluster_heatmap(
+  df = df,
+  class_col = "Structural_class",
+  class_order = structural_order
+)
+
+#Contingency heatmaps for all combinations: Agglomerative clustering for biosynthetic classes across fingerprint types
+generate_cluster_heatmap <- function(df, class_col = "Biosynthetic_class", class_order = NULL) {
+  df_long <- df %>%
+    pivot_longer(
+      cols = starts_with("EXT"):last_col(),
+      names_to = "fingerprint_k",
+      values_to = "cluster"
+    ) %>%
+    mutate(
+      fingerprint = str_extract(fingerprint_k, "^[a-zA-Z]+"),
+      k = str_extract(fingerprint_k, "k\\d+") %>% str_remove("k") %>% as.integer()
+    )
+
+  heatmap_data <- df_long %>%
+    group_by(!!sym(class_col), fingerprint, k, cluster) %>%
+    summarise(n = n(), .groups = "drop") %>%
+    group_by(!!sym(class_col), fingerprint, k) %>%
+    mutate(percentage = 100 * n / sum(n)) %>%
+    ungroup()
+  heatmap_data <- heatmap_data %>%
+    mutate(
+      cluster = factor(cluster),
+      class = !!sym(class_col),
+      class = if (!is.null(class_order)) factor(class, levels = class_order) else factor(class),
+      label = sprintf("%.1f", percentage)
+    )
+  ggplot(heatmap_data, aes(x = cluster, y = class, fill = percentage)) +
+    geom_tile(color = "white") +
+    geom_text(aes(label = label), size = 1.5) +
+    scale_fill_gradient(low = "white", high = "steelblue") +
+    facet_grid(k ~ fingerprint, scales = "free", space = "free") +
+    labs(x = "Cluster", y = class_col, fill = "% in cluster") +
+    theme_minimal(base_size = 6) +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      strip.text = element_text(face = "bold")
+    )
+}
+
+biosynthetic_order <-c("Shikimate_derived_Aromatics", "Terpenoids", "FADs", "Others")
+
+generate_cluster_heatmap(
+  df = df,
+  class_col = "Biosynthetic_class",
+  class_order = biosynthetic_order
+)
+```
+
+
+Part 2: Plots for taxonomic rank prediction
+
+```{r}
+#Load required libraries
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(readr)
+```
+
+
+```{r}
+#(2a) Recall bar plots
+#With fingerprints
+#Order-level
+#Read in the classification metrics file for order 
+df<-read.csv("classification_report_EXT_torder_MLPClassifier.csv", check.names = FALSE)
+df<-df[-c(39:41),]
+df$Recall_Percent <- df$recall * 100
+df <- df %>%
+  arrange(support) %>%
+  mutate(Orders = factor(Orders, levels = Orders))  
+
+#Plot
+p<-ggplot(df, aes(x = Orders, y = Recall_Percent)) +
+  
+  geom_bar(stat = "identity", fill = NA, color = "black", linewidth = 0.4, width = 0.6) +
+
+  
+  geom_text(aes(label = support),
+            vjust = -0.5,
+            size = 1.5,
+            family = "Times") +
+  scale_y_continuous(
+    limits = c(0, max(df$Recall_Percent) + 10),
+    breaks = seq(0, 100, by = 10),
+    expand = expansion(mult = c(0, 0.05))
+  ) +
+  labs(
+    x = "Plant Orders",
+    y = "Recall (%)",
+    title = "Recall by Plant Orders"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 90, hjust = 1, size = 5),
+    axis.text.y = element_text(size = 5),
+    axis.title.x = element_text(size = 6, face = "bold"),
+    axis.title.y = element_text(size = 6, face = "bold"),
+    plot.title  = element_text(size = 8, face = "bold"),
+    panel.grid  = element_blank(),
+    panel.border = element_blank(),
+    axis.line = element_line(color = "black", linewidth = 0.5),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    axis.ticks.length = unit(0.1, "cm")
+  )
+
+p
+
+#With fingerprints
+#Family-level
+#Read the classification metrics for family
+df<-read.csv("classification_report_EXT_tfamily_MLPClassifier.csv", check.names = FALSE)
+df<-df[-c(71:73),]
+df$Recall_Percent <- df$recall * 100
+df <- df %>%
+  arrange(support) %>%
+  mutate(Family = factor(Family, levels = Family)) 
+
+#Plot
+p<-ggplot(df, aes(x = Family, y = Recall_Percent)) +
+  geom_bar(stat = "identity", fill = NA, color = "black", linewidth = 0.4, width = 0.6) +
+  geom_text(aes(label = support),
+            vjust = -0.5,
+            size = 1.1,
+            family = "Times") +
+  scale_y_continuous(
+    limits = c(0, max(df$Recall_Percent) + 10),
+    breaks = seq(0, 100, by = 10),
+    expand = expansion(mult = c(0, 0.05))
+  ) +
+
+  labs(
+    x = "Plant Family",
+    y = "Recall (%)",
+    title = "Recall by Plant Family"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 90, hjust = 1, size = 5),
+    axis.text.y = element_text(size = 5),
+    axis.title.x = element_text(size = 6, face = "bold"),
+    axis.title.y = element_text(size = 6, face = "bold"),
+    plot.title  = element_text(size = 8, face = "bold"),
+    panel.grid  = element_blank(),
+    panel.border = element_blank(),
+    axis.line = element_line(color = "black", linewidth = 0.5),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    axis.ticks.length = unit(0.1, "cm")
+  )
+
+p
+
+#(2b) Confusion matrices for best performing model using fingerprints
+#Order-level classification: EXT: MLP after CV
+#Read the confusion matrix
+cm<-read.csv("confusion_matrix_EXT_torder_MLPClassifier.csv", row.names = 1, check.names = FALSE)
+head(cm)
+#Re-order according to phylogenetic relationships
+new_order <- c("Cycadales","Pinales","Chloranthales","Piperales","Canellales","Laurales",
+"Magnoliales","Acorales","Alismatales","Asparagales","Pandanales","Liliales",
+"Commelinales","Zingiberales","Arecales","Poales","Proteales","Ranunculales","Ericales",
+"Dipsacales","Apiales","Asterales","Lamiales","Solanales","Boraginales","Gentianales",
+"Caryophyllales","Santalales","Vitales","Saxifragales","Myrtales","Geraniales","Rosales",
+"Fabales","Malpighiales","Sapindales","Malvales","Brassicales")
+
+keep <- new_order[new_order %in% rownames(cm)]
+cm_ord <- cm[keep, keep]
+
+#Convert to long format
+cm_long <- cm_ord %>%
+  as.data.frame() %>%
+  rownames_to_column("Actual") %>%
+  pivot_longer(-Actual, names_to = "Predicted", values_to = "Freq")
+
+
+cm_long$Actual    <- factor(cm_long$Actual,    levels = keep)  
+cm_long$Predicted <- factor(cm_long$Predicted, levels = keep)       
+
+diag_df <- cm_long %>% filter(Actual == Predicted)
+
+#Plot
+p<-ggplot(cm_long, aes(Predicted, fct_rev(Actual), fill = Freq)) +
+  geom_tile(color = "grey85", linewidth = 0.3) +
+  geom_text(aes(label = ifelse(Freq == 0, "", Freq)), size = 3) +
+  geom_tile(
+    data = diag_df,
+    color = "maroon",       
+    linewidth = 0.2,      
+    fill = NA           
+  ) +
+  scale_fill_gradient(low = "white", high = "#2c7fb8") +
+  labs(title = "Confusion Matrix of Plant Orders", x = "Predicted Order", y = "Actual Order", fill = "Count") +
+  theme_minimal(base_size = 10) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid = element_blank()
+  ) +
+  coord_equal()
+p
+
+#Family-level classification: EXT: MLP after CV
+#Read the confusion matrix
+cm<-read.csv("confusion_matrix_EXT_tfamily_MLPClassifier.csv", row.names = 1, check.names = FALSE)
+
+#Re-order according to relatedness of families
+new_order<-c("Cycadaceae","Zamiaceae","Cupressaceae","Pinaceae","Chloranthaceae","Piperaceae","Winteraceae","Lauraceae","Annonaceae","Eupomatiaceae","Magnoliaceae","Myristicaceae","Acoraceae","Araceae","Amaryllidaceae","Orchidaceae","Cyclanthaceae","Liliaceae","Commelinaceae","Zingiberaceae","Arecaceae","Cyperaceae","Poaceae","Nelumbonaceae","Berberidaceae","Ranunculaceae","Actinidiaceae","Lecythidaceae","Polemoniaceae","Primulaceae","Caprifoliaceae","Apiaceae","Asteraceae","Lamiaceae","Oleaceae","Plantaginaceae","Acanthaceae","Orobanchaceae","Verbenaceae","Solanaceae","Boraginaceae","Apocynaceae","Gentianaceae","Rubiaceae","Cactaceae","Caryophyllaceae","Santalaceae","Vitaceae","Grossulariaceae", "Combretaceae","Lythraceae","Myrtaceae","Geraniaceae","Moraceae","Rosaceae","Fabaceae","Hypericaceae","Rhizophoraceae","Salicaceae","Violaceae","Anacardiaceae","Burseraceae","Meliaceae","Rutaceae","Sapindaceae","Bixaceae","Cistaceae","Malvaceae","Thymelaeaceae","Brassicaceae")
+
+keep <- new_order[new_order %in% rownames(cm)]
+cm_ord <- cm[keep, keep]
+
+#Convert to long format
+cm_long <- cm_ord %>%
+  as.data.frame() %>%
+  rownames_to_column("Actual") %>%
+  pivot_longer(-Actual, names_to = "Predicted", values_to = "Freq")
+
+cm_long$Actual    <- factor(cm_long$Actual,    levels = keep)  
+cm_long$Predicted <- factor(cm_long$Predicted, levels = keep)       
+
+diag_df <- cm_long %>% filter(Actual == Predicted)
+
+#Plot
+p<-ggplot(cm_long, aes(Predicted, fct_rev(Actual), fill = Freq)) +
+  geom_tile(color = "grey85", linewidth = 0.2) +
+  geom_text(aes(label = ifelse(Freq == 0, "", Freq)), size = 2) +
+  geom_tile(
+    data = diag_df,
+    color = "maroon",       
+    linewidth = 0.2,       
+    fill = NA              
+  ) +
+  scale_fill_gradient(low = "white", high = "#2c7fb8") +
+  labs(title = "Confusion Matrix of Plant families", x = "Predicted Family", y = "Actual Family", fill = "Count") +
+  theme_minimal(base_size = 10) +
+  coord_equal() 
+p
+
+#Genus-level classification: Sub: LR after CV
+#Read the confusion matrix
+cm<-read.csv("confusion_matrix_Sub_tgenus_LogisticRegression.csv", row.names = 1, check.names = FALSE)
+
+#Edit to required genera
+#Re-order according to family
+selected_taxa<-c("Achillea","Ageratum","Anaphalis","Arnica","Artemisia","Calendula","Carduus","Centaurea","Centratherum","Chamaemelum","Chrysactinia","CRASSOCEPHALUM","Glebionis","Leontopodium","Matricaria","Mikania","Saussurea","Tagetes","Tanacetum","Hypericum","Caryopteris","Clinopodium","Dracocephalum","Elsholtzia","Lavandula","Marrubium","Melissa","Mentha","Monarda","Nepeta","Ocimum","Origanum","Pogostemon","Salvia","Satureja","Stachys","Thymus","Liriodendron","Magnolia","Ficus","Aerangis","Coryanthes","Cymbidium","Cypripedium","Epidendrum","Mystacidium","Ophrys","Peristeria","Phalaenopsis","Vanda","Zygopetalum","Aframomum","Alpinia","Amomum","Hedychium","Zingiber")
+
+#Subset rows and columns for only these taxa
+cm_subset <- cm[selected_taxa, selected_taxa]
+
+keep <- selected_taxa[selected_taxa %in% rownames(cm_subset)]
+cm_ord <- cm_subset[keep, keep]
+
+#Convert to long format
+taxa_order <- colnames(cm_ord)
+
+cm_long <- cm_ord %>%
+  as.data.frame() %>%
+  rownames_to_column("Actual") %>%
+  pivot_longer(-Actual, names_to = "Predicted", values_to = "Freq") %>%
+  mutate(
+    Actual = factor(Actual, levels = taxa_order),
+    Predicted = factor(Predicted, levels = taxa_order)
+  )
+
+diag_df <- cm_long %>% filter(Actual == Predicted)
+
+# Plot
+p<-ggplot(cm_long, aes(Predicted, fct_rev(Actual), fill = Freq)) +
+  geom_tile(color = "grey85", linewidth = 0.2) +
+  geom_text(aes(label = ifelse(Freq == 0, "", Freq)), size = 2) +
+  geom_tile(
+    data = diag_df,
+    color = "maroon",       
+    linewidth = 0.2,      
+    fill = NA             
+  ) +
+  scale_fill_gradient(low = "white", high = "#2c7fb8") +
+  labs(title = "Confusion Matrix of Plant Genera", x = "Predicted Genera", y = "Actual Genera", fill = "Count") +
+  theme_minimal(base_size = 10) +
+  coord_equal()    
+
+p
+
+#(2c) Unique versus non-unique compounds
+#After adding fingerprints
+#Read files
+importance_df <- read_csv("importance_all_ranks_fp.csv")
+unique_df     <- read_csv("unique_compounds.csv")
+#Define "important" compounds based on coefficient
+top_imp <- importance_df %>%
+  group_by(Rank) %>%
+  arrange(desc(Importance_permutation)) %>%
+  slice_head(n = 400) %>%
+  ungroup()
+#Count overlap with unique compounds
+merged <- top_imp %>%
+  left_join(unique_df %>% select(Feature, Rank) %>% mutate(Unique = 1),
+            by = c("Feature", "Rank")) %>%
+  mutate(Unique = ifelse(is.na(Unique), 0, Unique))
+merged <- merged %>%
+  mutate(Rank = factor(Rank, levels = c("Order", "Family", "Genus")))
+
+#Scatter plots
+p<- ggplot(merged, aes(x=Importance_permutation, y=Unique, color=factor(Unique))) +
+  geom_point(shape = 21, fill = "white", size = 2, stroke = 0.6) +
+  geom_vline(xintercept = 0, color = "black", linetype = "dashed", linewidth = 0.4) +
+  facet_wrap(~Rank) +   
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 5),
+    axis.text.y = element_text(size = 5),
+    axis.title.x = element_text(size = 6, face = "bold"),
+    axis.title.y = element_text(size = 6, face = "bold"),
+    plot.title = element_text(size = 8, face = "bold"),
+    panel.grid = element_blank(),
+    panel.border = element_blank(),
+    axis.line = element_line(color = "black", linewidth = 0.5),
+    axis.ticks = element_line(color = "black", linewidth = 0.3),
+    axis.ticks.length = unit(0.1, "cm")
+  ) +
+  labs(y = "Unique (1) vs Non-unique (0)", x = "Feature Importance")
+
+p
+```
+
+
+Part 3: Plant species-metabolite relationship
+
+```{r}
+#Load libraries
+library(dplyr)
+library(vegan)
+library(ape)      
+library(readr) 
+library(dendextend)
+library(colorspace)
+```
+
+
+```{r}
+#(3a) Mantel's test
+#Genetic tree preparation
+
+#Prepare tree and calculate genetic distance
+ML_tree <- read.tree("Max_likelihood_tree.nex")
+tips_to_remove <- c("Origanum_majorana", "Typhonium_sp", "Pyrus_communis", "Ocimum_tenuiflorum","Chloranthus_spicatus","Santalum_album")  
+
+#Drop the specified tips
+ML_tree_all <- drop.tip(ML_tree, tips_to_remove)
+GenDist <- cophenetic.phylo(ML_tree_all)
+
+#Chemical data preparation
+#Prepare the chemical data
+Chem_table<-read.csv("TreeTaxa_IndComp.csv", header = T, check.names = F)
+
+#Removing taxa not present in the tree
+All_Chem_table<-Chem_table[-c(1:4,70,234,270,284),]
+
+#Check if tree tips match chem table taxa
+identical(names(All_Chem_table$Taxa_Tips), ML_tree_all$tip.label) 
+setequal(All_Chem_table$Taxa_Tips, ML_tree_all$tip.label)
+
+#Remove columns where the sum is zero
+str(All_Chem_table)
+All_Chem_table <- All_Chem_table %>%
+  mutate(across(-c(1:3), as.numeric))
+keep_cols <- c(rep(TRUE, 3),                     
+               colSums(All_Chem_table[, -c(1:3)]) > 0)
+
+All_Chem_table <- All_Chem_table[, keep_cols]
+
+#Chemical distance calculation
+#Compute Jaccard distance
+All_Chem_table <- All_Chem_table[match(rownames(GenDist), All_Chem_table$Taxa_Tips), ]
+binary_dist <- vegdist(All_Chem_table[, -c(1:3)], method = "jaccard", binary = TRUE)
+
+#Convert distance object to matrix
+binary_dist_matrix <- as.matrix(binary_dist)
+
+#Add species names as row and column names
+rownames(binary_dist_matrix) <- All_Chem_table$Taxa_Tips
+colnames(binary_dist_matrix) <- All_Chem_table$Taxa_Tips
+
+#Running Mantel's test
+set.seed(1234)
+mantel_result <- mantel(binary_dist_matrix, GenDist, method = "spearman", permutations = 999)
+print(mantel_result)
+
+#(3b) UPGMA Dendrogram with chemical data
+dist_mat <- as.matrix(binary_dist_matrix)
+diag(dist_mat) <- 0                       
+my_dist <- as.dist(binary_dist_matrix)               
+hc <- hclust(my_dist, method = "average")  
+tree <- as.phylo(hc)
+
+#Comparison between Chemogram and Phylogeny
+#Baker's gamma co-efficient calculation
+# Read the tree file (replace 'your_tree_file.tree' with your actual file path)
+tree <- read.nexus("Run12345_MCC.tree")
+# Specify the tips to remove
+tips_to_remove <- c("Origanum_majorana", "Typhonium_sp", "Pyrus_communis", "Ocimum_tenuiflorum","Chloranthus_spicatus","Santalum_album")  
+# Drop the specified tips
+tree_2 <- drop.tip(tree, tips_to_remove)
+
+
+chem_dend   <- as.dendrogram(tree)        
+gene_dend   <- as.dendrogram(tree_2)
+
+bgamma <- cor_bakers_gamma(chem_dend, gene_dend)
+
+#Calculate p-value
+set.seed(123)                      
+B     <- 99                      
+perm  <- replicate(B, {
+  perm_gene <- sample.dendrogram(gene_dend, replace = FALSE)  
+  cor_bakers_gamma(chem_dend, perm_gene)
+})
+
+p_val <- (sum(abs(perm) >= abs(bgamma)) + 1) / (B + 1)  
+
+#Tanglegram generation
+chem_dend <- set(chem_dend, "branches_lwd", 0.6)
+gene_dend <- set(gene_dend, "branches_lwd", 0.6)
+
+#Untangle to cut down edge crossings
+dl<- dendlist(chem_dend, gene_dend)
+#1
+dl<- untangle(dl, method = "step2side")  
+entanglement(dl)  
+
+#2
+dl<- untangle(dl, method = "step1side")  
+entanglement(dl) 
+
+#Plot
+p<-tanglegram(dl[[1]], dl[[2]],
+           sort = FALSE,                        
+           common_subtrees_color_lines = TRUE,  
+           highlight_distinct_edges = FALSE,    
+           columns_width = c(4, 1, 4),          
+           margin_inner = 3,                    
+           lwd = 0.8,                           
+           lab.cex = 0.28,                      
+           lab.col = "black",
+           main = "Chemogram vs Genetic Phylogeny (311 taxa)")
+
+p
+```
+
+
+Part 4: Calculation of phylogenetic signals
+
+Note: The labels for the metabolite clusters that correspond to labels given in the images in the manuscript are as follows:
+
+EXT_structural classes: 
+M0 = PM1a = Sesquiterpene dominated
+M1 = PM3a = Aliphatics and C5 branched chain dominated
+M2 = PM2 = Simple benzenoids and phenylpropanoids + aromatic N and S compounds dominated
+M3 = PM3b = Aliphatics and C5 branched chain dominated
+M4 = PM1b = Monoterpene dominated
+M5 = PM3c = Non-aromatic N and S compounds dominated + Aliphatics and C5 branched chain dominated  
+
+EXT_biosynthetic classes:
+M0 = PM1 = Terpenoid dominated
+M1 = PM2 = Shikimate-derived aromatics dominated
+M2 = PM3 = Fatty acid derivative dominated
+
+SubCount classes:
+M0 = PM3a = Aliphatics and C5 branched chain dominated
+M1 = PM1b = Monoterpene dominated
+M2 = PM1a = Sesquiterpene and diterpene dominated
+M3 = PM2 = Simple benzenoids and phenylpropanoids + aromatic N and S compounds dominated
+M4 = PM3b = Aliphatics and C5 branched chain dominated
+M5 = PM3c = Non-aromatic N and S compounds dominated + Aliphatics and C5 branched chain dominated
+M6 = PM3d = Aliphatics and C5 branched chain dominated
+
+PubChem classes:
+M0 = PM1 = Terpenoid dominated
+M1 = PM3 = Fatty acid derivative dominated
+M2 = PM2 = Shikimate-derived aromatics dominated
+
+```{r}
+# Load packages
+library(ape)
+library(writexl)
+library(phytools)
+library(maps)
+library(geiger)
+library(phangorn)
+library(mvtnorm)
+library(MASS)
+library(caper)
+library(dplyr)
+```
+
+
+```{r}
+# Read the tree file (replace 'your_tree_file.tree' with your actual file path)
+tree <- read.nexus("Run12345_MCC.tree")
+# Specify the tips to remove
+tips_to_remove <- c("Origanum_majorana", "Typhonium_sp", "Pyrus_communis", "Ocimum_tenuiflorum","Chloranthus_spicatus","Santalum_album")  
+# Drop the specified tips
+tree_2 <- drop.tip(tree, tips_to_remove)
+```
+
+Whole tree
+
+EXT_structural classes
+```{r}
+EXT_str<-read.csv("cluster_binary_EXT_str.csv", header = T, check.names = F)
+#Remove chloranthales and santalales
+EXT_str_whole2 <- EXT_str %>% filter(!Order %in% c("Chloranthales", "Santalales"))
+
+#Check if the matrix and tree tips match
+identical(sort(tree_2$tip.label), sort(EXT_str_whole2$Taxa_Tips)) 
+
+#Calculation of D-stats
+physig <- comparative.data(tree_2, EXT_str_whole2, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+EXT_biosynthetic classes
+```{r}
+EXT_bio<-read.csv("cluster_binary_EXT_bio.csv", header = T, check.names = F)
+#Remove chloranthales and santalales
+EXT_bio_whole2 <- EXT_bio %>% filter(!Order %in% c("Chloranthales", "Santalales"))
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_2$tip.label), sort(EXT_bio_whole2$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_2, EXT_bio_whole2, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+SubCount classes
+```{r}
+SubCount<-read.csv("cluster_binary_SubCount.csv", header = T, check.names = F)
+#Remove chloranthales and santalales
+SubCount_whole2 <- SubCount %>% filter(!Order %in% c("Chloranthales", "Santalales"))
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_2$tip.label), sort(SubCount_whole2$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_2, SubCount_whole2, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+M6 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M6, permut = 1000)
+print(phylo_D_result)
+```
+
+PubChem classes
+```{r}
+PubChem<-read.csv("cluster_binary_PubChem.csv", header = T, check.names = F)
+#Remove chloranthales and santalales
+PubChem_whole2 <- PubChem %>% filter(!Order %in% c("Chloranthales", "Santalales"))
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_2$tip.label), sort(PubChem_whole2$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_2, PubChem_whole2, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+
+Rosids
+```{r}
+#Specify the tips to keep
+tips_to_keep <- c("Acacia_caven","Aesculus_hippocastanum","Anacardium_occidentale","Backhousia_citriodora",        "Bauhinia_sp","Boswellia_sp","Brassica_rapa","Bruguiera_gymnorrhiza","Callistemon_citrinus","Callistemon_viminalis",         "Causonia_japonica","Ceiba_pentandra","Chukrasia_tabularis","Cistus_ladanifer","Citrus_limon",                "Corymbia_citriodora","Daphne_mezereum","Dictamnus_albus","Eucalyptus_alba","Eucalyptus_camaldulensis",      "Eucalyptus_deglupta","Eucalyptus_globulus","Eucalyptus_propinqua","Eucalyptus_robusta","Eucalyptus_saligna",            "Eucalyptus_tereticornis","Eucalyptus_urophylla","Eugenia_uniflora","Ficus_aurata","Ficus_beccarii",              "Ficus_benjamina","Ficus_condensa","Ficus_crassiramea","Ficus_deltoidea","Ficus_fulva","Ficus_megaleia",             "Ficus_microcarpa","Ficus_obscura","Ficus_punctata","Ficus_stolonifera","Geranium_macrorrhizum","Geranium_phaeum",         "Glycyrrhiza_echinata","Glycyrrhiza_glabra","Glycyrrhiza_inflata","Hibiscus_sp","Hypericum_barbatum",            "Hypericum_hirsutum","Hypericum_linarioides","Hypericum_maculatum","Hypericum_olympicum","Hypericum_perforatum",          "Hypericum_richeri_grisebachii","Hypericum_rumeliacum","Hypericum_tetrapterum","Inga_marginata",               "Kandelia_candel","Lathyrus_odoratus","Lawsonia_inermis","Lumnitzera_racemosa","Malus_domestica",              "Mangifera_indica","Melaleuca_sp","Murraya_koenigii","Myrtus_communis","Naregamia_alata",            "Pelargonium_endlicherianum","Pelargonium_graveolens","Pemphis_acidula","Pistacia_vera","Prunus_armeniaca",             "Prunus_avium","Prunus_domestica","Prunus_padus","Prunus_persica","Rhizophora_stylosa","Rosa_chinensis",                "Rosa_gallica","Rosa_odorata_gigantea","Salix_caprea","Salix_cinerea","Salix_repens_rosmarinifolia","Schinus_molle",        "Sonneratia_alba","Tilia_sp","Viola_etrusca","Viola_odorata","Vitis_vinifera")
+#Drop the specified tips
+tree_rosids <- keep.tip(tree, tips_to_keep)
+```
+
+EXT_structural classes
+```{r}
+#Keep Rosids
+selected_orders <- c("Fabales","Rosales","Malpighiales","Geraniales","Myrtales","Malvales","Brassicales","Sapindales","Vitales")
+EXT_str_rosids <- EXT_str %>% filter(Order %in% selected_orders)
+unique(EXT_str_rosids$Taxa_Tips)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_rosids$tip.label), sort(EXT_str_rosids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_rosids, EXT_str_rosids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+EXT_biosynthetic classes
+```{r}
+#Keep Rosids
+selected_orders <- c("Fabales","Rosales","Malpighiales","Geraniales","Myrtales","Malvales","Brassicales","Sapindales","Vitales")
+EXT_bio_rosids <- EXT_bio %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_rosids$tip.label), sort(EXT_bio_rosids$Taxa_Tips))
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_rosids, EXT_bio_rosids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+SubCount classes
+```{r}
+#Keep Rosids
+selected_orders <- c("Fabales","Rosales","Malpighiales","Geraniales","Myrtales","Malvales","Brassicales","Sapindales","Vitales")
+SubCount_rosids <- SubCount %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_rosids$tip.label), sort(SubCount_rosids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_rosids, SubCount_rosids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+M6 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M6, permut = 1000)
+print(phylo_D_result)
+```
+
+PubChem classes
+```{r}
+#Keep Rosids
+selected_orders <- c("Fabales","Rosales","Malpighiales","Geraniales","Myrtales","Malvales","Brassicales","Sapindales","Vitales")
+PubChem_rosids <- PubChem %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_rosids$tip.label), sort(PubChem_rosids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_rosids, PubChem_rosids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+
+Asterids
+```{r}
+# Specify the tips to keep
+tips_to_keep <- c("Achillea_ageratum","Achillea_millefolium","Acnistus_arborescens","Actinidia_chinensis",        "Ageratum_conyzoides","Allamanda_cathartica","Aloysia_citriodora","Aloysia_triphylla","Anaphalis_contorta",        "Anethuum_graveolens","Angelica_sylvestris","Anthriscus_cerefolium","Antirrhinum_majus","Apium_graveolens",           "Arnica_montana","Artemisia_annua","Avicennia_marina","Bartsia_alpinia","Calendula_officinalis","Carduus_pycnocephalus", "Carum_carvi","Caryopteris_sp","Catharanthus_roseus","Centaurea_armena","Centaurea_depressa","Centella_asiatica",          "Centratherum_punctatum","Chamaemelum_nobile","Chrysactinia_mexicana","Chrysanthemum_coronarium","Clinopodium_vulgare",  "Conopodium_majus","Coriandrum_sativum","Couroupita_guianensis","Crassocephalum_crepidiodes","Crithmum_maritimum",        "Cuminum_cyminum","Cyclamen_persicum","Cyclamen_purpurascens","Dracocephalum_moldavica","Elsholtzia_blanda",          "Elsholtzia_ciliata","Elsholtzia_densa","Elsholtzia_fruticosa","Exacum_affine","Foeniculum_vulgare",        "Gallium_aparine","Galium_odoratum","Gymnema_sylvestre","Heliotropium_myosotifolium","Heliotropium_pycnophyllum", "Heliotropium_stenophyllum","Hyssopus_officinalis","Jasminum_sp","Lavandula_angustifolia","Lecythis_persistens",        "Leontopodium_alpinum","Levisticum_officinale","Ligustrum_japonicum","Lippia_alba","Lonicera_japonica",          "Marrubium_peregrinum","Marrubium_vulgare","Matricaria_chamomilla","Matricara_recutita","Melissa_officinalis",       "Mentha_arvensis","Mentha_canadensis","Mentha_longifolia","Mentha_spicata","Meum_athamanticum","Mikania_glomerata",         "Monarda_citriodora","Monardo_didyma","Nepeta_cataria","Nyctanthes_arbortristis","Ocimum_americanum",         "Ocimum_basilicum","Oenanthe_crocata","Olea_europaea","Oliveria_decumbens","Origanum_vulgare","Parkia_biglobosa",           "Petroselinum_crispum","Phlox_sp","Pimpinella_saxifraga","Plantago_ovata","Plumeria_rubra","Pogostemon_cablin",         "Posoqueria_latifolia","Rosamarinus_officinalis","Salvia_fruticosa","Salvia_officinalis","Salvia_sclarea",             "Satureja_hortensis","Saussurea_costus","Stachys_byzantina","Syringa_oblata","Tagetes_minuta",         "Tanacetum_parthenium","Thevetia_peruviana","Thymus_pulegiodes","Thymus_vulgaris","Valeriana_jatamansi")
+# Drop the specified tips
+tree_asterids <- keep.tip(tree, tips_to_keep)
+```
+
+EXT_structural classes
+```{r}
+#Keep Asterids
+selected_orders <- c("Ericales","Asterales","Apiales","Dipsacales","Solanales","Lamiales","Gentianales","Boraginales")
+EXT_str_asterids <- EXT_str %>% filter(Order %in% selected_orders)
+unique(EXT_str_asterids$Taxa_Tips)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_asterids$tip.label), sort(EXT_str_asterids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_asterids, EXT_str_asterids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+EXT_biosynthetic classes
+```{r}
+#Keep Asterids
+selected_orders <- c("Ericales","Asterales","Apiales","Dipsacales","Solanales","Lamiales","Gentianales","Boraginales")
+EXT_bio_asterids <- EXT_bio %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_asterids$tip.label), sort(EXT_bio_asterids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_asterids, EXT_bio_asterids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+SubCount classes
+```{r}
+selected_orders <- c("Ericales","Asterales","Apiales","Dipsacales","Solanales","Lamiales","Gentianales","Boraginales")
+SubCount_asterids <- SubCount %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_asterids$tip.label), sort(SubCount_asterids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_asterids, SubCount_asterids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+M6 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M6, permut = 1000)
+print(phylo_D_result)
+```
+
+PubChem classes
+```{r}
+selected_orders <- c("Ericales","Asterales","Apiales","Dipsacales","Solanales","Lamiales","Gentianales","Boraginales")
+PubChem_asterids <- PubChem %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_asterids$tip.label), sort(PubChem_asterids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_asterids, PubChem_asterids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result) #Cannot calculate. Has a single state
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result) 
+```
+
+
+Malvids
+```{r}
+# Specify the tips to keep
+tips_to_keep <- c("Aesculus_hippocastanum","Anacardium_occidentale","Backhousia_citriodora","Boswellia_sp",               "Brassica_rapa","Callistemon_citrinus","Callistemon_viminalis","Ceiba_pentandra","Chukrasia_tabularis",      "Cistus_ladanifer","Citrus_limon","Corymbia_citriodora","Daphne_mezereum","Dictamnus_albus","Eucalyptus_alba",           "Eucalyptus_camaldulensis","Eucalyptus_deglupta","Eucalyptus_globulus","Eucalyptus_propinqua","Eucalyptus_robusta",         "Eucalyptus_saligna","Eucalyptus_tereticornis","Eucalyptus_urophylla","Eugenia_uniflora","Geranium_macrorrhizum",     "Geranium_phaeum","Hibiscus_sp","Lawsonia_inermis","Lumnitzera_racemosa","Mangifera_indica","Melaleuca_sp",               "Murraya_koenigii","Myrtus_communis","Naregamia_alata","Pelargonium_endlicherianum","Pelargonium_graveolens",   "Pemphis_acidula","Pistacia_vera","Schinus_molle","Sonneratia_alba","Tilia_sp")
+# Drop the specified tips
+tree_malvids <- keep.tip(tree, tips_to_keep)
+```
+
+EXT_structural classes
+```{r}
+selected_orders <- c("Geraniales","Myrtales","Malvales","Brassicales","Sapindales")
+EXT_str_malvids <- EXT_str %>% filter(Order %in% selected_orders)
+unique(EXT_str_malvids$Taxa_Tips)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_malvids$tip.label), sort(EXT_str_malvids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_malvids, EXT_str_malvids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+EXT_biosynthetic classes
+```{r}
+selected_orders <- c("Geraniales","Myrtales","Malvales","Brassicales","Sapindales")
+EXT_bio_malvids <- EXT_bio %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_malvids$tip.label), sort(EXT_bio_malvids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_malvids, EXT_bio_malvids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+SubCount classes
+```{r}
+selected_orders <- c("Geraniales","Myrtales","Malvales","Brassicales","Sapindales")
+SubCount_malvids <- SubCount %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_malvids$tip.label), sort(SubCount_malvids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_malvids, SubCount_malvids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+M6 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M6, permut = 1000)
+print(phylo_D_result)
+```
+
+PubChem classes
+```{r}
+selected_orders <- c("Geraniales","Myrtales","Malvales","Brassicales","Sapindales")
+PubChem_malvids <- PubChem %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_malvids$tip.label), sort(PubChem_malvids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_malvids, PubChem_malvids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result) 
+```
+
+
+Fabids
+```{r}
+# Specify the tips to keep
+tips_to_keep <- c("Acacia_caven","Bauhinia_sp","Bruguiera_gymnorrhiza","Ficus_aurata","Ficus_beccarii",               "Ficus_benjamina","Ficus_condensa","Ficus_crassiramea","Ficus_deltoidea","Ficus_fulva","Ficus_megaleia",               "Ficus_microcarpa","Ficus_obscura","Ficus_punctata","Ficus_stolonifera","Glycyrrhiza_echinata","Glycyrrhiza_glabra",     "Glycyrrhiza_inflata","Hypericum_barbatum","Hypericum_hirsutum","Hypericum_linarioides","Hypericum_maculatum",           "Hypericum_olympicum","Hypericum_perforatum","Hypericum_richeri_grisebachii","Hypericum_rumeliacum",          "Hypericum_tetrapterum","Inga_marginata","Kandelia_candel","Lathyrus_odoratus","Malus_domestica",               "Prunus_armeniaca","Prunus_avium","Prunus_domestica","Prunus_padus","Prunus_persica","Rhizophora_stylosa",           "Rosa_chinensis","Rosa_gallica","Rosa_odorata_gigantea","Salix_caprea","Salix_cinerea",            "Salix_repens_rosmarinifolia","Viola_etrusca","Viola_odorata")
+# Drop the specified tips
+tree_fabids <- keep.tip(tree, tips_to_keep)
+```
+
+EXT_structural classes
+```{r}
+selected_orders <- c("Fabales","Rosales","Malpighiales")
+EXT_str_fabids <- EXT_str %>% filter(Order %in% selected_orders)
+unique(EXT_str_fabids$Taxa_Tips)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_fabids$tip.label), sort(EXT_str_fabids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_fabids, EXT_str_fabids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+EXT_biosynthetic classes
+```{r}
+selected_orders <- c("Fabales","Rosales","Malpighiales")
+EXT_bio_fabids <- EXT_bio %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_fabids$tip.label), sort(EXT_bio_fabids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_fabids, EXT_bio_fabids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+SubCount classes
+```{r}
+selected_orders <- c("Fabales","Rosales","Malpighiales")
+SubCount_fabids <- SubCount %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_fabids$tip.label), sort(SubCount_fabids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_fabids, SubCount_fabids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+M6 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M6, permut = 1000)
+print(phylo_D_result)
+```
+
+PubChem classes
+```{r}
+selected_orders <- c("Fabales","Rosales","Malpighiales")
+PubChem_fabids <- PubChem %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_fabids$tip.label), sort(PubChem_fabids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_fabids, PubChem_fabids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+
+Lamids
+```{r}
+# Specify the tips to keep
+tips_to_keep <- c("Acnistus_arborescens","Allamanda_cathartica","Aloysia_citriodora","Aloysia_triphylla",          "Antirrhinum_majus","Avicennia_marina","Bartsia_alpinia","Caryopteris_sp","Catharanthus_roseus","Clinopodium_vulgare",   "Dracocephalum_moldavica","Elsholtzia_blanda","Elsholtzia_ciliata","Elsholtzia_densa","Elsholtzia_fruticosa",     "Exacum_affine","Gallium_aparine","Galium_odoratum","Gymnema_sylvestre","Heliotropium_myosotifolium","Heliotropium_pycnophyllum","Heliotropium_stenophyllum","Hyssopus_officinalis","Jasminum_sp","Lavandula_angustifolia","Ligustrum_japonicum",        "Lippia_alba","Marrubium_peregrinum","Marrubium_vulgare","Melissa_officinalis","Mentha_arvensis",        "Mentha_canadensis","Mentha_longifolia","Mentha_spicata","Monarda_citriodora","Monardo_didyma","Nepeta_cataria",            "Nyctanthes_arbortristis","Ocimum_americanum","Ocimum_basilicum","Olea_europaea","Origanum_vulgare",          "Parkia_biglobosa","Plantago_ovata","Plumeria_rubra","Pogostemon_cablin","Posoqueria_latifolia","Rosamarinus_officinalis","Salvia_fruticosa","Salvia_officinalis","Salvia_sclarea","Satureja_hortensis","Stachys_byzantina","Syringa_oblata",       "Thevetia_peruviana","Thymus_pulegiodes","Thymus_vulgaris")
+# Drop the specified tips
+tree_lamids <- keep.tip(tree, tips_to_keep)
+```
+
+EXT_structural classes
+```{r}
+selected_orders <- c("Solanales","Lamiales","Gentianales","Boraginales")
+EXT_str_lamids <- EXT_str %>% filter(Order %in% selected_orders)
+unique(EXT_str_lamids$Taxa_Tips)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_lamids$tip.label), sort(EXT_str_lamids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_lamids, EXT_str_lamids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+EXT_biosynthetic classes
+```{r}
+selected_orders <- c("Solanales","Lamiales","Gentianales","Boraginales")
+EXT_bio_lamids <- EXT_bio %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_lamids$tip.label), sort(EXT_bio_lamids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_lamids, EXT_bio_lamids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+SubCount classes
+```{r}
+selected_orders <- c("Solanales","Lamiales","Gentianales","Boraginales")
+SubCount_lamids <- SubCount %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_lamids$tip.label), sort(SubCount_lamids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_lamids, SubCount_lamids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+M6 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M6, permut = 1000)
+print(phylo_D_result)
+```
+
+PubChem classes
+```{r}
+selected_orders <- c("Solanales","Lamiales","Gentianales","Boraginales")
+PubChem_lamids <- PubChem %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_lamids$tip.label), sort(PubChem_lamids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_lamids, PubChem_lamids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result) #Has a single state 
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result) 
+```
+
+
+Campanuliids
+```{r}
+# Specify the tips to keep
+tips_to_keep <- c("Achillea_ageratum","Achillea_millefolium","Ageratum_conyzoides","Anaphalis_contorta",        "Anethuum_graveolens","Angelica_sylvestris","Anthriscus_cerefolium","Apium_graveolens","Arnica_montana",            "Artemisia_annua","Calendula_officinalis","Carduus_pycnocephalus","Carum_carvi","Centaurea_armena",       "Centaurea_depressa","Centella_asiatica","Centratherum_punctatum","Chamaemelum_nobile","Chrysactinia_mexicana",      "Chrysanthemum_coronarium","Conopodium_majus","Coriandrum_sativum","Crassocephalum_crepidiodes","Crithmum_maritimum",    "Cuminum_cyminum","Foeniculum_vulgare","Leontopodium_alpinum","Levisticum_officinale","Lonicera_japonica",      "Matricaria_chamomilla","Matricara_recutita","Meum_athamanticum","Mikania_glomerata","Oenanthe_crocata",        "Oliveria_decumbens","Petroselinum_crispum","Pimpinella_saxifraga","Saussurea_costus","Tagetes_minuta",        "Tanacetum_parthenium","Valeriana_jatamansi")
+# Drop the specified tips
+tree_campanuliids <- keep.tip(tree, tips_to_keep)
+```
+
+EXT_structural classes
+```{r}
+selected_orders <- c("Asterales","Dipsacales","Apiales")
+EXT_str_campanuliids <- EXT_str %>% filter(Order %in% selected_orders)
+unique(EXT_str_campanuliids$Taxa_Tips)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_campanuliids$tip.label), sort(EXT_str_campanuliids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_campanuliids, EXT_str_campanuliids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+EXT_biosynthetic classes
+```{r}
+selected_orders <- c("Asterales","Dipsacales","Apiales")
+EXT_bio_campanuliids <- EXT_bio %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_campanuliids$tip.label), sort(EXT_bio_campanuliids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_campanuliids, EXT_bio_campanuliids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result) #Has single state
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result) 
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result) 
+```
+
+SubCount classes
+```{r}
+selected_orders <- c("Asterales","Dipsacales","Apiales")
+SubCount_campanuliids <- SubCount %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_campanuliids$tip.label), sort(SubCount_campanuliids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_campanuliids, SubCount_campanuliids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result) #Has single state
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result) 
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result) 
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result) 
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result) 
+```
+
+M6 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M6, permut = 1000)
+print(phylo_D_result) 
+```
+
+PubChem classes
+```{r}
+selected_orders <- c("Asterales","Dipsacales","Apiales")
+PubChem_campanuliids <- PubChem %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_campanuliids$tip.label), sort(PubChem_campanuliids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_campanuliids, PubChem_campanuliids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result) #Has a single state
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result) #Has a single state
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result) 
+```
+
+
+Commelinids
+```{r}
+# Specify the tips to keep
+tips_to_keep <- c("Aframomum_sp","Alpinia_galanga","Alpinia_purpurata","Alpinia_zerumbet","Ammandra_decasperma",       "Amomum_subulatum","Aphandra_natalia","Chrysopogon_nigritanus","Chrysopogon_zizanioides","Cymbopogon_citratus",       "Cymbopogon_flexuosus","Cymbopogon_martinii","Cymbopogon_nardus","Cymbopogon_winterianus","Cyperus_articulatus",       "Cyperus_rotundus","Hedychium_coccineum","Hedychium_coronarium","Hedychium_flavescens","Hedychium_gardnerianum", "Nypa_fruticans","Phytelephas_aequatorialis","Phytelephas_macrocarpa","Phytelephas_seemannii","Zingiber_officinale",       "Zingiber_zerumbet")
+# Drop the specified tips
+tree_commelinids <- keep.tip(tree, tips_to_keep)
+```
+
+EXT_structural classes
+```{r}
+selected_orders <- c("Arecales","Poales","Commelinales","Zingiberales")
+EXT_str_commelinids <- EXT_str %>% filter(Order %in% selected_orders)
+unique(EXT_str_commelinids$Taxa_Tips)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_commelinids$tip.label), sort(EXT_str_commelinids$Taxa_Tips))
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_commelinids, EXT_str_commelinids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result) #Has a single state
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result) 
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result) 
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result) 
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result) 
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result) 
+```
+
+EXT_biosynthetic classes
+```{r}
+selected_orders <- c("Arecales","Poales","Commelinales","Zingiberales")
+EXT_bio_commelinids <- EXT_bio %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_commelinids$tip.label), sort(EXT_bio_commelinids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_commelinids, EXT_bio_commelinids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result) 
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result) 
+```
+
+SubCount classes
+```{r}
+selected_orders <- c("Arecales","Poales","Commelinales","Zingiberales")
+SubCount_commelinids <- SubCount %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_commelinids$tip.label), sort(SubCount_commelinids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_commelinids, SubCount_commelinids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+M6 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M6, permut = 1000)
+print(phylo_D_result)
+```
+
+PubChem classes
+```{r}
+selected_orders <- c("Arecales","Poales","Commelinales","Zingiberales")
+PubChem_commelinids <- PubChem %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_commelinids$tip.label), sort(PubChem_commelinids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_commelinids, PubChem_commelinids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result) 
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result) 
+```
+
+
+Magnoliids
+```{r}
+# Specify the tips to keep
+tips_to_keep <- c("Annona_sp","Bubbia_sp","Cananga_odorata","Cassytha_filiformis","Cinnamomum_verum",        "Eupomatia_laurina","Exospermum_stipitatum","Laurus_nobilis","Liriodendron_chinensis","Liriodendron_tulipifera", "Litsea_cubeba","Magnolia_acuminata","Magnolia_denudata","Magnolia_figo","Magnolia_grandiflora","Magnolia_obovata",       "Magnolia_salicifolia","Magnolia_tomentosa","Magnolia_tripetala","Magnolia_virginiana","Myristica_fragrans",      "Ocotea_meziana","Ocotea_sinuata","Ocotea_valeriana","Ocotea_veraguensis","Piper_auritum","Xylopia_sp",           "Zygogynum_baillonii","Zygogynum_bicolor","Zygogynum_pomiferum" )
+# Drop the specified tips
+tree_magnoliids <- keep.tip(tree, tips_to_keep)
+```
+
+EXT_structural classes
+```{r}
+selected_orders <- c("Magnoliales","Laurales","Piperales","Canellales")
+EXT_str_magnoliids <- EXT_str %>% filter(Order %in% selected_orders)
+unique(EXT_str_magnoliids$Taxa_Tips)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_magnoliids$tip.label), sort(EXT_str_magnoliids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_magnoliids, EXT_str_magnoliids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+EXT_biosynthetic classes
+```{r}
+selected_orders <- c("Magnoliales","Laurales","Piperales","Canellales")
+EXT_bio_magnoliids <- EXT_bio %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_magnoliids$tip.label), sort(EXT_bio_magnoliids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_magnoliids, EXT_bio_magnoliids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+SubCount classes
+```{r}
+selected_orders <- c("Magnoliales","Laurales","Piperales","Canellales")
+SubCount_magnoliids <- SubCount %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_magnoliids$tip.label), sort(SubCount_magnoliids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_magnoliids, SubCount_magnoliids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result) 
+```
+
+M6 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M6, permut = 1000)
+print(phylo_D_result) 
+```
+
+PubChem classes
+```{r}
+selected_orders <- c("Magnoliales","Laurales","Piperales","Canellales")
+PubChem_magnoliids <-PubChem %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_magnoliids$tip.label), sort(PubChem_magnoliids$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_magnoliids, PubChem_magnoliids, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+
+Myrtales
+```{r}
+# Specify the tips to keep
+tips_to_keep <- c("Backhousia_citriodora","Callistemon_citrinus","Callistemon_viminalis","Corymbia_citriodora",     "Eucalyptus_alba","Eucalyptus_camaldulensis","Eucalyptus_deglupta","Eucalyptus_globulus","Eucalyptus_propinqua",     "Eucalyptus_robusta","Eucalyptus_saligna","Eucalyptus_tereticornis","Eucalyptus_urophylla","Eugenia_uniflora",         "Lawsonia_inermis","Lumnitzera_racemosa","Melaleuca_sp","Myrtus_communis","Pemphis_acidula","Sonneratia_alba")
+# Drop the specified tips
+tree_myrtales <- keep.tip(tree, tips_to_keep)
+```
+
+EXT_structural classes
+```{r}
+selected_orders <- "Myrtales"
+EXT_str_myrtales <- EXT_str %>% filter(Order %in% selected_orders)
+unique(EXT_str_myrtales$Taxa_Tips)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_myrtales$tip.label), sort(EXT_str_myrtales$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_myrtales,EXT_str_myrtales, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+EXT_biosynthetic classes
+```{r}
+selected_orders <- "Myrtales"
+EXT_bio_myrtales <- EXT_bio %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_myrtales$tip.label), sort(EXT_bio_myrtales$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_myrtales, EXT_bio_myrtales, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+SubCount classes
+```{r}
+selected_orders <- "Myrtales"
+SubCount_myrtales <- SubCount %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_myrtales$tip.label), sort(SubCount_myrtales$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_myrtales, SubCount_myrtales, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)#Single state
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+M6 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M6, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+PubChem classes
+```{r}
+selected_orders <- "Myrtales"
+PubChem_myrtales <- PubChem %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_myrtales$tip.label), sort(PubChem_myrtales$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_myrtales, PubChem_myrtales, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result) 
+```
+
+
+Rosales
+```{r}
+# Specify the tips to keep
+tips_to_keep <- c("Ficus_aurata","Ficus_beccarii","Ficus_benjamina","Ficus_condensa","Ficus_crassiramea",     "Ficus_deltoidea","Ficus_fulva","Ficus_megaleia","Ficus_microcarpa","Ficus_obscura","Ficus_punctata","Ficus_stolonifera", "Malus_domestica","Prunus_armeniaca","Prunus_avium","Prunus_domestica","Prunus_padus","Prunus_persica","Rosa_chinensis",  "Rosa_gallica","Rosa_odorata_gigantea")
+# Drop the specified tips
+tree_rosales <- keep.tip(tree, tips_to_keep)
+```
+
+EXT_structural classes
+```{r}
+selected_orders <- "Rosales"
+EXT_str_rosales <- EXT_str %>% filter(Order %in% selected_orders)
+unique(EXT_str_rosales$Taxa_Tips)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_rosales$tip.label), sort(EXT_str_rosales$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_rosales, EXT_str_rosales, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+EXT_biosynthetic classes
+```{r}
+selected_orders <- "Rosales"
+EXT_bio_rosales <- EXT_bio %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_rosales$tip.label), sort(EXT_bio_rosales$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_rosales, EXT_bio_rosales, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+SubCount classes
+```{r}
+selected_orders <- "Rosales"
+SubCount_rosales <- SubCount %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_rosales$tip.label), sort(SubCount_rosales$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_rosales, SubCount_rosales, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result) 
+```
+
+M6 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M6, permut = 1000)
+print(phylo_D_result) 
+```
+
+PubChem classes
+```{r}
+selected_orders <- "Rosales"
+PubChem_rosales <- PubChem %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_rosales$tip.label), sort(PubChem_rosales$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_rosales, PubChem_rosales, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+
+Lamiales
+```{r}
+# Specify the tips to keep
+tips_to_keep <- c("Aloysia_citriodora","Aloysia_triphylla","Antirrhinum_majus","Avicennia_marina","Bartsia_alpinia",       "Caryopteris_sp","Clinopodium_vulgare","Dracocephalum_moldavica","Elsholtzia_blanda","Elsholtzia_ciliata",      "Elsholtzia_densa","Elsholtzia_fruticosa","Hyssopus_officinalis","Jasminum_sp","Lavandula_angustifolia",  "Ligustrum_japonicum","Lippia_alba","Marrubium_peregrinum","Marrubium_vulgare","Melissa_officinalis","Mentha_arvensis",  "Mentha_canadensis","Mentha_longifolia","Mentha_spicata","Monarda_citriodora","Monardo_didyma","Nepeta_cataria",          "Nyctanthes_arbortristis","Ocimum_americanum","Ocimum_basilicum","Olea_europaea","Origanum_vulgare","Parkia_biglobosa",   "Plantago_ovata","Pogostemon_cablin","Rosamarinus_officinalis","Salvia_fruticosa","Salvia_officinalis","Salvia_sclarea",  "Satureja_hortensis","Stachys_byzantina","Syringa_oblata","Thymus_pulegiodes","Thymus_vulgaris")
+# Drop the specified tips
+tree_lamiales <- keep.tip(tree, tips_to_keep)
+```
+
+EXT_structural classes
+```{r}
+selected_orders <- "Lamiales"
+EXT_str_lamiales <- EXT_str %>% filter(Order %in% selected_orders)
+unique(EXT_str_lamiales$Taxa_Tips)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_lamiales$tip.label), sort(EXT_str_lamiales$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_lamiales, EXT_str_lamiales, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+EXT_biosynthetic classes
+```{r}
+selected_orders <- "Lamiales"
+EXT_bio_lamiales <- EXT_bio %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_lamiales$tip.label), sort(EXT_bio_lamiales$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_lamiales, EXT_bio_lamiales, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+SubCount classes
+```{r}
+selected_orders <- "Lamiales"
+SubCount_lamiales <- SubCount %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_lamiales$tip.label), sort(SubCount_lamiales$Taxa_Tips))
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_lamiales, SubCount_lamiales, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result)
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result)
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result)
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result)
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result)
+```
+
+M6 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M6, permut = 1000)
+print(phylo_D_result)
+```
+
+PubChem classes
+```{r}
+selected_orders <- "Lamiales"
+PubChem_lamiales <- PubChem %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_lamiales$tip.label), sort(PubChem_lamiales$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_lamiales, PubChem_lamiales, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result) 
+```
+
+
+Asterales
+```{r}
+# Specify the tips to keep
+tips_to_keep <- c("Achillea_ageratum","Achillea_millefolium","Ageratum_conyzoides","Anaphalis_contorta",      "Arnica_montana","Artemisia_annua","Calendula_officinalis","Carduus_pycnocephalus","Centaurea_armena",        "Centaurea_depressa","Centratherum_punctatum","Chamaemelum_nobile","Chrysactinia_mexicana","Chrysanthemum_coronarium",   "Crassocephalum_crepidiodes","Leontopodium_alpinum","Matricaria_chamomilla","Matricara_recutita","Mikania_glomerata",    "Saussurea_costus","Tagetes_minuta","Tanacetum_parthenium")
+# Drop the specified tips
+tree_asterales <- keep.tip(tree, tips_to_keep)
+```
+
+EXT_structural classes
+```{r}
+selected_orders <- "Asterales"
+EXT_str_asterales <- EXT_str %>% filter(Order %in% selected_orders)
+unique(EXT_str_asterales$Taxa_Tips)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_asterales$tip.label), sort(EXT_str_asterales$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_asterales, EXT_str_asterales, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result) 
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result) 
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result) 
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result) 
+```
+
+EXT_biosynthetic classes
+```{r}
+selected_orders <- "Asterales"
+EXT_bio_asterales <- EXT_bio %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_asterales$tip.label), sort(EXT_bio_asterales$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_asterales, EXT_bio_asterales, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result) 
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result) 
+```
+
+SubCount classes
+```{r}
+selected_orders <- "Asterales"
+SubCount_asterales <- SubCount %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_asterales$tip.label), sort(SubCount_asterales$Taxa_Tips)) 
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_asterales, SubCount_asterales, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result)
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result) 
+```
+
+M3 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M3, permut = 1000)
+print(phylo_D_result) 
+```
+
+M4 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M4, permut = 1000)
+print(phylo_D_result) 
+```
+
+M5 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M5, permut = 1000)
+print(phylo_D_result) 
+```
+
+M6 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M6, permut = 1000)
+print(phylo_D_result) 
+```
+
+PubChem classes
+```{r}
+selected_orders <- "Asterales"
+PubChem_asterales <- PubChem %>% filter(Order %in% selected_orders)
+```
+
+Check if the matrix and tree tips match
+```{r}
+identical(sort(tree_asterales$tip.label), sort(PubChem_asterales$Taxa_Tips))
+```
+
+Calculation of D-stats
+```{r}
+physig <- comparative.data(tree_asterales, PubChem_asterales, names.col = "Taxa_Tips", vcv = TRUE, warn.dropped = TRUE)
+```
+
+M0 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M0, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+M1 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M1, permut = 1000)
+print(phylo_D_result) #Single state
+```
+
+M2 mapping
+```{r}
+set.seed(1234)
+phylo_D_result <- phylo.d(physig, binvar = M2, permut = 1000)
+print(phylo_D_result) 
+```
