@@ -1,0 +1,1460 @@
+Feature,Importance_permutation,Rank
+camphene,0.017985612,Order
+a-terpineol,0.016546763,Order
+terpinylacetate,0.013669065,Order
+germacrene D,0.010791367,Order
+b-Elemene,0.010791367,Order
+b-Caryophyllene oxide,0.010071942,Order
+4-terpineol,0.010071942,Order
+"E,E-farnesol",0.010071942,Order
+elemicin,0.008633094,Order
+methyl eugenol,0.008633094,Order
+copaene,0.007913669,Order
+d-cadinene,0.007913669,Order
+cis-jasmin lactone,0.007913669,Order
+ExtFP293,0.007913669,Order
+Artemisia ketone,0.007913669,Order
+ExtFP602,0.007194245,Order
+E-b-damascenone,0.007194245,Order
+ExtFP355,0.007194245,Order
+humulene epoxide II,0.007194245,Order
+Sylvestrene,0.007194245,Order
+ExtFP326,0.007194245,Order
+DL-Linalool,0.00647482,Order
+cis-p-menth-2-en-1-ol,0.00647482,Order
+Pentadecane,0.00647482,Order
+germacrene B,0.00647482,Order
+E-methyl isoeugenol,0.00647482,Order
+Pinene,0.00647482,Order
+benzyl tiglate,0.00647482,Order
+a-phellandrene,0.005755396,Order
+isobornyl acetate,0.005755396,Order
+b-ocimene,0.005755396,Order
+Sabinene,0.005035971,Order
+ExtFP391,0.005035971,Order
+ExtFP95,0.005035971,Order
+ExtFP194,0.004316547,Order
+ExtFP223,0.004316547,Order
+a-muurolene,0.004316547,Order
+Octen-3-ol,0.004316547,Order
+E-caryophyllene,0.003597122,Order
+ExtFP119,0.003597122,Order
+methyl benzoate,0.003597122,Order
+ExtFP232,0.003597122,Order
+a-cadinol,0.003597122,Order
+ExtFP447,0.003597122,Order
+a-humulene,0.003597122,Order
+ExtFP920,0.003597122,Order
+ExtFP880,0.003597122,Order
+ExtFP335,0.003597122,Order
+ExtFP459,0.003597122,Order
+ExtFP747,0.003597122,Order
+ExtFP422,0.002877698,Order
+ExtFP108,0.002877698,Order
+ExtFP138,0.002877698,Order
+Limonene,0.002877698,Order
+ExtFP903,0.002877698,Order
+ExtFP545,0.002877698,Order
+ExtFP179,0.002158273,Order
+ExtFP171,0.002158273,Order
+ExtFP468,0.002158273,Order
+ExtFP13,0.002158273,Order
+ExtFP104,0.002158273,Order
+g-muurolene,0.002158273,Order
+ExtFP269,0.002158273,Order
+ExtFP17,0.002158273,Order
+ExtFP412,0.002158273,Order
+ExtFP430,0.002158273,Order
+ExtFP151,0.002158273,Order
+ExtFP702,0.002158273,Order
+ExtFP347,0.002158273,Order
+ExtFP785,0.002158273,Order
+ExtFP893,0.002158273,Order
+E-geraniol,0.002158273,Order
+E-Isoeugenol,0.002158273,Order
+Z-b-ocimene,0.002158273,Order
+E-anethole,0.001438849,Order
+ExtFP181,0.001438849,Order
+4-methyl anisole,0.001438849,Order
+ExtFP606,0.001438849,Order
+ExtFP587,0.001438849,Order
+ExtFP782,0.001438849,Order
+ExtFP736,0.001438849,Order
+ExtFP870,0.001438849,Order
+6-Methylhept-5-en-2-one,0.001438849,Order
+ExtFP258,0.001438849,Order
+methyl hexadecanoate,0.001438849,Order
+Benzyl nitrile,0.001438849,Order
+ExtFP321,0.001438849,Order
+ExtFP127,0.001438849,Order
+salvial-4(14)en-1-one,0.001438849,Order
+bornyl acetate,0.001438849,Order
+citronellal,0.001438849,Order
+a-curcumene,0.001438849,Order
+b-bisabolene,0.001438849,Order
+a-terpinene,0.001438849,Order
+trans-limonene epoxide,0.001438849,Order
+ExtFP649,0.001438849,Order
+ExtFP616,0.001438849,Order
+ExtFP394,0.001438849,Order
+a-cubebene,0.001438849,Order
+"2,3-dehydro-1,8-cineole",0.001438849,Order
+Citronellol,0.001438849,Order
+g- Cadinene,0.000719424,Order
+ExtFP410,0.000719424,Order
+"1,8-cineole",0.000719424,Order
+"1,10-di-epi-cubenol",0.000719424,Order
+ExtFP409,0.000719424,Order
+bulnesol,0.000719424,Order
+phenylacetaldehyde,0.000719424,Order
+Myrtenol,0.000719424,Order
+myrtenyl acetate,0.000719424,Order
+hexadecane,0.000719424,Order
+n-Decanal,0.000719424,Order
+Germacrene A,0.000719424,Order
+g-gurjunene,0.000719424,Order
+ethyl hexanoate,0.000719424,Order
+Ethyl myristate,0.000719424,Order
+germacrene D-4-ol,0.000719424,Order
+Artemisia alcohol,0.000719424,Order
+cubebol,0.000719424,Order
+epi-bicyclosesquiphellandrene,0.000719424,Order
+E-rose oxide,0.000719424,Order
+E-citral,0.000719424,Order
+octanoic acid,0.000719424,Order
+benzyl benzoate,0.000719424,Order
+D-Selinene,0.000719424,Order
+dihydrocarvone,0.000719424,Order
+d-elemene,0.000719424,Order
+E-nerolidol,0.000719424,Order
+epi-a-cadinol,0.000719424,Order
+D-Limonene,0.000719424,Order
+Cinnamyl alcohol,0.000719424,Order
+E-b-farnesene,0.000719424,Order
+ExtFP30,0.000719424,Order
+Z-rose oxide,0.000719424,Order
+Menthol,0.000719424,Order
+Methyl 2-methylbutanoate,0.000719424,Order
+kaurene,0.000719424,Order
+Styrene,0.000719424,Order
+calamenene,0.000719424,Order
+hexanal,0.000719424,Order
+toluene,0.000719424,Order
+Methyl geranate,0.000719424,Order
+b-sesquiphellandrene,0.000719424,Order
+cyclosativene,0.000719424,Order
+o-cymene,0.000719424,Order
+ExtFP728,0.000719424,Order
+3-carene,0.000719424,Order
+2-phenylethyl acetate,0.000719424,Order
+a-fenchol,0,Order
+a-bisabolol,0,Order
+ExtFP544,0,Order
+a-muurolol,0,Order
+apiole,0,Order
+ar-curcumene,0,Order
+a-himachalene,0,Order
+ExtFP374,0,Order
+2-heptanol,0,Order
+2-heptanone,0,Order
+2-hexanone,0,Order
+2-methyl decane,0,Order
+2-methyl octane,0,Order
+2-pentylfuran,0,Order
+2-phenethyl benzoate,0,Order
+2-phenyl ethanol,0,Order
+2-tridecanone,0,Order
+2-undecanone,0,Order
+a-bergamotene,0,Order
+3-hexanone,0,Order
+3-methyl nonane,0,Order
+3-Methylbutyl 3-methylbutanoate,0,Order
+3-octanol,0,Order
+3-octanone,0,Order
+ExtFP753,0,Order
+ExtFP454,0,Order
+ExtFP472,0,Order
+ExtFP482,0,Order
+ExtFP705,0,Order
+p-Cymen-8-ol,0,Order
+ExtFP886,0,Order
+ExtFP914,0,Order
+Pentadecene,0,Order
+pentanal,0,Order
+Octanol,0,Order
+o-guaiacol,0,Order
+Oleic acid,0,Order
+o-Xylene,0,Order
+2-methyl dodecane,0,Order
+E-2-heptenal,0,Order
+E-2-hexene-1-ol,0,Order
+E-2-Hexenal,0,Order
+E-2-octen-1-al,0,Order
+E-3-hexen-1-ol,0,Order
+ExtFP98,0,Order
+ExtFP25,0,Order
+ExtFP45,0,Order
+ExtFP66,0,Order
+E-b-damascone,0,Order
+E-b-ocimene epoxide,0,Order
+ExtFP82,0,Order
+ExtFP86,0,Order
+E-linalool oxide (furanoid),0,Order
+E-linalool oxide (pyranoid),0,Order
+E-b-terpineol,0,Order
+E-cinnamic alcohol,0,Order
+trans-alpha bergamotene,0,Order
+epi-a-cubenol,0,Order
+epi- a-Muurolol,0,Order
+E-Geranyl acetone,0,Order
+eicosane,0,Order
+E-sabinene hydrate,0,Order
+Estragole,0,Order
+Ethyl 2-methylbutanoate,0,Order
+Isoborneol,0,Order
+Isobutanol,0,Order
+Isocaryophyllene,0,Order
+g-butyrolactone,0,Order
+Ethyl 3-methylbutanoate,0,Order
+ethyl acetate,0,Order
+Ethyl hexadecanoate,0,Order
+Ethylbenzene,0,Order
+g-himachalene,0,Order
+Fenchol,0,Order
+furfural,0,Order
+ExtFP21,0,Order
+cis-citral,0,Order
+Z-jasmone,0,Order
+Z-Linalool oxide (furanoid),0,Order
+Z-3-Hexenyl butyrate,0,Order
+Z-3-hexenyl isovalerate,0,Order
+cis-a-bergamotene,0,Order
+"Z,E-a-farnesene",0,Order
+"Z,E-farnesol",0,Order
+"Z,Z-9,12-octadecadienoic acid",0,Order
+"Z,Z-farnesol",0,Order
+g-terpinene,0,Order
+heneicosane,0,Order
+Heptacosane,0,Order
+heptadecane,0,Order
+Heptane,0,Order
+Z-3-Hexenol,0,Order
+Z-3-hexenyl benzoate,0,Order
+Indole,0,Order
+Heptanol,0,Order
+hexadecanal,0,Order
+hexadecanoic acid,0,Order
+Hexadecanol,0,Order
+Hexan-2-ol,0,Order
+Isomenthol,0,Order
+Cadinene,0,Order
+Butanoic acid,0,Order
+decanol,0,Order
+dihydro carveole,0,Order
+Dihydro-b-ionone,0,Order
+E-Phytol,0,Order
+docosane,0,Order
+dodecanal,0,Order
+Dodecane,0,Order
+Cyperene,0,Order
+decanoic acid,0,Order
+dodecanoic acid,0,Order
+Dodecanol,0,Order
+"E,E-a-farnesol",0,Order
+"E,E-farnesyl acetate",0,Order
+dimethyl disulfide,0,Order
+ExtFP137,0,Order
+isomenthone,0,Order
+Isopentanal,0,Order
+Hexan-3-ol,0,Order
+Hexanoic acid,0,Order
+Hexyl acetate,0,Order
+Hexyl butyrate,0,Order
+Linalool oxide (furanoid) 1,0,Order
+menthone,0,Order
+menthyl acetate,0,Order
+Isoprene,0,Order
+Lavandulol,0,Order
+Methyl octanoate,0,Order
+methyl salicylate,0,Order
+Methyl butanoate,0,Order
+methyl carvacrol,0,Order
+methyl decanoate,0,Order
+Methyl dodecanoate,0,Order
+thymol methyl ether,0,Order
+Torreyol,0,Order
+methyl guaiacol,0,Order
+Methyl jasmonate,0,Order
+Methyl linoleate,0,Order
+Methyl linolenate,0,Order
+tricosane,0,Order
+a-calacorene,0,Order
+a-cedrene,0,Order
+acetic acid,0,Order
+Acetoin,0,Order
+Benzyl isovalerate,0,Order
+benzyl salicylate,0,Order
+ExtFP252,0,Order
+ExtFP260,0,Order
+ExtFP282,0,Order
+Butanol,0,Order
+butyl acetate,0,Order
+"Cadina-1,3,5-triene",0,Order
+"Cadina-3,9-diene",0,Order
+Tricyclene,0,Order
+tridecane,0,Order
+undecanal,0,Order
+Vanillin,0,Order
+Verbenene,0,Order
+tetradecanal,0,Order
+Tetradecanol,0,Order
+Spathulenol,0,Order
+Tetracosane,0,Order
+phenol,0,Order
+neomenthol,0,Order
+Methyl stearate,0,Order
+methyl thymol,0,Order
+Muurolol,0,Order
+m-Xylene,0,Order
+Myristic acid,0,Order
+myristicin,0,Order
+Nonadecane,0,Order
+Nonadecene,0,Order
+myrtenal,0,Order
+naphthalene,0,Order
+n-decane,0,Order
+Lilac alcohol A,0,Order
+ExtFP621,0,Order
+ExtFP644,0,Order
+ExtFP674,0,Order
+a-Selenine,0,Order
+cuminol,0,Order
+Cuminal,0,Order
+a-Ylangene,0,Order
+b-Bisabolol,0,Order
+b-bourbonene,0,Order
+b-calacorene,0,Order
+b-cedrene,0,Order
+b-eudesmol,0,Order
+b-gurjunene,0,Order
+benzoic acid,0,Order
+a-thujone,0,Order
+nonanoic acid,0,Order
+Nonanol,0,Order
+Octadecanal,0,Order
+Octane,0,Order
+n-Hexane,0,Order
+Alloaromadendrene,0,Order
+Acetone,0,Order
+a-Elemol,0,Order
+ExtFP375,0,Order
+5-methylfurfural,0,Order
+piperitone,0,Order
+p-cymenene,0,Order
+pentacosane,0,Order
+Pentadecanal,0,Order
+a-bulnesene,0,Order
+pentadecanoic acid,0,Order
+ExtFP963,0,Order
+"1,2,3-trimethylbenzene",0,Order
+ExtFP937,0,Order
+12-methyl-tridecanol,0,Order
+"2,3-butanediol",0,Order
+2-butanol,0,Order
+2-dodecenol,0,Order
+2-ethyl-1-hexanol,0,Order
+b-pinene,-0.000719424,Order
+Methyl anthranilate,-0.000719424,Order
+Methyl epi-jasmonate,-0.000719424,Order
+Methyl ethyl ketone,-0.000719424,Order
+Methyl myristate,-0.000719424,Order
+undecane,-0.000719424,Order
+valencene,-0.000719424,Order
+Verbenone,-0.000719424,Order
+Viridiflorene,-0.000719424,Order
+"Z,E-a-bergamotol",-0.000719424,Order
+Z-3-Hexenyl acetate,-0.000719424,Order
+guaiol,-0.000719424,Order
+heptanal,-0.000719424,Order
+Isobutyl acetate,-0.000719424,Order
+trans-pinocarveol,-0.000719424,Order
+ExtFP755,-0.000719424,Order
+anisaldehyde,-0.000719424,Order
+allo-ocimene,-0.000719424,Order
+"6,10,14-trimethyl -2-pentadecanone",-0.000719424,Order
+"4,8-dimethyl-1,3,7-nonatriene",-0.000719424,Order
+2-methyl-3-buten-2-ol,-0.000719424,Order
+ExtFP1010,-0.000719424,Order
+ExtFP713,-0.000719424,Order
+ethanol,-0.000719424,Order
+a-amorphene,-0.000719424,Order
+6-methyl-5- hepten-2-one,-0.000719424,Order
+"1,4-dimethoxybenzene",-0.000719424,Order
+cryptone,-0.000719424,Order
+"cadina-1 ,4-diene",-0.000719424,Order
+b-thujone,-0.000719424,Order
+Fenchone,-0.000719424,Order
+Ethyl benzoate,-0.000719424,Order
+a-campholenal,-0.000719424,Order
+ExtFP639,-0.000719424,Order
+trans-nerolidol,-0.000719424,Order
+d-3-Carene,-0.000719424,Order
+dillapiole,-0.000719424,Order
+d-terpineol,-0.000719424,Order
+"E,Z-farnesol",-0.000719424,Order
+E-2-decenal,-0.000719424,Order
+ExtFP889,-0.000719424,Order
+a-p-Dimethyl styrene,-0.000719424,Order
+Acetophenone,-0.000719424,Order
+a-eudesmol,-0.000719424,Order
+a-guaiene,-0.000719424,Order
+pulegone,-0.000719424,Order
+Nitro-2-phenylethane,-0.000719424,Order
+nonanaI,-0.000719424,Order
+Linalool oxide (furanoid),-0.000719424,Order
+b-Selenine,-0.000719424,Order
+ExtFP118,-0.000719424,Order
+trans-carveol,-0.000719424,Order
+E-cinnamyl acetate,-0.000719424,Order
+E-methyl cinnamate,-0.000719424,Order
+Octadecane,-0.000719424,Order
+Isopentyl acetate,-0.000719424,Order
+aromadendrene,-0.000719424,Order
+b-copaene,-0.000719424,Order
+g-eudesmol,-0.000719424,Order
+cis-dihydrocarvone,-0.000719424,Order
+cis-pinocamphone,-0.000719424,Order
+cis-sabinene hydrate,-0.000719424,Order
+ExtFP15,-0.000719424,Order
+ledol,-0.000719424,Order
+Nonane,-0.000719424,Order
+ExtFP460,-0.000719424,Order
+camphor,-0.000719424,Order
+b-cubebene,-0.000719424,Order
+ExtFP336,-0.001438849,Order
+ExtFP474,-0.001438849,Order
+g-elemene,-0.001438849,Order
+Carvone,-0.001438849,Order
+a-Longipinene,-0.001438849,Order
+Hexanol,-0.001438849,Order
+trans-p-menth-2-en-1-ol,-0.001438849,Order
+Viridiflorol,-0.001438849,Order
+Z-b-Farnesene,-0.001438849,Order
+Tetradecane,-0.001438849,Order
+T-muurolol,-0.001438849,Order
+cis-carveol,-0.001438849,Order
+cubenol,-0.001438849,Order
+ExtFP74,-0.001438849,Order
+isopulegol,-0.001438849,Order
+b-chamigrene,-0.001438849,Order
+benzaldehyde,-0.001438849,Order
+ExtFP174,-0.001438849,Order
+ExtFP239,-0.001438849,Order
+E-cinnamaldehyde,-0.001438849,Order
+a-gurjunene,-0.001438849,Order
+Phenylethyl acohol,-0.001438849,Order
+pinocarvone,-0.001438849,Order
+octacosane,-0.001438849,Order
+ExtFP803,-0.001438849,Order
+perillene,-0.001438849,Order
+a-fenchyl acetate,-0.001438849,Order
+ExtFP425,-0.001438849,Order
+ExtFP435,-0.001438849,Order
+b-patchoulene,-0.001438849,Order
+p-cymene,-0.001438849,Order
+linalyl acetate,-0.001438849,Order
+ExtFP267,-0.002158273,Order
+ExtFP295,-0.002158273,Order
+octanal,-0.002158273,Order
+ExtFP862,-0.002158273,Order
+ExtFP372,-0.002158273,Order
+ExtFP1011,-0.002158273,Order
+ExtFP584,-0.002158273,Order
+a-thujene,-0.002158273,Order
+ExtFP268,-0.002877698,Order
+ExtFP117,-0.002877698,Order
+ExtFP883,-0.002877698,Order
+ExtFP591,-0.002877698,Order
+ExtFP389,-0.002877698,Order
+ExtFP331,-0.003597122,Order
+ExtFP624,-0.003597122,Order
+ExtFP12,-0.003597122,Order
+E-b-ionone,-0.004316547,Order
+ExtFP52,-0.004316547,Order
+ExtFP62,-0.004316547,Order
+ExtFP307,-0.004316547,Order
+ExtFP805,-0.004316547,Order
+ExtFP501,-0.004316547,Order
+Globulol,-0.004316547,Order
+a-pinene,-0.004316547,Order
+a-terpinolene,-0.004316547,Order
+Borneol,-0.005035971,Order
+ExtFP24,-0.005035971,Order
+ExtFP634,-0.005035971,Order
+ExtFP147,-0.005035971,Order
+ExtFP76,-0.005035971,Order
+ExtFP69,-0.005035971,Order
+Benzyl acetate,-0.005035971,Order
+Nerol,-0.005035971,Order
+"E,E-a-farnesene",-0.005755396,Order
+ExtFP329,-0.005755396,Order
+Myrcene,-0.005755396,Order
+bicyclogermacrene,-0.005755396,Order
+E-b-ocimene,-0.005755396,Order
+ExtFP746,-0.00647482,Order
+Eugenol,-0.00647482,Order
+"E-4,8-Dimethyl-1,3,7-nonatriene",-0.00647482,Order
+ExtFP114,-0.00647482,Order
+Isoamyl alcohol,-0.00647482,Order
+neryl acetate,-0.00647482,Order
+Epi-cubenol,-0.00647482,Order
+ExtFP165,-0.00647482,Order
+Geranyl acetate,-0.00647482,Order
+Neral,-0.00647482,Order
+Citronellyl acetate,-0.00647482,Order
+geranyl acetone,-0.007194245,Order
+6-methyl-5- hepten-2-ol,-0.007194245,Order
+a-Ionene,-0.007194245,Order
+Hexacosane,-0.007194245,Order
+p-cresol,-0.007913669,Order
+Benzyl alcohol,-0.007913669,Order
+b-phellandrene,-0.008633094,Order
+Thymol,-0.014388489,Order
+Carvacrol,-0.015107914,Order
+camphene,0.023741007,Family
+terpinylacetate,0.020863309,Family
+b-Caryophyllene oxide,0.01942446,Family
+methyl eugenol,0.017985612,Family
+camphor,0.017985612,Family
+myristicin,0.014388489,Family
+E-caryophyllene,0.014388489,Family
+Thymol,0.01294964,Family
+isobornyl acetate,0.01294964,Family
+germacrene D,0.011510791,Family
+ExtFP602,0.011510791,Family
+Z-b-ocimene,0.011510791,Family
+E-sabinene hydrate,0.010791367,Family
+Z-b-Farnesene,0.010071942,Family
+a-thujene,0.009352518,Family
+Artemisia ketone,0.009352518,Family
+cis-jasmin lactone,0.009352518,Family
+ExtFP295,0.008633094,Family
+octanal,0.008633094,Family
+E-geraniol,0.008633094,Family
+a-humulene,0.008633094,Family
+"E,E-farnesol",0.008633094,Family
+citronellal,0.007913669,Family
+g- Cadinene,0.007913669,Family
+methyl hexadecanoate,0.007913669,Family
+E-linalool oxide (furanoid),0.007913669,Family
+a-cedrene,0.007913669,Family
+Sabinene,0.007194245,Family
+E-nerolidol,0.007194245,Family
+E-anethole,0.007194245,Family
+a-cubebene,0.007194245,Family
+d-cadinene,0.007194245,Family
+Tricyclene,0.007194245,Family
+b-gurjunene,0.007194245,Family
+ExtFP137,0.007194245,Family
+"Z,E-a-farnesene",0.007194245,Family
+p-Cymen-8-ol,0.007194245,Family
+heptanal,0.007194245,Family
+d-elemene,0.007194245,Family
+pentadecanoic acid,0.007194245,Family
+"2,3-dehydro-1,8-cineole",0.007194245,Family
+cis-p-menth-2-en-1-ol,0.007194245,Family
+2-butanol,0.007194245,Family
+Isoprene,0.007194245,Family
+ethyl acetate,0.007194245,Family
+Ethyl myristate,0.007194245,Family
+Heptane,0.007194245,Family
+"cadina-1 ,4-diene",0.007194245,Family
+"1,10-di-epi-cubenol",0.007194245,Family
+a-fenchol,0.007194245,Family
+Octane,0.007194245,Family
+elemicin,0.007194245,Family
+Borneol,0.00647482,Family
+Carvone,0.00647482,Family
+Octen-3-ol,0.00647482,Family
+ExtFP391,0.00647482,Family
+ExtFP329,0.00647482,Family
+2-ethyl-1-hexanol,0.00647482,Family
+ExtFP785,0.00647482,Family
+ExtFP702,0.00647482,Family
+ExtFP336,0.00647482,Family
+b-ocimene,0.00647482,Family
+Pinene,0.00647482,Family
+ExtFP45,0.00647482,Family
+benzaldehyde,0.00647482,Family
+ExtFP634,0.00647482,Family
+ExtFP454,0.00647482,Family
+ExtFP389,0.00647482,Family
+ExtFP326,0.005755396,Family
+ExtFP591,0.005755396,Family
+ExtFP805,0.005755396,Family
+ExtFP893,0.005755396,Family
+ExtFP293,0.005755396,Family
+ExtFP232,0.005755396,Family
+ExtFP165,0.005755396,Family
+E-b-ocimene,0.005755396,Family
+ExtFP474,0.005755396,Family
+bicyclogermacrene,0.005755396,Family
+ExtFP472,0.005755396,Family
+ExtFP409,0.005755396,Family
+ExtFP755,0.005755396,Family
+b-Elemene,0.005035971,Family
+b-patchoulene,0.005035971,Family
+undecane,0.005035971,Family
+ExtFP736,0.005035971,Family
+Citronellol,0.005035971,Family
+ExtFP1011,0.005035971,Family
+ExtFP331,0.005035971,Family
+ExtFP963,0.005035971,Family
+ExtFP268,0.005035971,Family
+ExtFP886,0.005035971,Family
+ExtFP753,0.005035971,Family
+4-terpineol,0.005035971,Family
+ExtFP252,0.005035971,Family
+ExtFP410,0.005035971,Family
+ExtFP174,0.005035971,Family
+ExtFP460,0.005035971,Family
+ExtFP430,0.005035971,Family
+ExtFP269,0.005035971,Family
+ExtFP914,0.005035971,Family
+linalyl acetate,0.005035971,Family
+ExtFP674,0.005035971,Family
+Globulol,0.005035971,Family
+ExtFP66,0.005035971,Family
+ExtFP584,0.005035971,Family
+ExtFP545,0.005035971,Family
+ExtFP587,0.004316547,Family
+ExtFP920,0.004316547,Family
+a-guaiene,0.004316547,Family
+a-cadinol,0.004316547,Family
+ExtFP713,0.004316547,Family
+ExtFP114,0.004316547,Family
+ExtFP74,0.004316547,Family
+ExtFP12,0.004316547,Family
+ExtFP181,0.004316547,Family
+ExtFP544,0.004316547,Family
+ExtFP639,0.004316547,Family
+Myrcene,0.003597122,Family
+ExtFP147,0.003597122,Family
+ExtFP728,0.003597122,Family
+ExtFP267,0.003597122,Family
+ExtFP258,0.003597122,Family
+ExtFP21,0.003597122,Family
+ExtFP782,0.003597122,Family
+ExtFP447,0.003597122,Family
+ExtFP119,0.003597122,Family
+ExtFP223,0.003597122,Family
+ExtFP621,0.003597122,Family
+ExtFP425,0.003597122,Family
+"Z,E-farnesol",0.003597122,Family
+ExtFP104,0.003597122,Family
+ExtFP108,0.003597122,Family
+nonanaI,0.003597122,Family
+ExtFP880,0.003597122,Family
+6-methyl-5- hepten-2-one,0.002877698,Family
+menthone,0.002877698,Family
+copaene,0.002877698,Family
+ExtFP15,0.002877698,Family
+ExtFP117,0.002877698,Family
+ExtFP649,0.002877698,Family
+ExtFP394,0.002877698,Family
+p-cymene,0.002877698,Family
+Geranyl acetate,0.002877698,Family
+ExtFP86,0.002877698,Family
+ExtFP705,0.002877698,Family
+b-eudesmol,0.002877698,Family
+Z-Linalool oxide (furanoid),0.002877698,Family
+Octadecane,0.002158273,Family
+2-phenyl ethanol,0.002158273,Family
+a-terpinolene,0.002158273,Family
+bulnesol,0.002158273,Family
+hexadecanoic acid,0.002158273,Family
+ExtFP194,0.002158273,Family
+ExtFP372,0.002158273,Family
+Isomenthol,0.002158273,Family
+ExtFP282,0.002158273,Family
+ExtFP69,0.002158273,Family
+ExtFP616,0.002158273,Family
+ExtFP335,0.002158273,Family
+ExtFP883,0.002158273,Family
+a-bisabolol,0.002158273,Family
+Benzyl alcohol,0.002158273,Family
+2-methyl-3-buten-2-ol,0.002158273,Family
+ExtFP803,0.002158273,Family
+ExtFP179,0.002158273,Family
+Methyl jasmonate,0.002158273,Family
+methyl thymol,0.001438849,Family
+undecanal,0.001438849,Family
+guaiol,0.001438849,Family
+heptadecane,0.001438849,Family
+Heptanol,0.001438849,Family
+hexadecane,0.001438849,Family
+d-terpineol,0.001438849,Family
+"E,Z-farnesol",0.001438849,Family
+ExtFP321,0.001438849,Family
+ExtFP307,0.001438849,Family
+E-2-hexene-1-ol,0.001438849,Family
+b-phellandrene,0.001438849,Family
+E-b-damascone,0.001438849,Family
+ExtFP260,0.001438849,Family
+ExtFP937,0.001438849,Family
+E-b-farnesene,0.001438849,Family
+Phenylethyl acohol,0.001438849,Family
+ExtFP747,0.001438849,Family
+trans-alpha bergamotene,0.001438849,Family
+ExtFP239,0.001438849,Family
+ExtFP422,0.001438849,Family
+E-b-terpineol,0.001438849,Family
+ExtFP482,0.001438849,Family
+b-thujone,0.001438849,Family
+acetic acid,0.001438849,Family
+a-muurolene,0.001438849,Family
+a-eudesmol,0.001438849,Family
+epi-a-cadinol,0.001438849,Family
+epi-bicyclosesquiphellandrene,0.001438849,Family
+trans-pinocarveol,0.001438849,Family
+benzyl benzoate,0.001438849,Family
+ExtFP13,0.001438849,Family
+ExtFP118,0.001438849,Family
+eicosane,0.001438849,Family
+Dihydro-b-ionone,0.001438849,Family
+Z-3-Hexenol,0.001438849,Family
+ExtFP501,0.001438849,Family
+ExtFP24,0.001438849,Family
+Z-3-Hexenyl acetate,0.001438849,Family
+p-cymenene,0.001438849,Family
+Z-3-hexenyl isovalerate,0.001438849,Family
+trans-p-menth-2-en-1-ol,0.001438849,Family
+ethanol,0.001438849,Family
+Citronellyl acetate,0.001438849,Family
+calamenene,0.001438849,Family
+Methyl anthranilate,0.001438849,Family
+a-Selenine,0.001438849,Family
+Hexanol,0.001438849,Family
+ExtFP138,0.001438849,Family
+T-muurolol,0.001438849,Family
+E-Phytol,0.000719424,Family
+epi-a-cubenol,0.000719424,Family
+epi- a-Muurolol,0.000719424,Family
+E-Isoeugenol,0.000719424,Family
+a-Elemol,0.000719424,Family
+Methyl myristate,0.000719424,Family
+Methyl stearate,0.000719424,Family
+3-hexanone,0.000719424,Family
+germacrene B,0.000719424,Family
+b-pinene,0.000719424,Family
+ExtFP82,0.000719424,Family
+ExtFP151,0.000719424,Family
+Styrene,0.000719424,Family
+Sylvestrene,0.000719424,Family
+ExtFP127,0.000719424,Family
+"Cadina-3,9-diene",0.000719424,Family
+g-gurjunene,0.000719424,Family
+g-himachalene,0.000719424,Family
+g-muurolene,0.000719424,Family
+E-b-ocimene epoxide,0.000719424,Family
+Dodecane,0.000719424,Family
+D-Selinene,0.000719424,Family
+"E,E-a-farnesol",0.000719424,Family
+Indole,0.000719424,Family
+Isoamyl alcohol,0.000719424,Family
+Isoborneol,0.000719424,Family
+isomenthone,0.000719424,Family
+Linalool oxide (furanoid) 1,0.000719424,Family
+Cuminal,0.000719424,Family
+a-thujone,0.000719424,Family
+Benzyl nitrile,0.000719424,Family
+b-bisabolene,0.000719424,Family
+b-Bisabolol,0.000719424,Family
+dodecanal,0.000719424,Family
+Menthol,0.000719424,Family
+menthyl acetate,0.000719424,Family
+Methyl dodecanoate,0.000719424,Family
+Methyl epi-jasmonate,0.000719424,Family
+Methyl geranate,0.000719424,Family
+germacrene D-4-ol,0.000719424,Family
+Ethyl hexadecanoate,0.000719424,Family
+cis-a-bergamotene,0.000719424,Family
+perillene,0.000719424,Family
+Oleic acid,0.000719424,Family
+pentacosane,0.000719424,Family
+ExtFP17,0.000719424,Family
+Artemisia alcohol,0.000719424,Family
+decanoic acid,0.000719424,Family
+Z-jasmone,0.000719424,Family
+bornyl acetate,0.000719424,Family
+b-cubebene,0.000719424,Family
+benzoic acid,0.000719424,Family
+Benzyl acetate,0.000719424,Family
+benzyl salicylate,0.000719424,Family
+benzyl tiglate,0.000719424,Family
+E-methyl cinnamate,0.000719424,Family
+3-octanol,0.000719424,Family
+ExtFP95,0.000719424,Family
+valencene,0.000719424,Family
+Verbenone,0.000719424,Family
+E-citral,0.000719424,Family
+cis-sabinene hydrate,0.000719424,Family
+6-methyl-5- hepten-2-ol,0.000719424,Family
+"1,4-dimethoxybenzene",0.000719424,Family
+ExtFP1010,0.000719424,Family
+2-heptanone,0.000719424,Family
+n-Decanal,0.000719424,Family
+Nerol,0.000719424,Family
+Myristic acid,0.000719424,Family
+3-octanone,0.000719424,Family
+"4,8-dimethyl-1,3,7-nonatriene",0.000719424,Family
+2-hexanone,0.000719424,Family
+"1,2,3-trimethylbenzene",0,Family
+ExtFP459,0,Family
+ExtFP468,0,Family
+ExtFP412,0,Family
+ExtFP435,0,Family
+Acetophenone,0,Family
+Benzyl isovalerate,0,Family
+ExtFP30,0,Family
+cis-dihydrocarvone,0,Family
+Z-rose oxide,0,Family
+ExtFP889,0,Family
+ExtFP903,0,Family
+2-dodecenol,0,Family
+6-Methylhept-5-en-2-one,0,Family
+a-bergamotene,0,Family
+a-bulnesene,0,Family
+3-methyl nonane,0,Family
+3-Methylbutyl 3-methylbutanoate,0,Family
+5-methylfurfural,0,Family
+2-pentylfuran,0,Family
+2-phenethyl benzoate,0,Family
+2-phenylethyl acetate,0,Family
+2-tridecanone,0,Family
+2-undecanone,0,Family
+ExtFP606,0,Family
+Octanol,0,Family
+n-Hexane,0,Family
+Nitro-2-phenylethane,0,Family
+Nonadecane,0,Family
+Nonadecene,0,Family
+Nonane,0,Family
+naphthalene,0,Family
+n-decane,0,Family
+neomenthol,0,Family
+neryl acetate,0,Family
+Muurolol,0,Family
+m-Xylene,0,Family
+ExtFP347,0,Family
+Methyl linoleate,0,Family
+Methyl linolenate,0,Family
+Methyl octanoate,0,Family
+methyl carvacrol,0,Family
+methyl decanoate,0,Family
+Methyl ethyl ketone,0,Family
+methyl guaiacol,0,Family
+Methyl 2-methylbutanoate,0,Family
+Methyl butanoate,0,Family
+isopulegol,0,Family
+Lavandulol,0,Family
+ledol,0,Family
+Linalool oxide (furanoid),0,Family
+Octadecanal,0,Family
+octanoic acid,0,Family
+Ethyl 3-methylbutanoate,0,Family
+Isobutanol,0,Family
+Isobutyl acetate,0,Family
+Isocaryophyllene,0,Family
+Isopentanal,0,Family
+Isopentyl acetate,0,Family
+Hexanoic acid,0,Family
+Hexyl acetate,0,Family
+humulene epoxide II,0,Family
+hexadecanal,0,Family
+Hexadecanol,0,Family
+Hexan-2-ol,0,Family
+Hexan-3-ol,0,Family
+heneicosane,0,Family
+Heptacosane,0,Family
+Hexacosane,0,Family
+ExtFP171,0,Family
+salvial-4(14)en-1-one,0,Family
+Tetracosane,0,Family
+tetradecanal,0,Family
+Tetradecane,0,Family
+pinocarvone,0,Family
+piperitone,0,Family
+trans-carveol,0,Family
+g-eudesmol,0,Family
+furfural,0,Family
+g-butyrolactone,0,Family
+g-elemene,0,Family
+Germacrene A,0,Family
+Ethyl benzoate,0,Family
+ethyl hexanoate,0,Family
+Ethylbenzene,0,Family
+Fenchol,0,Family
+E-rose oxide,0,Family
+Estragole,0,Family
+Ethyl 2-methylbutanoate,0,Family
+pulegone,0,Family
+Pentadecanal,0,Family
+Pentadecane,0,Family
+Pentadecene,0,Family
+pentanal,0,Family
+phenol,0,Family
+o-cymene,0,Family
+o-guaiacol,0,Family
+o-Xylene,0,Family
+p-cresol,0,Family
+Z-3-hexenyl benzoate,0,Family
+cis-carveol,0,Family
+cis-citral,0,Family
+"Z,E-a-bergamotol",0,Family
+"Z,Z-9,12-octadecadienoic acid",0,Family
+"Z,Z-farnesol",0,Family
+decanol,0,Family
+dihydro carveole,0,Family
+dihydrocarvone,0,Family
+dillapiole,0,Family
+Epi-cubenol,0,Family
+trans-limonene epoxide,0,Family
+E-linalool oxide (pyranoid),0,Family
+E-methyl isoeugenol,0,Family
+trans-nerolidol,0,Family
+E-cinnamaldehyde,0,Family
+E-cinnamic alcohol,0,Family
+E-cinnamyl acetate,0,Family
+E-Geranyl acetone,0,Family
+E-b-damascenone,0,Family
+tridecane,0,Family
+Vanillin,0,Family
+Tetradecanol,0,Family
+thymol methyl ether,0,Family
+toluene,0,Family
+Torreyol,0,Family
+tricosane,0,Family
+ExtFP98,0,Family
+ExtFP52,0,Family
+ExtFP62,0,Family
+ExtFP76,0,Family
+"Cadina-1,3,5-triene",0,Family
+b-sesquiphellandrene,0,Family
+Butanoic acid,0,Family
+E-2-heptenal,0,Family
+E-2-Hexenal,0,Family
+E-2-octen-1-al,0,Family
+E-3-hexen-1-ol,0,Family
+"E-4,8-Dimethyl-1,3,7-nonatriene",0,Family
+"E,E-farnesyl acetate",0,Family
+dimethyl disulfide,0,Family
+D-Limonene,0,Family
+docosane,0,Family
+dodecanoic acid,0,Family
+Dodecanol,0,Family
+b-calacorene,0,Family
+b-chamigrene,0,Family
+a-terpineol,0,Family
+a-Ylangene,0,Family
+cryptone,0,Family
+cubebol,0,Family
+cubenol,0,Family
+cuminol,0,Family
+cyclosativene,0,Family
+Cyperene,0,Family
+Carvacrol,0,Family
+Cinnamyl alcohol,0,Family
+Butanol,0,Family
+butyl acetate,0,Family
+a-muurolol,0,Family
+a-curcumene,0,Family
+a-fenchyl acetate,0,Family
+a-calacorene,0,Family
+a-campholenal,0,Family
+Acetoin,0,Family
+Acetone,0,Family
+ExtFP862,0,Family
+ExtFP746,0,Family
+"2,3-butanediol",0,Family
+12-methyl-tridecanol,0,Family
+2-methyl decane,0,Family
+2-methyl dodecane,0,Family
+2-methyl octane,0,Family
+ExtFP375,0,Family
+a-p-Dimethyl styrene,0,Family
+apiole,0,Family
+ar-curcumene,0,Family
+aromadendrene,0,Family
+a-himachalene,0,Family
+allo-ocimene,0,Family
+ExtFP624,0,Family
+ExtFP644,0,Family
+2-heptanol,-0.000719424,Family
+3-carene,-0.000719424,Family
+4-methyl anisole,-0.000719424,Family
+"6,10,14-trimethyl -2-pentadecanone",-0.000719424,Family
+a-amorphene,-0.000719424,Family
+Verbenene,-0.000719424,Family
+Viridiflorene,-0.000719424,Family
+Viridiflorol,-0.000719424,Family
+octacosane,-0.000719424,Family
+nonanoic acid,-0.000719424,Family
+Nonanol,-0.000719424,Family
+Myrtenol,-0.000719424,Family
+myrtenyl acetate,-0.000719424,Family
+Cadinene,-0.000719424,Family
+b-bourbonene,-0.000719424,Family
+b-copaene,-0.000719424,Family
+Fenchone,-0.000719424,Family
+Hexyl butyrate,-0.000719424,Family
+methyl benzoate,-0.000719424,Family
+Lilac alcohol A,-0.000719424,Family
+kaurene,-0.000719424,Family
+b-cedrene,-0.000719424,Family
+a-gurjunene,-0.000719424,Family
+a-Longipinene,-0.000719424,Family
+Z-3-Hexenyl butyrate,-0.000719424,Family
+d-3-Carene,-0.001438849,Family
+ExtFP25,-0.001438849,Family
+cis-pinocamphone,-0.001438849,Family
+a-terpinene,-0.001438849,Family
+anisaldehyde,-0.001438849,Family
+E-2-decenal,-0.001438849,Family
+ExtFP355,-0.001438849,Family
+phenylacetaldehyde,-0.001438849,Family
+"1,8-cineole",-0.001438849,Family
+ExtFP870,-0.002158273,Family
+myrtenal,-0.002158273,Family
+g-terpinene,-0.002158273,Family
+Neral,-0.002877698,Family
+Limonene,-0.003597122,Family
+methyl salicylate,-0.005035971,Family
+hexanal,-0.005755396,Family
+a-pinene,-0.005755396,Family
+ExtFP374,-0.00647482,Family
+geranyl acetone,-0.00647482,Family
+Eugenol,-0.00647482,Family
+b-Selenine,-0.00647482,Family
+E-b-ionone,-0.00647482,Family
+Alloaromadendrene,-0.007194245,Family
+a-Ionene,-0.007194245,Family
+DL-Linalool,-0.007194245,Family
+Spathulenol,-0.007194245,Family
+"E,E-a-farnesene",-0.007913669,Family
+a-phellandrene,-0.007913669,Family
+Z-b-ocimene,0.018705036,Genus
+E-caryophyllene,0.017266187,Genus
+Indole,0.013669065,Genus
+a-pinene,0.01294964,Genus
+Myrcene,0.012230216,Genus
+4-terpineol,0.011510791,Genus
+germacrene D,0.010071942,Genus
+Phenylethyl acohol,0.007913669,Genus
+myristicin,0.007194245,Genus
+Borneol,0.007194245,Genus
+cis-sabinene hydrate,0.00647482,Genus
+anisaldehyde,0.00647482,Genus
+Isomenthol,0.00647482,Genus
+n-Decanal,0.00647482,Genus
+undecane,0.00647482,Genus
+Benzyl acetate,0.00647482,Genus
+a-humulene,0.00647482,Genus
+a-terpineol,0.00647482,Genus
+Pentadecane,0.005755396,Genus
+ar-curcumene,0.005755396,Genus
+"1,8-cineole",0.005755396,Genus
+copaene,0.005755396,Genus
+SubFP85,0.004316547,Genus
+nonanaI,0.004316547,Genus
+piperitone,0.004316547,Genus
+methyl salicylate,0.003597122,Genus
+Sabinene,0.003597122,Genus
+b-Elemene,0.002877698,Genus
+"E,E-a-farnesene",0.002877698,Genus
+SubFP13,0.002877698,Genus
+Carvone,0.002877698,Genus
+g-terpinene,0.002158273,Genus
+b-pinene,0.002158273,Genus
+octanal,0.002158273,Genus
+a-thujene,0.002158273,Genus
+Citronellol,0.002158273,Genus
+a-cadinol,0.001438849,Genus
+g-muurolene,0.001438849,Genus
+2-phenyl ethanol,0.001438849,Genus
+d-cadinene,0.001438849,Genus
+SubFP5,0.001438849,Genus
+a-phellandrene,0.000719424,Genus
+b-phellandrene,0.000719424,Genus
+a-terpinolene,0.000719424,Genus
+E-b-farnesene,0.000719424,Genus
+b-cubebene,0.000719424,Genus
+hexadecanoic acid,0.000719424,Genus
+dihydrocarvone,0.000719424,Genus
+benzyl benzoate,0.000719424,Genus
+"1,4-dimethoxybenzene",0.000719424,Genus
+ethyl acetate,0.000719424,Genus
+b-copaene,0.000719424,Genus
+SubFP1,0.000719424,Genus
+a-muurolene,0.000719424,Genus
+neryl acetate,0.000719424,Genus
+Citronellyl acetate,0.000719424,Genus
+geranyl acetone,0.000719424,Genus
+a-thujone,0.000719424,Genus
+a-muurolol,0.000719424,Genus
+humulene epoxide II,0.000719424,Genus
+epi-a-cadinol,0.000719424,Genus
+3-octanone,0.000719424,Genus
+Germacrene A,0.000719424,Genus
+Isoamyl alcohol,0.000719424,Genus
+E-2-Hexenal,0.000719424,Genus
+phenol,0.000719424,Genus
+6-methyl-5- hepten-2-one,0.000719424,Genus
+Viridiflorol,0.000719424,Genus
+Thymol,0.000719424,Genus
+d-3-Carene,2.22E-17,Genus
+Globulol,2.22E-17,Genus
+camphene,2.22E-17,Genus
+Verbenone,1.11E-17,Genus
+hexadecane,1.11E-17,Genus
+3-octanol,1.11E-17,Genus
+heptanal,1.11E-17,Genus
+linalyl acetate,1.11E-17,Genus
+Methyl geranate,1.11E-17,Genus
+myrtenal,1.11E-17,Genus
+neomenthol,0,Genus
+naphthalene,0,Genus
+n-decane,0,Genus
+Hexyl butyrate,0,Genus
+Hexyl acetate,0,Genus
+Hexanoic acid,0,Genus
+Isopentyl acetate,0,Genus
+Isoborneol,0,Genus
+methyl thymol,0,Genus
+Nerol,0,Genus
+octacosane,0,Genus
+Octadecanal,0,Genus
+Octadecane,0,Genus
+Octane,0,Genus
+g-gurjunene,0,Genus
+g-himachalene,0,Genus
+furfural,0,Genus
+g-butyrolactone,0,Genus
+Linalool oxide (furanoid) 1,0,Genus
+Heptacosane,0,Genus
+heptadecane,0,Genus
+Heptane,0,Genus
+Heptanol,0,Genus
+Hexadecanol,0,Genus
+Hexanol,0,Genus
+Hexan-2-ol,0,Genus
+Hexan-3-ol,0,Genus
+guaiol,0,Genus
+Epi-cubenol,0,Genus
+eicosane,0,Genus
+E-Isoeugenol,0,Genus
+E-linalool oxide (pyranoid),0,Genus
+E-methyl cinnamate,0,Genus
+E-methyl isoeugenol,0,Genus
+Hexacosane,0,Genus
+hexadecanal,0,Genus
+Myrtenol,0,Genus
+myrtenyl acetate,0,Genus
+g-eudesmol,0,Genus
+Muurolol,0,Genus
+m-Xylene,0,Genus
+Myristic acid,0,Genus
+Methyl jasmonate,0,Genus
+2-methyl octane,0,Genus
+a-bisabolol,0,Genus
+3-hexanone,0,Genus
+3-methyl nonane,0,Genus
+3-Methylbutyl 3-methylbutanoate,0,Genus
+"4,8-dimethyl-1,3,7-nonatriene",0,Genus
+2-methyl dodecane,0,Genus
+a-cedrene,0,Genus
+Acetoin,0,Genus
+Acetone,0,Genus
+5-methylfurfural,0,Genus
+Lilac alcohol A,0,Genus
+a-amorphene,0,Genus
+a-bergamotene,0,Genus
+a-eudesmol,0,Genus
+a-fenchol,0,Genus
+a-fenchyl acetate,0,Genus
+a-guaiene,0,Genus
+a-bulnesene,0,Genus
+a-calacorene,0,Genus
+a-campholenal,0,Genus
+cis-carveol,0,Genus
+Viridiflorene,0,Genus
+"Z,E-a-bergamotol",0,Genus
+"Z,E-farnesol",0,Genus
+"Z,Z-9,12-octadecadienoic acid",0,Genus
+"Z,Z-farnesol",0,Genus
+"6,10,14-trimethyl -2-pentadecanone",0,Genus
+Linalool oxide (furanoid),0,Genus
+isobornyl acetate,0,Genus
+Isobutanol,0,Genus
+Isobutyl acetate,0,Genus
+Isocaryophyllene,0,Genus
+isomenthone,0,Genus
+Isopentanal,0,Genus
+Methyl anthranilate,0,Genus
+Methyl 2-methylbutanoate,0,Genus
+Isoprene,0,Genus
+kaurene,0,Genus
+Lavandulol,0,Genus
+ledol,0,Genus
+Nonanol,0,Genus
+cis-dihydrocarvone,0,Genus
+Methyl epi-jasmonate,0,Genus
+methyl decanoate,0,Genus
+methyl carvacrol,0,Genus
+Methyl butanoate,0,Genus
+Methyl stearate,0,Genus
+Methyl octanoate,0,Genus
+Methyl linolenate,0,Genus
+cis-citral,0,Genus
+cis-jasmin lactone,0,Genus
+methyl guaiacol,0,Genus
+Methyl ethyl ketone,0,Genus
+2-hexanone,0,Genus
+cis-a-bergamotene,0,Genus
+Z-3-hexenyl isovalerate,0,Genus
+Z-rose oxide,0,Genus
+cis-p-menth-2-en-1-ol,0,Genus
+cis-pinocamphone,0,Genus
+3-carene,0,Genus
+Pinene,0,Genus
+Tetradecanol,0,Genus
+thymol methyl ether,0,Genus
+T-muurolol,0,Genus
+Torreyol,0,Genus
+tricosane,0,Genus
+2-methyl decane,0,Genus
+bulnesol,0,Genus
+Benzyl nitrile,0,Genus
+benzyl salicylate,0,Genus
+benzyl tiglate,0,Genus
+b-eudesmol,0,Genus
+b-gurjunene,0,Genus
+"Cadina-3,9-diene",0,Genus
+Cadinene,0,Genus
+Ethyl 3-methylbutanoate,0,Genus
+Cyperene,0,Genus
+a-Ionene,0,Genus
+a-himachalene,0,Genus
+a-gurjunene,0,Genus
+aromadendrene,0,Genus
+apiole,0,Genus
+"Cadina-1,3,5-triene",0,Genus
+b-patchoulene,0,Genus
+butyl acetate,0,Genus
+Butanol,0,Genus
+Butanoic acid,0,Genus
+a-Longipinene,0,Genus
+Alloaromadendrene,0,Genus
+b-thujone,0,Genus
+b-sesquiphellandrene,0,Genus
+b-Selenine,0,Genus
+"cadina-1 ,4-diene",0,Genus
+2-phenethyl benzoate,0,Genus
+2-phenylethyl acetate,0,Genus
+2-tridecanone,0,Genus
+2-undecanone,0,Genus
+tridecane,0,Genus
+Vanillin,0,Genus
+Verbenene,0,Genus
+Methyl linoleate,0,Genus
+a-Elemol,0,Genus
+"1,10-di-epi-cubenol",0,Genus
+"1,2,3-trimethylbenzene",0,Genus
+12-methyl-tridecanol,0,Genus
+"2,3-butanediol",0,Genus
+"2,3-dehydro-1,8-cineole",0,Genus
+2-butanol,0,Genus
+tetradecanal,0,Genus
+Tetracosane,0,Genus
+terpinylacetate,0,Genus
+Sylvestrene,0,Genus
+salvial-4(14)en-1-one,0,Genus
+Artemisia ketone,0,Genus
+Artemisia alcohol,0,Genus
+b-chamigrene,0,Genus
+2-dodecenol,0,Genus
+b-calacorene,0,Genus
+b-bourbonene,0,Genus
+b-Bisabolol,0,Genus
+2-methyl-3-buten-2-ol,0,Genus
+a-p-Dimethyl styrene,0,Genus
+2-heptanone,0,Genus
+2-heptanol,0,Genus
+2-ethyl-1-hexanol,0,Genus
+b-cedrene,0,Genus
+"E-4,8-Dimethyl-1,3,7-nonatriene",0,Genus
+trans-alpha bergamotene,0,Genus
+Dodecanol,0,Genus
+D-Selinene,0,Genus
+d-terpineol,0,Genus
+E-cinnamyl acetate,0,Genus
+E-Geranyl acetone,0,Genus
+E-anethole,0,Genus
+E-b-damascenone,0,Genus
+E-b-ocimene epoxide,0,Genus
+E-b-terpineol,0,Genus
+Ethyl 2-methylbutanoate,0,Genus
+trans-nerolidol,0,Genus
+E-Phytol,0,Genus
+epi-a-cubenol,0,Genus
+Cinnamyl alcohol,0,Genus
+p-Cymen-8-ol,0,Genus
+p-cresol,0,Genus
+Nonadecene,0,Genus
+Nonadecane,0,Genus
+Nitro-2-phenylethane,0,Genus
+n-Hexane,0,Genus
+Octanol,0,Genus
+epi- a-Muurolol,0,Genus
+E-rose oxide,0,Genus
+Fenchol,0,Genus
+Ethylbenzene,0,Genus
+Ethyl myristate,0,Genus
+ethyl hexanoate,0,Genus
+Ethyl hexadecanoate,0,Genus
+Ethyl benzoate,0,Genus
+epi-bicyclosesquiphellandrene,0,Genus
+ethanol,0,Genus
+dillapiole,0,Genus
+Benzyl isovalerate,0,Genus
+benzoic acid,0,Genus
+decanol,0,Genus
+decanoic acid,0,Genus
+dodecanoic acid,0,Genus
+Dodecane,0,Genus
+E-3-hexen-1-ol,0,Genus
+docosane,0,Genus
+cyclosativene,0,Genus
+cuminol,0,Genus
+cubebol,0,Genus
+cryptone,0,Genus
+Dihydro-b-ionone,0,Genus
+dihydro carveole,0,Genus
+E-cinnamic alcohol,0,Genus
+dodecanal,0,Genus
+E-2-octen-1-al,0,Genus
+Pentadecanal,0,Genus
+pentacosane,0,Genus
+p-cymenene,0,Genus
+"E,Z-farnesol",0,Genus
+"E,E-farnesyl acetate",0,Genus
+"E,E-a-farnesol",0,Genus
+dimethyl disulfide,0,Genus
+Oleic acid,0,Genus
+o-guaiacol,0,Genus
+o-cymene,0,Genus
+Octen-3-ol,0,Genus
+perillene,0,Genus
+pentanal,0,Genus
+Pentadecene,0,Genus
+pentadecanoic acid,0,Genus
+"E,E-farnesol",0,Genus
+DL-Linalool,-0.000719424,Genus
+b-ocimene,-0.000719424,Genus
+a-Ylangene,-0.000719424,Genus
+menthone,-0.000719424,Genus
+toluene,-0.000719424,Genus
+E-nerolidol,-0.000719424,Genus
+g- Cadinene,-0.000719424,Genus
+pinocarvone,-0.000719424,Genus
+a-Selenine,-0.000719424,Genus
+calamenene,-0.000719424,Genus
+methyl hexadecanoate,-0.000719424,Genus
+Methyl dodecanoate,-0.000719424,Genus
+Z-3-Hexenol,-0.000719424,Genus
+Z-3-Hexenyl butyrate,-0.000719424,Genus
+Styrene,-0.000719424,Genus
+pulegone,-0.000719424,Genus
+E-b-ionone,-0.000719424,Genus
+D-Limonene,-0.000719424,Genus
+d-elemene,-0.000719424,Genus
+Methyl myristate,-0.000719424,Genus
+Carvacrol,-0.000719424,Genus
+hexanal,-0.000719424,Genus
+camphor,-0.000719424,Genus
+trans-carveol,-0.000719424,Genus
+menthyl acetate,-0.000719424,Genus
+Fenchone,-0.000719424,Genus
+g-elemene,-0.000719424,Genus
+germacrene B,-0.000719424,Genus
+heneicosane,-0.000719424,Genus
+elemicin,-0.000719424,Genus
+isopulegol,-0.000719424,Genus
+E-cinnamaldehyde,-0.000719424,Genus
+nonanoic acid,-0.000719424,Genus
+trans-limonene epoxide,-0.000719424,Genus
+octanoic acid,-0.000719424,Genus
+o-Xylene,-0.000719424,Genus
+E-2-heptenal,-0.000719424,Genus
+E-2-decenal,-0.000719424,Genus
+E-2-hexene-1-ol,-0.000719424,Genus
+Nonane,-0.000719424,Genus
+Tricyclene,-0.000719424,Genus
+undecanal,-0.000719424,Genus
+valencene,-0.000719424,Genus
+2-pentylfuran,-0.000719424,Genus
+6-methyl-5- hepten-2-ol,-0.000719424,Genus
+acetic acid,-0.000719424,Genus
+Acetophenone,-0.000719424,Genus
+"Z,E-a-farnesene",-0.000719424,Genus
+benzaldehyde,-0.001438849,Genus
+E-linalool oxide (furanoid),-0.001438849,Genus
+4-methyl anisole,-0.001438849,Genus
+germacrene D-4-ol,-0.001438849,Genus
+E-b-damascone,-0.001438849,Genus
+Z-3-hexenyl benzoate,-0.001438849,Genus
+Z-jasmone,-0.001438849,Genus
+bornyl acetate,-0.001438849,Genus
+allo-ocimene,-0.001438849,Genus
+Tetradecane,-0.001438849,Genus
+phenylacetaldehyde,-0.001438849,Genus
+b-bisabolene,-0.001438849,Genus
+Z-3-Hexenyl acetate,-0.001438849,Genus
+Cuminal,-0.001438849,Genus
+trans-pinocarveol,-0.001438849,Genus
+E-b-ocimene,-0.002158273,Genus
+methyl benzoate,-0.002158273,Genus
+SubFP137,-0.002158273,Genus
+Menthol,-0.002158273,Genus
+methyl eugenol,-0.002158273,Genus
+Spathulenol,-0.002158273,Genus
+SubFP12,-0.002158273,Genus
+bicyclogermacrene,-0.003597122,Genus
+E-geraniol,-0.003597122,Genus
+SubFP88,-0.003597122,Genus
+a-cubebene,-0.003597122,Genus
+Z-b-Farnesene,-0.004316547,Genus
+p-cymene,-0.005035971,Genus
+Limonene,-0.005035971,Genus
+SubFP295,-0.005035971,Genus
+SubFP4,-0.005035971,Genus
+Neral,-0.005755396,Genus
+a-curcumene,-0.00647482,Genus
+Estragole,-0.00647482,Genus
+6-Methylhept-5-en-2-one,-0.00647482,Genus
+E-sabinene hydrate,-0.00647482,Genus
+Geranyl acetate,-0.00647482,Genus
+trans-p-menth-2-en-1-ol,-0.007194245,Genus
+Z-Linalool oxide (furanoid),-0.007194245,Genus
+SubFP2,-0.007194245,Genus
+cubenol,-0.007194245,Genus
+citronellal,-0.007194245,Genus
+SubFP274,-0.007913669,Genus
+Benzyl alcohol,-0.007913669,Genus
+b-Caryophyllene oxide,-0.007913669,Genus
+SubFP3,-0.009352518,Genus
+SubFP287,-0.010071942,Genus
+Eugenol,-0.010791367,Genus
+a-terpinene,-0.010791367,Genus
+E-citral,-0.01294964,Genus
+SubFP302,-0.014388489,Genus
