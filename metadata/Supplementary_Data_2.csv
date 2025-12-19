@@ -1,0 +1,1670 @@
+"Supplementary_Data_2. Dataset of plant volatile metabolites used for unsupervised clustering analyses, including SMILES representations and biosynthetic and structural class annotations.",,,
+Volatile_Metabolites,SMILES,Biosynthetic_class,Structural_class
+(+)-isodihydrocarvone,C[C@H]1CC[C@H](CC1=O)C(=C)C,Terpenoids,MT
+"(4a alpha,7 alpha,7a alpha)-Nepetalactone",C[C@@H]1CC[C@H]2[C@H]1C(=O)OC=C2C,Terpenoids,MT
+"(4a alpha,7 alpha,7a beta)-Nepetalactone",C[C@H]1CC[C@H]2[C@@H]1C(=O)OC=C2C,Terpenoids,MT
+"(4a alpha,7 beta,7a beta)-Nepetalactone",C[C@H]1CC[C@H]2[C@H]1C(=O)OC=C2C,Terpenoids,MT
+1-(Cyclohexylmethyl)-4-isopropylcyclohexane,CC(C)C1CCC(CC1)CC2CCCCC2,Others,Others
+"1,1-diethoxy-ethane",CCOC(C)OCC,FADs,Aliphatics and C5 branched
+"1,2- benzenedicarboxylic acid, diisooctyl ester",CC(C)CCCCCOC(=O)C1=CC=CC=C1C(=O)OCCCCCC(C)C,Shikimate_derived_Aromatics,BP
+"1,2,3-trimethoxybenzene",COC1=C(C(=CC=C1)OC)OC,Shikimate_derived_Aromatics,BP
+"1,2,3-trimethylbenzene",CC1=C(C(=CC=C1)C)C,Shikimate_derived_Aromatics,BP
+"1,2,4-trimethoxybenzene",COC1=CC(=C(C=C1)OC)OC,Shikimate_derived_Aromatics,BP
+"1,2-diethyl benzene",CCC1=CC=CC=C1CC,Shikimate_derived_Aromatics,BP
+"1,2-dihydro-1,1,6-trimethyl naphthalene",CC1=CC2=C(C=C1)C(CC=C2)(C)C,Terpenoids,Irregular terpene
+"1,2-dimethoxy-4-methylbenzene",CC1=CC(=C(C=C1)OC)OC,Shikimate_derived_Aromatics,BP
+"1,2-dimethyIcyclohexane",C[C@@H]1CCCC[C@@H]1C,Others,Others
+"1,3,5-cycloheptatriene",C1C=CC=CC=C1,Others,Others
+"1,3,5-trimethoxy benzene",COC1=CC(=CC(=C1)OC)OC,Shikimate_derived_Aromatics,BP
+"1,3,5-trimethyl-benzene",CC1=CC(=CC(=C1)C)C,Shikimate_derived_Aromatics,BP
+"1,3,6-octatriene",C/C=C/C/C=C/C=C,FADs,Aliphatics and C5 branched
+"1,3,7-octatriene",C=CCC/C=C/C=C,FADs,Aliphatics and C5 branched
+"1,3-benzothiazole",C1=CC=C2C(=C1)N=CS2,Others,Aromatic_N/S
+"1,3-diethyl benzene",CCC1=CC(=CC=C1)CC,Shikimate_derived_Aromatics,BP
+"1,3-dimethylcyclohexane",CC1CCCC(C1)C,Others,Others
+"1,3-octadiene",CCCC/C=C/C=C,FADs,Aliphatics and C5 branched
+"1,4-diethyl benzene",CCC1=CC=C(C=C1)CC,Shikimate_derived_Aromatics,BP
+"1,4-dimethoxybenzene",COC1=CC=C(C=C1)OC,Shikimate_derived_Aromatics,BP
+"1,4-dioxane",C1COCCO1,Others,Others
+"1,5-di-epi-Bourbonene",CC1=CC[C@@H]2[C@H]1[C@@H]3C2(CC[C@H]3C(C)C)C,Terpenoids,ST
+"1,5-epoxysalvial-4(14)-ene",CC(C)C1CCC2(C1C3C(=C)CCC2O3)C,Terpenoids,ST
+"1,6-diacteoxyhexane",CC(=O)OCCCCCCOC(=O)C,FADs,Aliphatics and C5 branched
+"1,6-germacradien-5-ol",C/C/1=C/CC(C(/C=C(\CCC1)/C)O)C(C)C,Terpenoids,ST
+"1,6-octadien, 3,7-dimethyl",CC(CCC=C(C)C)C=C,Terpenoids,MT
+"1,7-Dicyclopentyl-4-n-octylheptane",CCCCCCCCC(CCCC1CCCC1)CCCC2CCCC2,Others,Others
+"1,8-cineole",CC1(C2CCC(O1)(CC2)C)C,Terpenoids,MT
+10-epi-cubenol,C[C@H]1CC[C@H](C2[C@]1(CCC(=C2)C)O)C(C)C,Terpenoids,ST
+10-epi-g-eudesmol,CC1=C2C[C@@H](CC[C@@]2(CCC1)C)C(C)(C)O,Terpenoids,ST
+10-epi-italicene,CC1CC[C@H]2[C@@]13CCC(=C[C@H]3C2(C)C)C,Terpenoids,ST
+"11,13-labdadien-8-ol",C/C=C(\C)/C=C/[C@@H]1[C@]2(CCCC(C2CCC1(C)O)(C)C)C,Terpenoids,Diterpenes
+12-epi-cedrol,CC1CCC2C13CCC(C(C3)C2(C)C)(C)O,Terpenoids,ST
+12-methyl-tridecanol,CC(C)CCCCCCCCCCCO,FADs,Aliphatics and C5 branched
+12-Nor-preziza-7(15)-en-2-one,CC1(C2CCC(=O)[C@@]23CC[C@H](C3)C1=C)C,Terpenoids,ST
+13-epi-manool,C[C@]12CCCC(=C)[C@@H]1C[C@@H](CC2)C(C)(C)O,Terpenoids,Diterpenes
+13-epi-manoyl oxide,C[C@@]1(CC[C@@H]2[C@]3(CCCC([C@@H]3CC[C@]2(O1)C)(C)C)C)C=C,Terpenoids,Diterpenes
+13-Nor-eudesma-5-en-11-one,C[C@H]1CCC[C@]2(C1=CC(CC2)C(=O)C)C,Terpenoids,ST
+14-hydroxy-9-epi-(E) Caryophyllene,C/C/1=C/CCC(=C)C2CC(C2CC1)(C)CO,Terpenoids,ST
+14-hydroxy-a-muurolene,CC1=CC2[C@@H](CC=C(C2CC1)C)C(C)CO,Terpenoids,ST
+14-oxy-a-Muurolene,CC1=C[C@H]2[C@@H](CC1)C(=CC[C@@H]2C(C)C)C=O,Terpenoids,ST
+16-heptadecenal,C=CCCCCCCCCCCCCCCC=O,FADs,Aliphatics and C5 branched
+"1a,10a-Epoxy-amorph-4-ene",CC1=CC2[C@H](CC[C@]3([C@@]2(O3)CC1)C)C(C)C,Terpenoids,ST
+"1-allyl-2,3,4,5-tetramethoxybenzene",COC1=C(C(=C(C(=C1)CC=C)OC)OC)OC,Shikimate_derived_Aromatics,BP
+2-(4-Methoxyphenyl) ethanol,COC1=CC=C(C=C1)CCO,Shikimate_derived_Aromatics,BP
+"2,2,4,4,7,7-hexamethyloctahydro-1H-indene",CC1(CCC(C2C1CC(C2)(C)C)(C)C)C,Terpenoids,MT
+"2,2,4-trimethylpentane",CC(C)CC(C)(C)C,FADs,Aliphatics and C5 branched
+"2,2,6-trimethyl-1,4-cyclohexanedione",CC1CC(=O)CC(C1=O)(C)C,Terpenoids,Irregular terpene
+"2,2,6-trimethylcyclohexanone",CC1CCCC(C1=O)(C)C,Others,Others
+"2,2,6-trimethyl-hepta-3,5-diene",CC(=C/C=C/C(C)(C)C)C,FADs,Aliphatics and C5 branched
+"2,2-dimethylpropanoic acid",CC(C)(C)C(=O)O,FADs,Aliphatics and C5 branched
+"2,3,3-Trimethyl-3-cyclopentene acetaldehyde",CC1C(CCC1(C)C)C=O,Terpenoids,MT
+"2,3,4-trimethylbenzaldehyde",CC1=C(C(=C(C=C1)C=O)C)C,Shikimate_derived_Aromatics,BP
+"2,3,5,5,8,8-Hexamethyl-cycloocta-1,3,6-triene",C/C/1=C/C(/C=C\C(/C=C1/C)(C)C)(C)C,Terpenoids,ST
+"2,3,5-trimethylpyrazine",CC1=CN=C(C(=N1)C)C,Others,Aromatic_N/S
+"2,3,5-trithiahexane",CSCSSC,Others,NonAromatic_N/S
+"2,3-butadione",CC(=O)C(=O)C,FADs,Aliphatics and C5 branched
+"2,3-butanediol",CC(C(C)O)O,FADs,Aliphatics and C5 branched
+"2,3-dehydro-1,8-cineole",CC1(C2CCC(O1)(C=C2)C)C,Terpenoids,MT
+"2,3-dimethyl-1,3-butadiene",CC(=C)C(=C)C,Terpenoids,Aliphatics and C5 branched
+"2,3-dimethyl-2-butene",CC(=C(C)C)C,Terpenoids,Aliphatics and C5 branched
+"2,3-dimethylpyridine",CC1=C(N=CC=C1)C,Others,Aromatic_N/S
+"2,3-pentanedione",CCC(=O)C(=O)C,FADs,Aliphatics and C5 branched
+"2,4,5,7-tetrathiaoctane",CSCSSCSC,Others,NonAromatic_N/S
+"2,4,6-trichlorophenol",C1=C(C=C(C(=C1Cl)O)Cl)Cl,Shikimate_derived_Aromatics,BP
+"2,4-diathiapentane",CSCSC,Others,NonAromatic_N/S
+"2,4-dimethyl-1-heptanol",CCCC(C)CC(C)CO,FADs,Aliphatics and C5 branched
+"2,4-dimethyl-2,4-heptadiene",CCC=C(C)C=C(C)C,FADs,Aliphatics and C5 branched
+"2,4-dimethylphenol",CC1=CC(=C(C=C1)O)C,Shikimate_derived_Aromatics,BP
+"2,4-dimethylthiophene",CC1=CC(=CS1)C,Others,Aromatic_N/S
+"2,4-di-tert-butylanisole",CC(C)(C)C1=CC(=C(C=C1)OC)C(C)(C)C,Shikimate_derived_Aromatics,BP
+"2,4-di-tert-butylphenol",CC(C)(C)C1=CC(=C(C=C1)O)C(C)(C)C,Shikimate_derived_Aromatics,BP
+"2,5,6-trimethyl hepta-1,3,6-triene",CC(/C=C/C(=C)C)C(=C)C,Terpenoids,Aliphatics and C5 branched
+"2,5-diethyl tetrahydrofuran",CCC1CCC(O1)CC,Others,Others
+"2,5-dihydro-2,5-dimethylfuran",CC1C=CC(O1)C,Others,Others
+"2,5-dihydrofuran",C1C=CCO1,Others,Others
+"2,5-Dimethoxy-p-cymene",CC1=CC(=C(C=C1OC)C(C)C)OC,Terpenoids,MT
+"2,5-dimethyl-3-(1-propenyl)-pyrazine",CC=CC1=NC(=CN=C1C)C,Others,Aromatic_N/S
+"2,5-dimethyl-3-(3-methylbutyl)-pyrazine",CC1=CN=C(C(=N1)CCC(C)C)C,Others,Aromatic_N/S
+"2,5-dimethyl-3-pentylpyrazine",CCCCCC1=NC(=CN=C1C)C,Others,Aromatic_N/S
+"2,5-dimethylpyrazine",CC1=CN=C(C=N1)C,Others,Aromatic_N/S
+"2,5-dimethylstyrene",CC1=CC(=C(C=C1)C)C=C,Shikimate_derived_Aromatics,BP
+"2,5-dimethyl-tridecane",CCCCCCCCC(C)CCC(C)C,FADs,Aliphatics and C5 branched
+"2,5-hexanediol",CC(CCC(C)O)O,FADs,Aliphatics and C5 branched
+"2,6,10,14-tetramethylheptadecane",CCCC(C)CCCC(C)CCCC(C)CCCC(C)C,FADs,Aliphatics and C5 branched
+"2,6,10,14-tetramethylhexadecane",CCC(C)CCCC(C)CCCC(C)CCCC(C)C,FADs,Aliphatics and C5 branched
+"2,6,10,14-tetramethylpentadecane",CC(C)CCCC(C)CCCC(C)CCCC(C)C,Terpenoids,Diterpenes
+"2,6,10-trimethylpentadecane",CCCCCC(C)CCCC(C)CCCC(C)C,FADs,Aliphatics and C5 branched
+"2,6,6-trimethyl-2-vinyl-THP",CC1(CCCC(O1)(C)C=C)C,Terpenoids,MT
+"2,6,8-trimethyl-decane",CCC(C)CC(C)CCCC(C)C,FADs,Aliphatics and C5 branched
+"2,6-dimethoxy-4-(2-propenyl)-phenol",COC1=CC(=CC(=C1O)OC)CC=C,Shikimate_derived_Aromatics,BP
+"2,6-dimethyl-1,5,7-octatrien-3-ol",CC(=C)C(CC=C(C)C=C)O,Terpenoids,MT
+"2,6-dimethyl-3,5-heptadione",CC(C)C(=O)CC(=O)C(C)C,FADs,Aliphatics and C5 branched
+"2,6-dimethyl-4-heptanone",CC(C)CC(=O)CC(C)C,FADs,Aliphatics and C5 branched
+"2,6-dimethyl-5-heptenal",CC(CCC=C(C)C)C=O,FADs,Aliphatics and C5 branched
+"2,6-dimethylcyclohexanol",CC1CCCC(C1O)C,Others,Others
+"2,6-dimethylpyrazine",CC1=CN=CC(=N1)C,Others,Aromatic_N/S
+"2,6-di-tert-butylquinone",CC(C)(C)C1=CC(=O)C=C(C1=O)C(C)(C)C,Shikimate_derived_Aromatics,BP
+2-acetylfuran,CC(=O)C1=CC=CO1,Others,Others
+2-acetylpyridine,CC(=O)C1=CC=CC=N1,Others,Aromatic_N/S
+2-aminoacetophenone,C1=CC=C(C=C1)C(=O)CN,Others,Aromatic_N/S
+2-aminobenzaldehyde,C1=CC=C(C(=C1)C=O)N,Others,Aromatic_N/S
+2-butanol,CCC(C)O,FADs,Aliphatics and C5 branched
+2-butenal,C/C=C/C=O,FADs,Aliphatics and C5 branched
+"2-butenoic acid,3-methyl ethyl ester",CCOC(=O)C=C(C)C,FADs,Aliphatics and C5 branched
+2-butylfuran,CCCCC1=CC=CO1,Others,Others
+2-butylpyridine,CCCCC1=CC=CC=N1,Others,Aromatic_N/S
+2-dodecenol,CCCCCCCCCC=CCO,FADs,Aliphatics and C5 branched
+2-epi-Ziza-6(13)-en-12-al,CC1([C@@H]2CC[C@]3(C2)[C@@H](CCC3C1=C)C=O)C,Terpenoids,ST
+2-ethoxyethyl acetate,CCOCCOC(=O)C,FADs,Aliphatics and C5 branched
+2-ethyl cyclobutanol,CCC1CCC1O,Others,Others
+2-ethyl-1-hexanol,CCCCC(CC)CO,FADs,Aliphatics and C5 branched
+2-ethyl-2-hexenal,CCC/C=C(\CC)/C=O,FADs,Aliphatics and C5 branched
+"2-ethyl-3,5-dimethylpyrazine",CCC1=NC=C(N=C1C)C,Others,Aromatic_N/S
+2-ethyl-3-methylpyrazine,CCC1=NC=CN=C1C,Others,Aromatic_N/S
+2-ethyl-5-methylpyrazine,CCC1=NC=C(N=C1)C,Others,Aromatic_N/S
+2-ethyl-6-methylpyrazine,CCC1=NC(=CN=C1)C,Others,Aromatic_N/S
+2-ethylfuran,CCC1=CC=CO1,Others,Others
+2-heptadecanol,CCCCCCCCCCCCCCCC(C)O,FADs,Aliphatics and C5 branched
+2-heptadecanone,CCCCCCCCCCCCCCCC(=O)C,FADs,Aliphatics and C5 branched
+2-heptanol,CCCCCC(C)O,FADs,Aliphatics and C5 branched
+2-heptanone,CCCCCC(=O)C,FADs,Aliphatics and C5 branched
+2-heptyl acetate,CCCCCC(C)OC(=O)C,FADs,Aliphatics and C5 branched
+2-hexadecanol,CCCCCCCCCCCCCCC(C)O,FADs,Aliphatics and C5 branched
+2-hexadecanone,CCCCCCCCCCCCCCC(=O)C,FADs,Aliphatics and C5 branched
+2-hexanone,CCCCC(=O)C,FADs,Aliphatics and C5 branched
+2-hexyl acetate,CCCCC(C)OC(=O)C,FADs,Aliphatics and C5 branched
+2-hexyl-1-decanol,CCCCCCCCC(CCCCCC)CO,FADs,Aliphatics and C5 branched
+2-hexyl-1-octanol,CCCCCCC(CCCCCC)CO,FADs,Aliphatics and C5 branched
+2-hexylfuran,CCCCCCC1=CC=CO1,Others,Others
+"2-Hydroxy-1,8-cineole",CC1([C@@H]2CCC(O1)([C@H](C2)O)C)C,Terpenoids,MT
+2-hydroxy-2-methyl-3-butenyl angelate,C/C=C(/C)\C(=O)OCC(C)(C=C)O,Terpenoids,Aliphatics and C5 branched
+2-hydroxybutyric acid,CCC(C(=O)O)O,FADs,Aliphatics and C5 branched
+2-hydroxymethyl benzoic acid,C1=CC=C(C(=C1)CO)C(=O)O,Shikimate_derived_Aromatics,BP
+"2-Isopropenyl-1,3,5-trimethylbenzene",CC1=CC(=C(C(=C1)C)C(=C)C)C,Shikimate_derived_Aromatics,BP
+2-isopropyl-3-methoxypyrazine,CC(C)C1=NC=CN=C1OC,Others,Aromatic_N/S
+2-isopropylcyclohexanol,CC(C)C1CCCCC1O,Others,Others
+2-methoxy-3-sec-butyl pyrazine,CCC(C)C1=NC=CN=C1OC,Others,Aromatic_N/S
+2-Methyl 4-heptanone,CC1=CC=CO1,FADs,Aliphatics and C5 branched
+2-methyl decane,CCCC(=O)CC(C)C,FADs,Aliphatics and C5 branched
+2-methyl dodecane,CCCC(C)C,FADs,Aliphatics and C5 branched
+2-methyl furan,CCCCCC(C)CO,Others,Others
+2-methyl heptanol,CCCCCCC(C)C,FADs,Aliphatics and C5 branched
+2-methyl hexadecane,CCCCCCCCC(C)C,FADs,Aliphatics and C5 branched
+2-methyl octane,CCCCCCCCCCC(C)C,FADs,Aliphatics and C5 branched
+2-methyl pentane,CCCCCCCCCCCCCCC(C)C,FADs,Aliphatics and C5 branched
+2-methyl-1-penten-3-one,CCC(=O)C(=C)C,FADs,Aliphatics and C5 branched
+2-methyl-1-pentene,CCCC(=C)C,FADs,Aliphatics and C5 branched
+2-methyl-2-butenyl acetate,C/C=C(\C)/COC(=O)C,FADs,Aliphatics and C5 branched
+2-methyl-2-propenyl angelate,C/C=C(/C)\C(=O)OCC(=C)C,FADs,Aliphatics and C5 branched
+2-methyl-2-propenyl methacrylate,CC(=C)COC(=O)C(=C)C,FADs,Aliphatics and C5 branched
+2-methyl-3-buten-2-ol,CC(C)(C=C)O,FADs,Aliphatics and C5 branched
+"2-methyl-6-methylene-1,3,7-octatriene",CC(=C)/C=C/CC(=C)C=C,Terpenoids,MT
+2-methylamino benzaldehyde,CNC1=CC=CC=C1C=O,Others,Aromatic_N/S
+2-methylbenzaldehyde,CC1=CC=CC=C1C=O,Shikimate_derived_Aromatics,BP
+2-methylbutanol,CCC(C)CO,FADs,Aliphatics and C5 branched
+2-methylbutyl acetate,CCC(C)COC(=O)/C(=C\C)/C,FADs,Aliphatics and C5 branched
+2-methylbutyl angelate,CCC(C)COC(=O)C,FADs,Aliphatics and C5 branched
+2-methylbutyl benzoate,CCC(C)COC(=O)C(=C)C,Shikimate_derived_Aromatics,BP
+2-methylbutyl butyrate,CCC(C)COC(=O)C(C)C,FADs,Aliphatics and C5 branched
+2-methylbutyl isobutyrate,CCC(C)COC(=O)C1=CC=CC=C1,FADs,Aliphatics and C5 branched
+2-methylbutyl methacrylate,CCCC(=O)OCC(C)CC,FADs,Aliphatics and C5 branched
+2-methylbutyl-2-methylbutyrate,CCC(C)COC(=O)C(C)CC,FADs,Aliphatics and C5 branched
+2-methylbutyronitrile,CCC(C)C#N,Others,NonAromatic_N/S
+2-methyldocosane,CCCCCCCCCCCCCCCCCCCCC(C)C,FADs,Aliphatics and C5 branched
+2-methylfurfural,CC1(CC=CO1)C=O,Others,Others
+2-methyl-heptan-3-one,CCCCC(=O)C(C)C,FADs,Aliphatics and C5 branched
+2-methyloctadecane,CCCCCCCCCCCCCCCCC(C)C,FADs,Aliphatics and C5 branched
+2-methylpentadecane,CCCCCCCCCCCCCC(C)C,FADs,Aliphatics and C5 branched
+2-methyltridecane,CCCCCCCCCCCC(C)C,FADs,Aliphatics and C5 branched
+2-nitroethanol,C(CO)[N+](=O)[O-],Others,NonAromatic_N/S
+2-nonanol,CCCCCCCC(C)O,FADs,Aliphatics and C5 branched
+2-nonanone,CCCCCCCC(=O)C,FADs,Aliphatics and C5 branched
+2-nonene-1-ol,CCCCCC/C=C/CO,FADs,Aliphatics and C5 branched
+2-Norpinanol.3.6.6-trimethyl,CC1CC2CC(C1O)C2(C)C,Terpenoids,MT
+2-octanol,CCCCCCC(C)O,FADs,Aliphatics and C5 branched
+2-octanone,CCCCCCC(=O)C,FADs,Aliphatics and C5 branched
+2-pentadecanone,CCCCCCCCCCCCCC(=O)C,FADs,Aliphatics and C5 branched
+2-pentanol,CCCC(C)O,FADs,Aliphatics and C5 branched
+2-pentanone,CCCC(=O)C,FADs,Aliphatics and C5 branched
+2-pentenol,CC/C=C/CO,FADs,Aliphatics and C5 branched
+2-pentyl acetate,CCCC(C)OC(=O)C,FADs,Aliphatics and C5 branched
+2-pentyl butanoate,CCCC(C)OC(=O)CCC,FADs,Aliphatics and C5 branched
+2-pentyl decanoate,CCCCCC(=O)OC(C)CCC,FADs,Aliphatics and C5 branched
+2-pentyl hexanoate,CCCCCCCCCC(=O)OC(C)CCC,FADs,Aliphatics and C5 branched
+2-pentylfuran,CCCCCC1=CC=CO1,Others,Others
+2-pentylpyridine,CCCCCC1=CC=CC=N1,Others,Aromatic_N/S
+2-phenyl ethanol,C1=CC=C(C=C1)CCO,Shikimate_derived_Aromatics,BP
+2-phenylethyl 2-methylbutyrate,C1=CC=C(C=C1)CCN=C=S,Shikimate_derived_Aromatics,BP
+2-phenylethyl acetate,CC(=O)OCCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+2-phenylethyl hexanoate,CC(C)CC(=O)OCCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+2-phenylethyl isothiocyanate,CCC(C)C(=O)OCCC1=CC=CC=C1,Others,Aromatic_N/S
+2-phenylethyl isovalerate,CCCCCC(=O)OCCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+2-phenylpyridine,C1=CC=C(C=C1)C2=CC=CC=N2,Others,Aromatic_N/S
+"2-propenoic acid, 3-phenyl-ethyl-ester",CCOC(=O)/C=C/C1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+2-propylfuran,CCCC1=CC=CO1,Others,Others
+2-tridecanone,CCCCCCCCCCCC(=O)C,FADs,Aliphatics and C5 branched
+2-tridecene,CCCCCCCCCCC=CC,FADs,Aliphatics and C5 branched
+2-tridecenol,CCCCCCCCCC/C=C/CO,FADs,Aliphatics and C5 branched
+2-undecanol,CCCCCCCCCC(C)O,FADs,Aliphatics and C5 branched
+2-undecanone,CCCCCCCCCC(=O)C,FADs,Aliphatics and C5 branched
+2-undecene,CCCCCCCC/C=C/C,FADs,Aliphatics and C5 branched
+2-vinylcrotonaldehyde,C/C=C(/C=C)\C=O,FADs,Aliphatics and C5 branched
+3-(2-Isopropyl-5-methylphenyl)-2-methylpropionic acid,CC1=CC(=C(C=C1)C(C)C)CC(C)C(=O)O,Shikimate_derived_Aromatics,BP
+"3-(Hydroxy-phenyl-methyl)-2,3 dimethyl-octan-4-one",CCCCC(=O)C(C)(C(C)C)C(C1=CC=CC=C1)O,Shikimate_derived_Aromatics,BP
+"3,3,5-trimethyl-1,5-heptadiene",C/C=C(\C)/CC(C)(C)C=C,FADs,Aliphatics and C5 branched
+"3,3,8,8-Tetramethyl-tricyclo[5.1.0.0(2,4)] oct5-ene-5-propanoic acid",CC1(C2C1C3C(C3(C)C)C(=C2)CCC(=O)O)C,Terpenoids,Diterpenes
+"3,3-dimethylhexane",CCCC(C)(C)CC,FADs,Aliphatics and C5 branched
+"3,4-dihydro-1-2H-napthalenone",C1CC2=CC=CC=C2C(=O)C1,Shikimate_derived_Aromatics,BP
+"3,4-dimethyl-1,5-heptadiene",C/C=C/C(C)C(C)C=C,Terpenoids,Aliphatics and C5 branched
+"3,4-dimethyl-5-pentylidene-2(5H)-furanone",CCCC/C=C/1\C(=C(C(=O)O1)C)C,Others,Others
+"3,5-dimethoxytoluene",CC1=CC(=CC(=C1)OC)OC,Shikimate_derived_Aromatics,BP
+"3,5-dimethyl-2-(1-propenyl)-pyrazine",C/C=C/C1=NC=C(N=C1C)C,Others,Aromatic_N/S
+"3,6-pentadecadienal",CCCCCCCC/C=C/C/C=C/CC=O,FADs,Aliphatics and C5 branched
+"3,7(11)-Selinadiene",CC1=CCCC2(C1CC(=C(C)C)CC2)C,Terpenoids,ST
+"3,7,11,15-Tetramethyl-2-hexadecene-1-ol",CC(C)CCCC(C)CCCC(C)CCCC(=CCO)C,Terpenoids,MT
+"3,7-dimethyl-1,5,7-octatrien-3-ol",CC(=C)/C=C/CC(C)(C=C)O,Terpenoids,MT
+"3,7-dimethyl-1,5-octadiene-3,7-diol",CC(C)(/C=C/CC(C)(C=C)O)O,Terpenoids,MT
+"3,7-dimethyl-1,7-octadiene-3,6-diol",CC(=C)C(CCC(C)(C=C)O)O,Terpenoids,MT
+"3,7-guaiadiene",CC1CC=C(CC2C1CC=C2C)C(C)C,Terpenoids,ST
+"3,8-Dimethyl-4-(1-methylethylidene)- 2,4,6,7,8,8a-Hexahydro-5(1H)-azulenone",CC1CCC(=O)C(=C(C)C)C2=C(CCC12)C,Terpenoids,ST
+"3-acetyl-2,5-dimethyl furan",CC1=CC(=C(O1)C)C(=O)C,Others,Others
+3-carene,CC1=CCC2C(C1)C2(C)C,Terpenoids,MT
+3-cyclohexenyl methanol,C1CC(CC=C1)CO,Others,Others
+"3-ethyl-2,5-dimethylpyrazine",CCC1=NC(=CN=C1C)C,Others,Aromatic_N/S
+3-furancarboxylic acid,C1=COC=C1C(=O)O,Others,Others
+3-heptanone,CCCCC(=O)CC,FADs,Aliphatics and C5 branched
+3-hepten-2-one,CCC/C=C/C(=O)C,FADs,Aliphatics and C5 branched
+3-hexadecanol,CCCCCCCCCCCCCC(CC)O,FADs,Aliphatics and C5 branched
+3-hexanone,CCCC(=O)CC,FADs,Aliphatics and C5 branched
+3-hexen-2-one,CC/C=C/C(=O)C,FADs,Aliphatics and C5 branched
+3-hexenol,CC/C=C\CCO,FADs,Aliphatics and C5 branched
+3-iso-Thujopsanone,C[C@@H]1[C@@H]2C[C@]23[C@@](CCCC3(C)C)(CC1=O)C,Terpenoids,ST
+3-methoxybutyl acetate,CC(CCOC(=O)C)OC,FADs,Aliphatics and C5 branched
+3-methoxycinnamaldehyde,COC1=CC=CC(=C1)/C=C/C=O,Shikimate_derived_Aromatics,BP
+3-methyl nonane,CCC(C)CC,FADs,Aliphatics and C5 branched
+3-methyl pentane,CCCCCCC(C)CC,FADs,Aliphatics and C5 branched
+3-methyl-1-octyn-3-ol,CCCCCC(C)(C#C)O,FADs,Aliphatics and C5 branched
+3-methyl-2(5H)-furanone,CC1=CCOC1=O,Others,Others
+3-methyl-2-butene-1-thiol,CC(=CCS)C,Others,NonAromatic_N/S
+3-methyl-2-butenyl benzoate,CC(=CCOC(=O)C1=CC=CC=C1)C,Shikimate_derived_Aromatics,BP
+3-methyl-2-pentanol,CCC(C)C(C)O,FADs,Aliphatics and C5 branched
+3-methyl-2-pentanone,CCC(C)C(=O)C,FADs,Aliphatics and C5 branched
+3-methyl-3-buten-2-one,CC(=C)C(=O)C,FADs,Aliphatics and C5 branched
+3-methyl-3-butenol,CC(=C)CCO,FADs,Aliphatics and C5 branched
+3-methyl-3-butenyl benzoate,CC(=C)CCOC(=O)C1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+3-methyl-3-decen-2-one,CCCCCC/C=C(\C)/C(=O)C,FADs,Aliphatics and C5 branched
+3-methyl-4-penten-1-ol,CC(CCO)C=C,FADs,Aliphatics and C5 branched
+3-methylamyl angelate,CCC(C)CCOC(=O)/C(=C\C)/C,FADs,Aliphatics and C5 branched
+3-methylamyl methacrylate,CCC(C)CCOC(=O)C(=C)C,FADs,Aliphatics and C5 branched
+3-methylbutanone,CC(C)C(=O)C,FADs,Aliphatics and C5 branched
+3-methylbutenal,CC(=CC=O)C,FADs,Aliphatics and C5 branched
+3-Methylbutyl 3-methylbutanoate,CC(C)CCOC(=O)C(=C)C,FADs,Aliphatics and C5 branched
+3-methylbutyl caproate,CC(C)CCOC(=O)CC(C)C,FADs,Aliphatics and C5 branched
+3-methylbutyl methacrylate,CCCCCC(=O)OCCC(C)C,FADs,Aliphatics and C5 branched
+3-methyl-furan,CC1=COC=C1,Others,Others
+3-methylpentadecane,CCCCCCCCCCCCC(C)CC,FADs,Aliphatics and C5 branched
+3-methylpentanol,CCC(C)CCO,FADs,Aliphatics and C5 branched
+3-methylpentyl isobutyrate,CCC(C)CCOC(=O)C(C)C,FADs,Aliphatics and C5 branched
+3-methylvalericacid,CCC(C)CC(=O)O,FADs,Aliphatics and C5 branched
+3-nonanol,CCCCCCC(CC)O,FADs,Aliphatics and C5 branched
+3-nonanone,CCCCCCC(=O)CC,FADs,Aliphatics and C5 branched
+3-nonen-1-ol,CCCCCC=CCCO,FADs,Aliphatics and C5 branched
+3-nonen-2-one,CCCCC/C=C/C(=O)C,FADs,Aliphatics and C5 branched
+3-octanol,CCCCCC(CC)O,FADs,Aliphatics and C5 branched
+3-octanol acetate,CCCCCC(CC)OC(=O)C,FADs,Aliphatics and C5 branched
+3-octanone,CCCCCC(=O)CC,FADs,Aliphatics and C5 branched
+3-octenyl acetate,CCCC/C=C/CCOC(=O)C,FADs,Aliphatics and C5 branched
+3-Pentanone,CCC(=O)CC,FADs,Aliphatics and C5 branched
+3-penten-2-ol,CC=CC(C)O,FADs,Aliphatics and C5 branched
+3-penten-2-one,C/C=C/C(=O)C,FADs,Aliphatics and C5 branched
+3-phenylpropionitrile,C1=CC=C(C=C1)CCC#N,Others,Aromatic_N/S
+3-phenylpropyl alcohol,C1=CC=C(C=C1)CCCO,Shikimate_derived_Aromatics,BP
+3-phenylpyridine,C1=CC=C(C=C1)C2=CN=CC=C2,Others,Aromatic_N/S
+3-pinen-2-ol,CC1([C@@H]2C[C@H]1C(C=C2)(C)O)C,Terpenoids,MT
+3-thujanone,CC1C2CC2(CC1=O)C(C)C,Terpenoids,MT
+3-undecanone,CCCCCCCCC(=O)CC,FADs,Aliphatics and C5 branched
+"4,4-Dimethyl-E-2-pentene",C/C=C/C(C)(C)C,FADs,Aliphatics and C5 branched
+"4,4-Dimethylheptane",CCCC(C)(C)CCC,FADs,Aliphatics and C5 branched
+"4,6,6-trimethylbicyclo-[3.1.1]-hept-3-en-2-one",CC1=CC(=O)[C@@H]2C[C@H]1C2(C)C,Terpenoids,MT
+"4,8,8-Trimethyl-2-methylene-4-vinylbicyclo[5.2.0]nonane",CC1(CC2C1CCC(CC2=C)(C)C=C)C,Terpenoids,ST
+"4,8-dimethyl-1,3,7-nonatriene",CC(=CCCC(=CC=C)C)C,Terpenoids,Irregular terpene
+"4,8-Dimethylnona-3,8- dien-2-one",CC(=C)CCCC(=CC(=O)C)C,Terpenoids,MT
+4-decanone,CCCCCCC(=O)CCC,FADs,Aliphatics and C5 branched
+4-ethyl guaiacol,CCC1=CC(=C(C=C1)O)OC,Shikimate_derived_Aromatics,BP
+"4-ethyl-1,2-dimethylbenzene",CCC1=CC(=C(C=C1)C)C,Shikimate_derived_Aromatics,BP
+4-heptenal,CC/C=C/CCC=O,FADs,Aliphatics and C5 branched
+4-hydroxy-2-methylacetophenone,CC1=C(C=CC(=C1)O)C(=O)C,Shikimate_derived_Aromatics,BP
+4-hydroxy-5-methyl-2-hexanone,CC(C)C(CC(=O)C)O,FADs,Aliphatics and C5 branched
+"4-Hydroxydodecanoic acid, lactone",CCCCCCCCC1CCC(=O)O1,Others,Others
+4-isopropylphenol,CC(C)C1=CC=C(C=C1)O,Shikimate_derived_Aromatics,BP
+4-methoxyphenol,COC1=CC=C(C=C1)O,Shikimate_derived_Aromatics,BP
+4-methyl anisole,CC1=CC(=C(C=C1)O)OC,Shikimate_derived_Aromatics,BP
+4-methyl cyclohexanone,CC1=CC=C(C=C1)OC,Others,Others
+4-Methyl guaiacol,CC1CCC(=O)CC1,Shikimate_derived_Aromatics,BP
+4-methyl-2-propyl-1-pentanol,CCCC(CC(C)C)CO,FADs,Aliphatics and C5 branched
+4-methyl-3-heptanone,CCCC(C)C(=O)CC,FADs,Aliphatics and C5 branched
+4-methyl-3-hexanone,CCC(C)C(=O)CC,FADs,Aliphatics and C5 branched
+4-methyl-4-vinyl-butyrolactone,CC1(CCC(=O)O1)C=C,Others,Others
+4-methyl-6-isobutyl-2-pyranone,CC1=CC(=O)OC(=C1)CC(C)C,Others,Others
+4-methyldocosane,CCCCCCCCCCCCCCCCCCC(C)CCC,FADs,Aliphatics and C5 branched
+4-Methylenecyclohexene,C=C1CCC=CC1,Others,Others
+4-methylheptan-2-ol,CCCC(C)CC(C)O,FADs,Aliphatics and C5 branched
+4-methylpentanol,CC(C)CCCO,FADs,Aliphatics and C5 branched
+4-methylpyridine,CC1=CC=NC=C1,Others,Aromatic_N/S
+4-methylthiobutanenitrile,CSCCCC#N,Others,NonAromatic_N/S
+4-nonen-1-ol,CCCC/C=C\CCCO,FADs,Aliphatics and C5 branched
+4-oxo-b-ionone,CC1=C(C(CCC1=O)(C)C)/C=C/C(=O)C,Terpenoids,Irregular terpene
+4-oxoisophorone,CC1=CC(=O)CC(C1=O)(C)C,Terpenoids,Irregular terpene
+4-penten-1-ol,C=CCCCO,FADs,Aliphatics and C5 branched
+4-propenylphenol,C/C=C/C1=CC=C(C=C1)C,Shikimate_derived_Aromatics,BP
+4-terpineol,CC1=CCC(CC1)(C(C)C)O,Terpenoids,MT
+4-tridecene,CCCCCCCC/C=C/CCC,FADs,Aliphatics and C5 branched
+4-undecanone,CCCCCCCC(=O)CCC,FADs,Aliphatics and C5 branched
+4-vinyl guaiacol,COC1=C(C=CC(=C1)C=C)O,Shikimate_derived_Aromatics,BP
+4-vinylphenol,C=CC1=CC=C(C=C1)O,Shikimate_derived_Aromatics,BP
+5-hexen-2-one,CC(=O)CCC=C,FADs,Aliphatics and C5 branched
+5-hexen-3-one,CCC(=O)CC=C,FADs,Aliphatics and C5 branched
+5-hydroxy furfural,C1=C(OC(=C1)O)C=O,Others,Others
+5-hydroxymethyl-furfural,C1=C(OC(=C1)C=O)CO,Others,Others
+5-methyl-2-hexanone,CC(C)CCC(=O)C,FADs,Aliphatics and C5 branched
+5-methyl-3-heptanone,CCC(C)CC(=O)CC,FADs,Aliphatics and C5 branched
+5-methyl-3-hexene-2-one,CC(C)C=CC(=O)C,FADs,Aliphatics and C5 branched
+5-methyl-5-hepten-3-one,CCC(=O)C/C(=C/C)/C,FADs,Aliphatics and C5 branched
+5-methylfurfural,CC1=CC=C(O1)C=O,Others,Others
+5-Pentyl-3H-furan-2-one,CCCCCC1=CCC(=O)O1,Others,Others
+"5-phenyl-l,3-pentadiyne",C#CC#CCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+5-undecanone,CCCCCCC(=O)CCCC,FADs,Aliphatics and C5 branched
+"6,10,14-trimethyl -2-pentadecanone",CC(C)CCCC(C)CCCC(C)CCCC(=O)C,Terpenoids,Irregular terpene
+"6,9-guaiadiene",CC1CCC2=C1CC(=CCC2C)C(C)C,Terpenoids,ST
+6-methoxythymol isobutyrate,CCCC(=O)OC1=C(C=CC(=C1OC)C)C(C)C,Terpenoids,MT
+6-methyl dodecane,CCCCCCC(C)CCCCC,FADs,Aliphatics and C5 branched
+"6-methyl-3,5-heptadien-2-one",CC(=C/C=C/C(=O)C)C,Terpenoids,Irregular terpene
+6-methyl-5- hepten-2-ol,CC(CCC=C(C)C)O,Terpenoids,Irregular terpene
+6-methyl-5-hepten-2-one,CC(=CCCC(=O)C)C,Terpenoids,Irregular terpene
+6-methyl-5-Hepten-2-yl acetate,CC(CCC=C(C)C)OC(=O)C,Terpenoids,Irregular terpene
+6-methyl-5-hepten-3-one,CCC(=O)CC=C(C)C,FADs,Aliphatics and C5 branched
+6-methyl-7-octen-2-one,CC(CCCC(=O)C)C=C,FADs,Aliphatics and C5 branched
+6-Methylhept-5-en-2-one,CC(=CCCC(=O)C)C,Terpenoids,Irregular terpene
+"6-methylheptan-2,4-dione",CC(C)CC(=O)CC(=O)C,Terpenoids,Irregular terpene
+6-undecanone,CCCCCC(=O)CCCCC,FADs,Aliphatics and C5 branched
+"7,13-abietadiene",CC(C)C1=CC2=CC[C@@H]3[C@@]([C@H]2CC1)(CCCC3(C)C)C,Terpenoids,Diterpenes
+7-epi-a-selinene,CC1=CCC[C@]2([C@H]1C[C@H](CC2)C(=C)C)C,Terpenoids,ST
+"7-methyl-1,6-dioxaspiro[4,5]decane",CC1CCCC2(O1)CCCO2,Others,Others
+7-Methyl-3-methylene-6-octen-1-ol,CC(=CCCC(=C)CCO)C,Terpenoids,MT
+7-octen-4-ol,CCCC(CCC=C)O,FADs,Aliphatics and C5 branched
+7-tricosene,CCCCCCCCCCCCCCC/C=C/CCCCCC,FADs,Aliphatics and C5 branched
+"8,10-heptadecadiene-4,6-diyne-1,12-diol",CCCCC[C@@H](/C=C/C=C/C#CC#CCCCO)O,FADs,Aliphatics and C5 branched
+"8,11,13-abietatriene",CC(C)C1=CC2=C(C=C1)[C@]3(CCCC([C@@H]3CC2)(C)C)C,Terpenoids,Diterpenes
+"8,11,14-Ecosatrienoic acid",CCCCC/C=C\C/C=C\C/C=C\CCCCCCC(=O)O,FADs,Aliphatics and C5 branched
+8-hydroxycarvotanacetone,CC1=CCC(CC1=O)C(C)(C)O,Terpenoids,MT
+"9,12,15-octadecatrienal",CC/C=C/C/C=C/C/C=C/CCCCCCCC=O,FADs,Aliphatics and C5 branched
+9-Aromadendrene,CC1CCC2C1C3C(C3(C)C)CC=C2C,Terpenoids,ST
+9-epicaryophyllene,C/C/1=C\CCC(=C)[C@H]2CC([C@H]2CC1)(C)C,Terpenoids,ST
+9-epi-E-Caryophyllene,C/C/1=C\CCC(=C)[C@@H]2CC([C@@H]2CC1)(C)C,Terpenoids,ST
+9-hexacosene,CCCCCCCCCCCCCCCC/C=C/CCCCCCCC,FADs,Aliphatics and C5 branched
+9-octadecanol,CCCCCCCCCC(CCCCCCCC)O,FADs,Aliphatics and C5 branched
+9-pentacosene,CCCCCCCCCCCCCCC/C=C/CCCCCCCC,FADs,Aliphatics and C5 branched
+9-tricosene,CCCCCCCCCCCCC/C=C/CCCCCCCC,FADs,Aliphatics and C5 branched
+a-acoradiene,C[C@H]1CC=C(C12CCC(C=C2)C)C(C)C,Terpenoids,ST
+a-acorenol,C[C@H]1CCC([C@@]12CCC(=CC2)C)C(C)(C)O,Terpenoids,ST
+a-agarofuran,CC1=CCC[C@@]2([C@]13C[C@@H](CC2)C(O3)(C)C)C,Terpenoids,ST
+a-alaskene,C[C@H]1CCC(=C(C)C)C12CCC(=CC2)C,Terpenoids,ST
+a-amorphene,CC1=C[C@@H]2[C@H](CC1)C(=CC[C@@H]2C(C)C)C,Terpenoids,ST
+a-asarone,C/C=C/C1=CC(=C(C=C1OC)OC)OC,Shikimate_derived_Aromatics,BP
+a-atlantone,CC1=CC[C@@H](CC1)/C(=C/C(=O)C=C(C)C)/C,Terpenoids,ST
+a-bergamotene,CC1=CCC2CC1C2(C)CCC=C(C)C,Terpenoids,ST
+abietadiene,CC(C)C1=CC2=CCC3C(CCCC3(C2CC1)C)(C)C,Terpenoids,Diterpenes
+a-bisabolene,CC1=CCC(CC1)C(=CCC=C(C)C)C,Terpenoids,ST
+a-bisabolol,CC1=CCC(CC1)C2(CCC(C(O2)(C)C)O)C,Terpenoids,ST
+a-bisabolol oxide A,CC1=CC[C@@H](CC1)[C@@](C)(CCC=C(C)C)O,Terpenoids,ST
+a-bourbonene,CC1=CCC2C1C3C2(CCC3C(C)C)C,Terpenoids,ST
+a-bulnesene,C[C@H]1CCC2=C(CC[C@H](C[C@@H]12)C(=C)C)C,Terpenoids,ST
+a-cadinol,CC1=C[C@H]2[C@@H](CC[C@@]([C@@H]2CC1)(C)O)C(C)C,Terpenoids,ST
+a-calacorene,CC1=CC[C@H](C2=C1C=CC(=C2)C)C(C)C,Terpenoids,ST
+a-campholenal,CC1=CC[C@@H](C1(C)C)CC=O,Terpenoids,MT
+a-cedrene,C[C@@H]1CC[C@@H]2[C@]13CC=C([C@H](C3)C2(C)C)C,Terpenoids,ST
+acetic acid,CC(=O)O,FADs,Aliphatics and C5 branched
+Acetoin,CC(C(=O)C)O,FADs,Aliphatics and C5 branched
+Acetone,CC(=O)C,FADs,Aliphatics and C5 branched
+Acetophenone,CC(=O)C1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+a-Copaen-11-ol,CC1=CCC2C3C1C2(CCC3C(C)(C)O)C,Terpenoids,ST
+a-copaen-8-ol,CC1=CCC2C3C1C2(CC(C3C(C)C)O)C,Terpenoids,ST
+a-cubebene,C[C@@H]1CC[C@H]([C@H]2[C@]13[C@@H]2C(=CC3)C)C(C)C,Terpenoids,ST
+a-curcumene,CC1=CC=C(C=C1)C(C)CCC=C(C)C,Terpenoids,ST
+a-Cyclogeraniol,CC1=CCCC(C1CO)(C)C,Terpenoids,MT
+a-elemene,CC(C)C1=CC(=C(C)C)CC[C@@]1(C)C=C,Terpenoids,ST
+a-Elemol,CC(=C)[C@@H]1C[C@@H](CC[C@@]1(C)C=C)C(C)(C)O,Terpenoids,ST
+a-eudesmol,CC1=CCC[C@]2([C@@H]1C([C@@H](CC2)C(C)(C)O)OC(=O)C)C,Terpenoids,ST
+a-eudesmol acetate,CC1=CCC[C@]2([C@H]1C[C@@H](CC2)C(C)(C)O)C,Terpenoids,ST
+a-guaiene,C[C@H]1CC[C@H](CC2=C1CC[C@@H]2C)C(=C)C,Terpenoids,ST
+a-guaiol,C[C@@H]1CC[C@@H](CC2=C1CC[C@H]2C)C(C)(C)O,Terpenoids,ST
+a-gurjunene,CC1CCC2C(C2(C)C)C3=C(CCC13)C,Terpenoids,ST
+a-himachalene,CC1=C[C@H]2[C@@H](CC1)C(=C)CCCC2(C)C,Terpenoids,ST
+a-humulene,C/C/1=C\CC(/C=C/C/C(=C/CC1)/C)(C)C,Terpenoids,ST
+a-Ionene,CC1=CC2=C(C=C1)C(CCC2)(C)C,Terpenoids,ST
+a-isocomene,C[C@@H]1CC[C@@]2([C@]13CCC[C@]3(C=C2C)C)C,Terpenoids,ST
+a-linalool,CC(=C)CCCC(C)(C=C)O,Terpenoids,MT
+Alloaromadendrene,C[C@@H]1CC[C@H]2[C@@H]1[C@H]3[C@H](C3(C)C)CCC2=C,Terpenoids,ST
+allo-aromadendrene epoxide,C[C@H]1CCC2C1[C@@H]3[C@@H](C3(C)C)CCC24CO4,Terpenoids,ST
+allo-ocimene,C/C=C(\C)/C=C/C=C(C)C,Terpenoids,MT
+allyl isothiocyanate,C=CCN=C=S,Others,NonAromatic_N/S
+a-Longipinene,CC1=CC[C@@H]2[C@@H]3[C@H]1[C@]2(CCCC3(C)C)C,Terpenoids,ST
+a-Methyl benzyl acetate,CC(C1=CC=CC=C1)OC(=O)C,Shikimate_derived_Aromatics,BP
+a-Methylstyrene,CC(=C)C1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+"Amorpha-4,9-dien-2-ol",CC1=CC2[C@H](CC=C(C2C(C1)O)C)C(C)C,Terpenoids,ST
+a-muurolene,CC1=C[C@@H]2[C@H](CC1)C(=CC[C@H]2C(C)C)C,Terpenoids,ST
+a-muurolol,CC1=C[C@H]2[C@H](CC[C@@]([C@H]2CC1)(C)O)C(C)C,Terpenoids,ST
+amyl acetate,CCCCCOC(=O)C,FADs,Aliphatics and C5 branched
+Amyl benzoate,CCCCCOC(=O)C(C)C,Shikimate_derived_Aromatics,BP
+amyl isobutyrate,CCCCCOC(=O)C1=CC=CC=C1,FADs,Aliphatics and C5 branched
+amyl isovalerate,CCCCCOC(=O)C1=CC=CC=C1O,FADs,Aliphatics and C5 branched
+amyl salicylate,CCCCCOC(=O)CC(C)C,Shikimate_derived_Aromatics,BP
+anisaldehyde,COC1=CC=C(C=C1)C=O,Shikimate_derived_Aromatics,BP
+Anisole,COC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+anti-2-methylbutyraldehyde oxime,CCC(C)/C=N\O,Others,NonAromatic_N/S
+anti-isovaleraldehyde oxime,CC(C)C/C=N\O,Others,NonAromatic_N/S
+a-ocimene,CC(=C)CC/C=C(\C)/C=C,Terpenoids,MT
+a-Patchoulene,CC1CCC23C1CC(C2(C)C)CC=C3C,Terpenoids,ST
+a-phellandren-8-ol,CC1=CCC(C=C1)C(C)(C)O,Terpenoids,MT
+a-phellandrene,CC1=CCC(C=C1)C(C)C,Terpenoids,MT
+a-pinene,CC1(C2CC1C3(C(C2)O3)C)C,Terpenoids,MT
+a-pinene oxide,CC1=CCC2CC1C2(C)C,Terpenoids,MT
+apiole,COC1=C2C(=C(C(=C1)CC=C)OC)OCO2,Shikimate_derived_Aromatics,BP
+Aplotaxene,CC/C=C\C/C=C\C/C=C\CCCCCC=C,FADs,Aliphatics and C5 branched
+Arachidicacid,CCCCCCCCCCCCCCCCCCCC(=O)O,FADs,Aliphatics and C5 branched
+ar-curcumene,CC1=CC=C(C=C1)[C@@H](C)CCC=C(C)C,Terpenoids,ST
+ar-ethylbenzyl alcohol,CCC(C1=CC=CC=C1)O,Shikimate_derived_Aromatics,BP
+Aristolene,CC1CCCC2=CCC3C(C12C)C3(C)C,Terpenoids,ST
+arnicenone,C[C@H]1CC(=O)[C@]2([C@@]13CCC[C@@]3(C=C2C)C)C,Terpenoids,ST
+aromadendrene,C[C@@H]1CC[C@@H]2[C@@H]1[C@H]3[C@H](C3(C)C)CCC2=C,Terpenoids,ST
+artemisia acetate,CC(=C)/C=C/C(C)(C)C=C,Terpenoids,MT
+Artemisia alcohol,CC(=CC(=O)C(C)(C)C=C)C,Terpenoids,MT
+Artemisia ketone,CC(=CC(C(C)(C)C=C)O)C,Terpenoids,MT
+Artemisia triene,CC(=CC(C(C)(C)C=C)OC(=O)C)C,Terpenoids,MT
+Ar-tumerone,CC1=CC=C(C=C1)C(C)CC(=O)C=C(C)C,Terpenoids,ST
+ar-Turmerol,CC1=CC=C(C=C1)C(C)CC(C=C(C)C)O,Terpenoids,ST
+a-santalal,C/C(=C/CCC1(C2CC3C1(C3C2)C)C)/C=O,Terpenoids,ST
+a-Santalol,C/C(=C/CCC1(C2CC3C1(C3C2)C)C)/CO,Terpenoids,ST
+Ascaridole,CC(C)C12CCC(C=C1)(OO2)C,Terpenoids,MT
+a-Selenine,CC1=CCC[C@]2([C@H]1C[C@@H](CC2)C(=C)C)C,Terpenoids,MT
+a-terpinene,CC1=CC=C(CC1)C(C)C,Terpenoids,MT
+a-terpineol,CC1=CCC(CC1)C(C)(C)O,Terpenoids,MT
+a-terpinolene,CC1=CCC(=C(C)C)CC1,Terpenoids,MT
+a-Thujenal,CC1=CC(C2(C1C2)C(C)C)C=O,Terpenoids,MT
+a-thujene,CC1=CCC2(C1C2)C(C)C,Terpenoids,MT
+a-thujone,C[C@@H]1[C@H]2C[C@]2(CC1=O)C(C)C,Terpenoids,MT
+Atractylone,CC1=COC2=C1C[C@H]3C(=C)CCC[C@@]3(C2)C,Terpenoids,ST
+a-vetivone,C[C@@H]1CC(=O)C=C2[C@]1(CC(=C(C)C)CC2)C,Terpenoids,ST
+a-Ylangene,CC1=CCC2C3C1[C@]2(CCC3C(C)C)C,Terpenoids,ST
+a-zingiberene,CC1=CC[C@H](C=C1)[C@H](C)CCC=C(C)C,Terpenoids,ST
+b-acoradiene,C[C@@H]1CC[C@H]([C@@]12CCC(=CC2)C)C(=C)C,Terpenoids,ST
+b-acoradienol,CC1CCC(C12CCC(=CC2)CO)C(=C)C,Terpenoids,ST
+b-alaskene,C[C@@H]1CCC(=C(C)C)[C@@]12CCC(=CC2)C,Terpenoids,ST
+b-atlantone type,CC1=CC[C@@H](CC1)C(=C)CC(=O)C=C(C)C,Terpenoids,ST
+b-bergamotene,CC(=CCCC1(C2CCC(=C)C1C2)C)C,Terpenoids,ST
+b-bisabolene,CC1=CCC(CC1)C(=C)CCC=C(C)C,Terpenoids,ST
+b-bisabolenol,CC(=CCCC(=C)C1CCC(=CC1)CO)C,Terpenoids,ST
+b-Bisabolol,CC1=CC[C@@](CC1)([C@@H](C)CCC=C(C)C)O,Terpenoids,ST
+b-bourbonene,CC(C)[C@@H]1CC[C@@]2([C@H]1[C@@H]3[C@H]2CCC3=C)C,Terpenoids,ST
+b-calacorene,CC1=CC2=C(C=C1)C(=C)CCC2C(C)C,Terpenoids,ST
+b-caryophyllene alcohol,CC1(CC2C1CCC3(CCCC2(C3)O)C)C,Terpenoids,ST
+b-Caryophyllene oxide,C[C@@]12CC[C@@H]3[C@H](CC3(C)C)C(=C)CC[C@H]1O2,Terpenoids,ST
+b-cedrene,C[C@@H]1CC[C@@H]2[C@]13CCC(=C)[C@H](C3)C2(C)C,Terpenoids,ST
+b-chamigrene,CC1=CC[C@@]2(CC1)C(=C)CCCC2(C)C,Terpenoids,ST
+b-citronellene,C[C@@H](CCC=C(C)C)C=C,Terpenoids,MT
+b-copaen-4-a-ol,CC(C)[C@H]1CC[C@@]2(C3C1C2C(=C)[C@@H](C3)O)C,Terpenoids,ST
+b-copaene,CC(C)[C@@H]1CC[C@]2([C@@H]3[C@H]1C2C(=C)CC3)C,Terpenoids,ST
+b-Costol,CC12CCCC(=C)C1CC(CC2)C(=C)CO,Terpenoids,ST
+b-cubebene,C[C@@H]1CC[C@H]([C@H]2[C@]13[C@@H]2C(=C)CC3)C(C)C,Terpenoids,ST
+b-curcumene,CC1=CCC(=CC1)C(C)CCC=C(C)C,Terpenoids,ST
+b-cyclocitral,CC1=C(C(CCC1)(C)C)C=O,Terpenoids,Irregular terpene
+b-cyclogeraniol,CC1=C(C(CCC1)(C)C)CO,Terpenoids,MT
+b-dihydroagarofuran,C[C@H]1CCC[C@]2(C13C[C@H](CC2)C(O3)(C)C)C,Terpenoids,ST
+Behenic acid,CCCCCCCCCCCCCCCCCCCCCC(=O)O,FADs,Aliphatics and C5 branched
+b-Elemene,CC(=C)[C@@H]1CC[C@@]([C@@H](C1)C(=C)C)(C)C=C,Terpenoids,ST
+b-Elemol,CC(=C)C1C[C@@H](CC[C@@]1(C)C=C)C(C)(C)O,Terpenoids,ST
+benzaldehyde,C1=CC=C(C=C1)C=O,Shikimate_derived_Aromatics,BP
+Benzene,C1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+"Benzene,1,1-(1,5-hexadiene-1,6-diyl)bis",C1=CC=C(C=C1)/C=C/CC/C=C/C2=CC=CC=C2,Shikimate_derived_Aromatics,BP
+Benzofuran,C1=CC=C2C(=C1)C=CO2,Shikimate_derived_Aromatics,BP
+benzoic acid,C1=CC=C(C=C1)C(=O)O,Shikimate_derived_Aromatics,BP
+Benzyl 2 methyl butyrate,C/C=C(\C)/C(=O)OCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+Benzyl acetate,C/C=C/C(=O)OCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+Benzyl alcohol,C1=CC=C(C=C1)CC#N,Shikimate_derived_Aromatics,BP
+benzyl benzoate,C1=CC=C(C=C1)CN=C=S,Shikimate_derived_Aromatics,BP
+benzyl butyrate,C1=CC=C(C=C1)CO,Shikimate_derived_Aromatics,BP
+Benzyl caprylate,C1=CC=C(C=C1)COC(=O)C2=CC=CC=C2,Shikimate_derived_Aromatics,BP
+Benzyl crotonate,C1=CC=C(C=C1)COC(=O)C2=CC=CC=C2O,Shikimate_derived_Aromatics,BP
+benzyl formate,C1=CC=C(C=C1)COC=O,Shikimate_derived_Aromatics,BP
+Benzyl hexanoate,CC(=O)OCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+Benzyl Isobutyrate,CC(C)C(=O)OCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+Benzyl isonitrile,CC(C)CC(=O)OCC1=CC=CC=C1,Others,Aromatic_N/S
+Benzyl isothiocyanate,CCC(=O)OCC1=CC=CC=C1,Others,Aromatic_N/S
+Benzyl isovalerate,CCC(C)C(=O)OCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+Benzyl methyl ether,CCCC(=O)OCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+Benzyl nitrile,CCCCCC(=O)OCC1=CC=CC=C1,Others,Aromatic_N/S
+Benzyl proprionate,CCCCCCCC(=O)OCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+benzyl salicylate,COCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+benzyl tiglate,[C-]#[N+]CC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+b-eudesmol,CC(=O)OC(C)(C)[C@@H]1CC[C@]2(CCCC(=C)C2C1)C,Terpenoids,ST
+b-eudesmol acetate,C[C@]12CCCC(=C)[C@@H]1C[C@@H](CC2)C(C)(C)O,Terpenoids,ST
+beyerene,C[C@]12CC[C@H]3[C@@]4(CCCC([C@H]4CC[C@@]3(C1)C=C2)(C)C)C,Terpenoids,MT
+b-Fenchol,C[C@@]12CC[C@@H](C1)C([C@H]2O)(C)C,Terpenoids,MT
+b-Funebrene,C[C@@H]1CC[C@@H]2[C@@]13CCC(=C)[C@@H](C3)C2(C)C,Terpenoids,ST
+b-geranic acid,CC(=CCC/C(=C/C(=O)O)/C)C,Terpenoids,MT
+b-guaiene,CC1CCC(=C(C)C)CC2=C1CCC2C,Terpenoids,ST
+b-gurjunene,C[C@@H]1CC[C@@H]2[C@@H](C2(C)C)[C@H]3[C@@H]1CCC3=C,Terpenoids,ST
+b-humulene,C/C/1=C\CC(/C=C/CC(=C)CCC1)(C)C,Terpenoids,ST
+Bicycloelemene,CC(=C)[C@H]1[C@H]2[C@H](C2(C)C)CC[C@@]1(C)C=C,Terpenoids,ST
+bicyclogermacrene,C/C/1=C\CC/C(=C/[C@H]2[C@H](C2(C)C)CC1)/C,Terpenoids,ST
+bicyclosesquiphellandrene,CC1CCC(C2=CC(=C)CCC12)C(C)C,Terpenoids,ST
+bifloratriene,CC1=C[C@H]2[C@H](CC1)C(=C)CC[C@@H]2[C@@H](C)CCC=C(C)C,Terpenoids,Diterpenes
+b-ionol,CC1=C(C(CCC1)(C)C)/C=C/C(C)O,Terpenoids,Irregular terpene
+Bisabolol oxide II,CC1=CCC(CC1)C2(CCC(O2)C(C)(C)O)C,Terpenoids,ST
+Bisabolone oxide,CC1=CC[C@H](CC1)[C@@]2(CCC(=O)C(O2)(C)C)C,Terpenoids,ST
+b-isocomene,C[C@@H]1CC[C@@]2([C@]13CCC[C@]3(CC2=C)C)C,Terpenoids,ST
+b-longipinene,CC1(CCCC2(C3C1C2C(=C)CC3)C)C,Terpenoids,ST
+b-maaliene,CC1=C2[C@H]3[C@H](C3(C)C)CC[C@@]2(CCC1)C,Terpenoids,ST
+b-Methylionone,CCC(=O)/C=C/C1=C(CCCC1(C)C)C,Terpenoids,Irregular terpene
+b-ocimene,CC(=CCC=C(C)C=C)C,Terpenoids,MT
+b-ocimenol,CC(=CC(/C=C(/C)\C=C)O)C,Terpenoids,MT
+b-Oplopenone,CC(C)[C@@H]1CCC(=C)[C@H]2[C@H]1[C@H](CC2)C(=O)C,Terpenoids,ST
+Borneol,CC1(C2CCC1(C(C2)O)C)C,Terpenoids,MT
+bornyl acetate,CC(=O)O[C@@H]1C[C@@H]2CC[C@]1(C2(C)C)C,Terpenoids,MT
+bornyl formate,CC(C)CC(=O)OC1CC2CCC1(C2(C)C)C,Terpenoids,MT
+bornyl isovalerate,CC1(C2CCC1(C(C2)OC=O)C)C,Terpenoids,MT
+b-patchoulene,CC1CCC2=C1CC3CCC2(C3(C)C)C,Terpenoids,ST
+b-phellandren-8-ol,CC(C)(C1CCC(=C)C=C1)O,Terpenoids,MT
+b-phellandrene,CC(C)C1CCC(=C)C=C1,Terpenoids,MT
+b-phorone,CC1=CC(CC(=O)C1)(C)C,Terpenoids,Irregular terpene
+b-pinene,CC1(C2CCC(=C)C1C2)C,Terpenoids,MT
+b-santalal,C/C(=C/CCC1(C2CCC(C2)C1=C)C)/C=O,Terpenoids,ST
+b-santalene,CC(=CCC[C@@]1([C@H]2CC[C@H](C2)C1=C)C)C,Terpenoids,ST
+b-sesquiphellandrene,C[C@@H](CCC=C(C)C)[C@H]1CCC(=C)C=C1,Terpenoids,ST
+b-Sinensal,C/C(=C\CCC(=C)C=C)/CC/C=C(\C)/C=O,Terpenoids,ST
+b-Terpinene,CC(C)C1=CCC(=C)CC1,Terpenoids,MT
+b-thujene,CC1C=CC2(C1C2)C(C)C,Terpenoids,MT
+b-thujone,C[C@H]1[C@H]2C[C@]2(CC1=O)C(C)C,Terpenoids,MT
+bulnesol,CC1CCC2=C(CCC(CC12)C(C)(C)O)C,Terpenoids,ST
+But-3-en-1-yl isothiocyanate,C=CCCN=C=S,Others,NonAromatic_N/S
+Butanal,CCCC=O,FADs,Aliphatics and C5 branched
+Butanal-2-methyl,CCC(C)C=O,FADs,Aliphatics and C5 branched
+Butanoic acid,CCC(C)C(=O)OC1=C(C=C(C=C1)OC)C2C(O2)C,FADs,Aliphatics and C5 branched
+"Butanoic acid, 2-methyl-,4-methoxy-2-(3-methyloxiranyl) phenyl ester",CCCC(=O)O,Shikimate_derived_Aromatics,BP
+"butanoic acid, 3-methyl-, hexyl ester",CCCCCCOC(=O)CC(C)C,FADs,Aliphatics and C5 branched
+Butanol,CCCCO,FADs,Aliphatics and C5 branched
+Buten-3-one,CC(=O)C=C,FADs,Aliphatics and C5 branched
+butyl acetate,CCCCCC(=O)OCCCC,FADs,Aliphatics and C5 branched
+butyl angelate,CCCCOC(=O)/C(=C/C)/C,FADs,Aliphatics and C5 branched
+Butyl benzoate,CCCCOC(=O)/C(=C\C)/C,Shikimate_derived_Aromatics,BP
+Butyl butyrate,CCCCOC(=O)C,FADs,Aliphatics and C5 branched
+Butyl caproate,CCCCOC(=O)C(C)C,FADs,Aliphatics and C5 branched
+Butyl isobutyrate,CCCCOC(=O)C1=CC=CC=C1,FADs,Aliphatics and C5 branched
+butyl tiglate,CCCCOC(=O)CCC,FADs,Aliphatics and C5 branched
+Butylidenphthalide,CCC/C=C\1/C2=CC=CC=C2C(=O)O1,Shikimate_derived_Aromatics,BP
+b-Vatirenene,CC1CC=CC2=CCC(=C(C)C)CC12C,Terpenoids,ST
+b-vetivone,C[C@@H]1CC(=O)C=C([C@@]12CCC(=C(C)C)C2)C,Terpenoids,ST
+b-ylangene,CC(C)C1CC[C@]2([C@H]3[C@@H]1C2C(=C)CC3)C,Terpenoids,ST
+C10H14 alkylbenzene,CCCCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+C14H16O2,CC1=CC2=C(C3(CC3)[C@@](C(=O)C2=C1)(C)O)C,Others,Others
+C15H26,CC1CCC2C(C1)C(CC=C2C)C(C)C,Others,Others
+C15H26O,CC(=CCCC(=CCCC(=CCO)C)C)C,Others,Others
+C15H280,C1CCCCCCCC(=O)CCCCCC1,Others,Others
+cadalene,CC1=CC2=C(C=CC(=C2C=C1)C)C(C)C,Terpenoids,ST
+"cadina-1 ,4-diene",C[C@H]1CCC(C2C1=CCC(=C2)C)C(C)C,Terpenoids,ST
+"Cadina-3,9-diene",CC1=CC[C@@H]2[C@@H](C1)[C@@H](CC=C2C)C(C)C,Terpenoids,ST
+"Cadina-4,10(15)-dien-3-one",CC1=C[C@@H]2[C@H](CCC(=C)[C@H]2CC1=O)C(C)C,Terpenoids,ST
+Cadinene,CC1=C[C@@H]2[C@@H](CC1)C(=CC[C@H]2C(C)C)C,Terpenoids,ST
+calamenene,C[C@H]1CC[C@H](C2=C1C=CC(=C2)C)C(C)C,Terpenoids,ST
+Calarene,CC1CCC=C2C1(C3C(C3(C)C)CC2)C,Terpenoids,ST
+camphene,CC1(C2CCC(C2)C1(C)O)C,Terpenoids,MT
+camphene hydrate,CC1(C2CCC(C2)C1=C)C,Terpenoids,MT
+Camphenilone,CC1(C2CCC(C2)C1=O)C,Terpenoids,MT
+Camphonealdehyde,CC1=CCC(C1(C)C)CC=O,Terpenoids,MT
+camphor,CC1(C2CCC1(C(=O)C2)C)C,Terpenoids,MT
+Car-2-ene,CC1=C[C@@H]2[C@@H](C2(C)C)CC1,Terpenoids,MT
+Carotol,CC1=CC[C@]2(CC[C@@H]([C@]2(CC1)O)C(C)C)C,Terpenoids,ST
+Carvacrol,CC1=C(C=C(C=C1)C(C)C)O,Terpenoids,MT
+carvacrol acetate,CC1=C(C=C(C=C1)C(C)C)OC(=O)C,Terpenoids,MT
+carvenone,CC1CCC(=CC1=O)C(C)C,Terpenoids,MT
+carveol,CC1=CCC(CC1O)C(=C)C,Terpenoids,MT
+Carvone,CC1=CCC(CC1=O)C(=C)C,Terpenoids,MT
+carvotanacetone,CC1=CC[C@@H](CC1=O)C(C)C,Terpenoids,MT
+"Caryophylla-3(15),7(14)-dien-6-ol",CC1(CC2C1CCC(=C)C(CCC2=C)O)C,Terpenoids,ST
+"Caryophylla-3(15),7-dienol(6) I",C/C/1=C/2\CC([C@@H]2CCC(=C)CCC1O)(C)C,Terpenoids,ST
+caryophyllenol II,C/C/1=C/CC2C(CC2(C)C)C(=C)CCC1O,Terpenoids,ST
+Cedr-8-en-13-ol,CC1CCC2C13CC=C(C(C3)C2(C)CO)C,Terpenoids,ST
+Cedren-8-en-15-ol,C[C@@H]1CC[C@@H]2[C@]13CC=C([C@H](C3)C2(C)C)CO,Terpenoids,ST
+cedrol,C[C@@H]1CC[C@@H]2[C@]13CC[C@@]([C@H](C3)C2(C)C)(C)O,Terpenoids,ST
+chamazulene,CCC1=CC2=C(C=CC2=C(C=C1)C)C,Terpenoids,ST
+chavicol,C=CCC1=CC=C(C=C1)O,Shikimate_derived_Aromatics,BP
+chrysanthenone,CC1=CCC2C(=O)C1C2(C)C,Terpenoids,MT
+Chrysanthenyl acetate,C/C=C(/C)\C(=O)OC1C2CC=C(C1C2(C)C)C,Terpenoids,MT
+Chrysanthenyl angelate,CC1=CCC2C(C1C2(C)C)OC(=O)C,Terpenoids,MT
+Chrysanthenyl isovalerate,CC1=CCC2C(C1C2(C)C)OC(=O)CC(C)C,Terpenoids,MT
+Chrysanthenyl proprionate,CCC(=O)OC1C2CC=C(C1C2(C)C)C,Terpenoids,MT
+Cinnamyl alcohol,C1=CC=C(C=C1)/C=C/CO,Shikimate_derived_Aromatics,BP
+cinnamyl cinnamate,C1=CC=C(C=C1)/C=C/COC(=O)/C=C/C2=CC=CC=C2,Shikimate_derived_Aromatics,BP
+"cis,trans-farnesyl acetate",CC(=CCC/C(=C/CC/C(=C/COC(=O)C)/C)/C)C,Terpenoids,ST
+cis-a-bergamotene,CC1=CC[C@H]2C[C@@H]1[C@@]2(C)CCC=C(C)C,Terpenoids,ST
+cis-a-farnesene,CC(=CCC/C(=C\C/C=C(/C)\C=C)/C)C,Terpenoids,ST
+cis-a-santalol,C/C(=C/CC[C@@]1(C2CC3C1(C3C2)C)C)/CO,Terpenoids,ST
+cis-b-guaiene,C[C@@H]1CCC(=C(C)C)CC2=C1CC[C@H]2C,Terpenoids,ST
+cis-b-santalol,C/C(=C/CC[C@@]1([C@H]2CC[C@H](C2)C1=C)C)/CO,Terpenoids,ST
+cis-b-sesquiphellandrol,CC(CCC=C(C)C)[C@H]1C[C@H](C(=C)C=C1)O,Terpenoids,ST
+cis-calamenene,C[C@H]1CC[C@H](C2=C1C=CC(=C2)C)C(C)C,Terpenoids,ST
+cis-carveol,CC1=CC[C@H](C[C@H]1O)C(=C)C,Terpenoids,MT
+cis-chrysanthenol,CC1=CCC2C(C1C2(C)C)O,Terpenoids,MT
+cis-citral,CC(=CCC/C(=C\C=O)/C)C,Terpenoids,MT
+cis-dihydrocarvone,C[C@@H]1CC[C@@H](CC1=O)C(=C)C,Terpenoids,MT
+cis-farnesal,CC(=CCC/C(=C\CC/C(=C\C=O)/C)/C)C,Terpenoids,ST
+cis-jasmin lactone,CC/C=C\CC1CCCC(=O)O1,Others,Others
+cis-lanceol,CC1=CCC(CC1)C(=C)CC/C=C(\C)/CO,Terpenoids,ST
+cis-linalool oxide (pyranoid),C[C@]1(CC[C@@H](C(O1)(C)C)O)C=C,Terpenoids,MT
+"cis-muurola-3,5-diene",C[C@@H]1CC[C@@H](C2=CC(=CC[C@@H]12)C)C(C)C,Terpenoids,ST
+"cis-muurola-4(14),5-diene",C[C@@H]1CC[C@@H](C2=CC(=C)CC[C@@H]12)C(C)C,Terpenoids,ST
+cis-nerolidol,CC(=CCC/C(=C\CCC(C)(C=C)O)/C)C,Terpenoids,ST
+cis-nerolidyl acetate,CC(=CCC/C(=C\CC[C@](C)(C=C)OC(=O)C)/C)C,Terpenoids,ST
+cis-nuciferol,CC1=CC=C(C=C1)C(C)CC/C=C(/C)\CO,Terpenoids,ST
+cis-pinene hydrate,C[C@]1(CC[C@H]2C[C@@H]1C2(C)C)O,Terpenoids,MT
+cis-pinocamphone,C[C@H]1[C@@H]2C[C@@H](C2(C)C)CC1=O,Terpenoids,MT
+cis-pinocarveol,CC1([C@H]2C[C@@H]1C(=C)[C@H](C2)O)C,Terpenoids,MT
+cis-piperitone epoxide,CC(C)[C@@H]1CC[C@]2([C@@H](C1=O)O2)C,Terpenoids,MT
+cis-p-menth-2-en-1-ol,CC(C)[C@H]1CC[C@](C=C1)(C)O,Terpenoids,MT
+cis-sabinene hydrate,CC(C)[C@@]12CC[C@]([C@@H]1C2)(C)O,Terpenoids,MT
+cis-Sesquisabinene hydrate,CC(CCC=C(C)C)[C@]12CC[C@@](C1C2)(C)O,Terpenoids,ST
+cis-thujone,C[C@H]1[C@@H]2C[C@]2(CC1=O)C(C)C,Terpenoids,MT
+cis-thujopsene,CC1=CC[C@]2(CCCC([C@@]23[C@@H]1C3)(C)C)C,Terpenoids,ST
+cis-verbenol,CC1=C[C@H]([C@@H]2C[C@H]1C2(C)C)O,Terpenoids,MT
+citronellal,CC(CCC=C(C)C)CC=O,Terpenoids,MT
+Citronellol,CC(CCC=C(C)C)CCO,Terpenoids,MT
+Citronellyl acetate,CC(CCC=C(C)C)CCOC(=O)C,Terpenoids,MT
+citronellyl formate,CC(CCC=C(C)C)CCOC=O,Terpenoids,MT
+Citronellyl propionate,CCC(=O)OCCC(C)CCC=C(C)C,Terpenoids,MT
+clovene,C[C@@]12CCC[C@]3(C1)C=CC([C@@H]3CC2)(C)C,Terpenoids,ST
+clovenol,C[C@@]12CCC3[C@@](C1)(CC[C@H]2O)CCC3(C)C,Terpenoids,ST
+copaene,CC1=CC[C@H]2[C@H]3[C@@H]1[C@@]2(CC[C@H]3C(C)C)C,Terpenoids,ST
+Costunolide 553-21-9,C/C/1=C\CC/C(=C/[C@@H]2[C@@H](CC1)C(=C)C(=O)O2)/C,Terpenoids,ST
+Coumarin,C1=CC=C2C(=C1)C=CC(=O)O2,Shikimate_derived_Aromatics,BP
+cryptone,CC(C)C1CCC(=O)C=C1,Terpenoids,MT
+cubeban-11-ol,CC1CCC23C1C2C(CCC3C)C(C)(C)O,Terpenoids,ST
+Cubebene,CC1CCC(C2C13C2C(=C)CC3)C(C)C,Terpenoids,ST
+cubebol,C[C@@H]1CC[C@H]([C@H]2[C@]13[C@@H]2[C@@](CC3)(C)O)C(C)C,Terpenoids,ST
+cubenol,C[C@@H]1CC[C@H]([C@H]2[C@]1(CCC(=C2)C)O)C(C)C,Terpenoids,ST
+Cuminal,CC(C)C1=CC=C(C=C1)C=O,Terpenoids,MT
+cuminol,CC(C)C1=CC=C(C=C1)CO,Terpenoids,MT
+cuparene,CC1=CC=C(C=C1)[C@@]2(CCCC2(C)C)C,Terpenoids,ST
+curcuphenol,CC1=CC(=C(C=C1)[C@H](C)CCC=C(C)C)O,Terpenoids,ST
+Curzerene,CC1=COC2=C1C[C@@H]([C@@](C2)(C)C=C)C(=C)C,Terpenoids,ST
+Curzerenone,CC1=COC2=C1C(=O)[C@@H]([C@@](C2)(C)C=C)C(=C)C,Terpenoids,ST
+cyanophenol,C1=CC=C(C(=C1)C#N)O,Others,Aromatic_N/S
+Cyclocopacamphan-12-ol,CC(CO)[C@H]1CCC2([C@@H]3C1C4[C@]2(C4C3)C)C,Terpenoids,Diterpenes
+cyclofenchene,CC1(C2CC3C1C3(C2)C)C,Terpenoids,MT
+Cycloheptanemethanol,C1CCCC(CC1)CO,Others,Others
+Cyclohexane,C1CCC(CC1)CCO,Others,Others
+Cyclohexane ethanol,C1CCC(CC1)CO,Others,Others
+Cyclohexane isothiocyanate,C1CCC(CC1)N=C=S,Others,NonAromatic_N/S
+Cyclohexane methanol,C1CCCCC1,Others,Others
+Cyclohexanol,C1CCC(CC1)O,Others,Others
+Cyclohexanone,C1CCC(=O)CC1,Others,Others
+cyclohexyl acetate,CC(=O)OC1CCCCC1,Others,Others
+Cyclohexylnonene,CCCCCCC/C=C/C1CCCCC1,Others,Others
+Cycloisolongifolene,CC1(CCCC23C14C2CC(C4)C3(C)C)C,Terpenoids,ST
+"cyclopentan-1,3-dione",C1CC(=O)CC1=O,Others,Others
+Cyclopentanecarboxaldehyde,C1CCC(C1)C=O,Others,Others
+"cyclopentanol. 2-methyl-acetate, trans-",C[C@@H]1CCC[C@H]1OC(=O)C,Others,Others
+Cyclopentyl-4-n-octyldodecane,CCCCCCCCC(CCCCCCCC)CCCC1CCCC1,Others,Others
+cyclosativene,CC(C)C1CCC2(C3C1C4C2(C4C3)C)C,Terpenoids,ST
+Cycloseychellene,CC1CCC2(C3(C1CC4C2(C4C3)C)C)C,Terpenoids,ST
+cyclotetradecane,C1CCCCCCCCCCCCC1,Others,Others
+Cyperene,C[C@@H]1CC[C@@H]2CC3=C(CC[C@]13C2(C)C)C,Terpenoids,ST
+d14-cymene,[2H]C1=C(C(=C(C(=C1C([2H])([2H])[2H])[2H])[2H])C([2H])(C([2H])([2H])[2H])C([2H])([2H])[2H])[2H],Terpenoids,MT
+d-3-Carene,CC1=CC[C@@H]2[C@H](C1)C2(C)C,Terpenoids,MT
+d-Amorphene,CC1=CC2C(CCC(=C2CC1)C)C(C)C,Terpenoids,ST
+Daucene,CC1=CCC2(CCC(=C2CC1)C(C)C)C,Terpenoids,ST
+d-cadinene,CC1=C[C@H]2[C@@H](CCC(=C2CC1)C)C(C)C,Terpenoids,ST
+D-carvone,CC1=CC[C@@H](CC1=O)C(=C)C,Terpenoids,MT
+d-decalactone,CCCCCC1CCCC(=O)O1,Others,Others
+"Decahydro-1,1,4a,5,6-pentamethylnaphthalene",CC1CCC2C(CCCC2(C1C)C)(C)C,Terpenoids,Diterpenes
+Decamethyleneglycol,C(CCCCCO)CCCCO,FADs,Aliphatics and C5 branched
+decanoic acid,CCCCCCCCCC(=O)O,FADs,Aliphatics and C5 branched
+decanol,CCCCCCCCCCO,FADs,Aliphatics and C5 branched
+decyl acetate,CCCCCCCCCCOC(=O)C,FADs,Aliphatics and C5 branched
+Decyl hexadecanoate,CCCCCCCCCCCCCCCC(=O)OCCCCCCCCCC,FADs,Aliphatics and C5 branched
+decylbenzene,CCCCCCCCCCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+dehydroabietal,CC(C)C1=CC2=C(C=C1)[C@]3(CCC[C@@]([C@@H]3CC2)(C)C=O)C,Terpenoids,Diterpenes
+Dehydroaromadendrene,C[C@H]1CCC2C1[C@@H]3[C@@H](C3(C)C)CC=C2C,Terpenoids,ST
+Dehydrocostus lactone 477-43-0,C=C1CC[C@@H]2[C@@H]([C@@H]3[C@H]1CCC3=C)OC(=O)C2=C,Terpenoids,ST
+Dehydronerolidol,CC(=CCC/C(=C/CCC(C)(C#C)O)/C)C,Terpenoids,ST
+d-elemene,CC(C)C1=C[C@@H]([C@@](CC1)(C)C=C)C(=C)C,Terpenoids,ST
+delta-2-carene,CC1=CC2C(C2(C)C)CC1,Terpenoids,MT
+demethoxyencecalin,CC(=O)C1=CC2=C(C=C1)OC(C=C2)(C)C,Shikimate_derived_Aromatics,BP
+Dendrolasin,CC(=CCC/C(=C/CCC1=COC=C1)/C)C,Terpenoids,ST
+d-guaiene,CC1CCC2=C(CCC(CC12)C(=C)C)C,Terpenoids,ST
+d-Gurjunene,C[C@@H]1CC[C@@H]2[C@@H](C2(C)C)[C@@H]3[C@@H]1CC=C3C,Terpenoids,ST
+diacetonyl alcohol,CC(=O)CC(C)(C)O,FADs,Aliphatics and C5 branched
+Dibunol,CC1=CC(=C(C(=C1)C(C)(C)C)O)C(C)(C)C,Shikimate_derived_Aromatics,BP
+dibutyl phthalate,CCCCOC(=O)C1=CC=CC=C1C(=O)OCCCC,Shikimate_derived_Aromatics,BP
+Diethoxy-methane,CCOCOCC,FADs,Aliphatics and C5 branched
+diethyl ether,CCOC(=O)C1=CC=CC=C1C(=O)OCC,FADs,Aliphatics and C5 branched
+diethyl phthalate,CCOCC,Shikimate_derived_Aromatics,BP
+Diethylene glycol dibenzoate,C1=CC=C(C=C1)C(=O)OCCOCCOC(=O)C2=CC=CC=C2,Shikimate_derived_Aromatics,BP
+dihydro-3-methyl 2(3H)-furanone,CC1CCOC1=O,Others,Others
+dihydroactinidiolide,CC1(CCCC2(C1=CC(=O)O2)C)C,Terpenoids,Irregular terpene
+Dihydroagarofuran,C[C@H]1CCC[C@@]2([C@]13C[C@@H](CC2)C(O3)(C)C)C,Terpenoids,ST
+Dihydro-a-ionone,CC1=CCCC(C1CCC(=O)C)(C)C,Terpenoids,Irregular terpene
+Dihydro-b-ionol,CC1=C(C(CCC1)(C)C)CCC(C)O,Terpenoids,Irregular terpene
+Dihydro-b-ionone,CC1=C(C(CCC1)(C)C)CCC(=O)C,Terpenoids,Irregular terpene
+dihydrocarvone,CC1CCC(CC1=O)C(=C)C,Terpenoids,MT
+dihydrocarvyl acetate,CC1CCC(CC1OC(=O)C)C(=C)C,Terpenoids,MT
+Dihydrocinnamaldehyde,C1=CC=C(C=C1)CCC=O,Shikimate_derived_Aromatics,BP
+Dihydrocitronellol acetate,CC(C)CCCC(C)CCOC(=O)C,Terpenoids,MT
+Dihydroedulan I,CC1CCC2C(CC=CC2(O1)C)(C)C,Terpenoids,ST
+dihydroedulan II,C[C@H]1CC[C@H]2[C@](O1)(C=CCC2(C)C)C,Terpenoids,ST
+dihydroeugenol,CCCC1=CC(=C(C=C1)O)OC,Shikimate_derived_Aromatics,BP
+Dihydronepetalactone,CC1CCC2C1C(=O)OCC2C,Terpenoids,MT
+dihydrotagetone,CC(C)CC(=O)CC(C)C=C,Terpenoids,MT
+dill ether,C[C@@H]1CO[C@@H]2[C@H]1CCC(=C2)C,Terpenoids,MT
+dillapiole,COC1=C(C2=C(C=C1CC=C)OCO2)OC,Shikimate_derived_Aromatics,BP
+Dimethyl adipate,CNC1=CC=CC=C1C(=O)OC,FADs,Aliphatics and C5 branched
+dimethyl anthranilate,COC(=O)CCCC(=O)OC,Others,Aromatic_N/S
+dimethyl disulfide,COC(=O)CCCCC(=O)OC,Others,NonAromatic_N/S
+Dimethyl glutarate,COC1=CC=CC=C1C(=O)OC,FADs,Aliphatics and C5 branched
+Dimethyl salicylate,CSC,Shikimate_derived_Aromatics,BP
+Dimethyl sulphide,CSSC,Others,NonAromatic_N/S
+dimethyl tetrasulfide,CSSSC,Others,NonAromatic_N/S
+dimethyl trisulfide,CSSSSC,Others,NonAromatic_N/S
+dipropyl disulfide,CCCSSCCC,Others,NonAromatic_N/S
+dipropyl pentasulfide,CCCSSSCCC,Others,NonAromatic_N/S
+dipropyl tetrasulfide,CCCSSSSCCC,Others,NonAromatic_N/S
+dipropyl trisulfide,CCCSSSSSCCC,Others,NonAromatic_N/S
+D-Limonene,CC1=CC[C@@H](CC1)C(=C)C,Terpenoids,MT
+DL-Linalool,CC(=CCCC(C)(C=C)O)C,Terpenoids,MT
+docosane,CCCCCCCCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+Docosanol,CCCCCCCCCCCCCCCCCCCCCCO,FADs,Aliphatics and C5 branched
+docosene,CCCCCCCCCCCCCCCCCCCCC=C,FADs,Aliphatics and C5 branched
+d-Octalactone,CCCC1CCCC(=O)O1,Others,Others
+dodecanal,CCCCCCCCCCCC=O,FADs,Aliphatics and C5 branched
+Dodecane,CCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+dodecanoic acid,CCCCCCCCCCCC(=O)O,FADs,Aliphatics and C5 branched
+Dodecanol,CCCCCCCCCCCCO,FADs,Aliphatics and C5 branched
+dodecenal,CCCCCCCCC/C=C/C=O,FADs,Aliphatics and C5 branched
+Dodecene,CCCCCCCCCCC=C,FADs,Aliphatics and C5 branched
+Dodecyl acetate,CCCCCCCCCCCCCC(=O)OCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+Dodecyl tetradecanoate,CCCCCCCCCCCCOC(=O)C,FADs,Aliphatics and C5 branched
+dolabradiene,C[C@@]1(CC[C@@]2([C@@H](C1)CC[C@]3([C@H]2CCCC3=C)C)C)C=C,Terpenoids,Diterpenes
+Dotriacontane,CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+D-Selinene,CC1=C2C=C(CCC2(CCC1)C)C(C)C,Terpenoids,ST
+d-terpineol,CC(C)(C1CCC(=C)CC1)O,Terpenoids,MT
+"E,E-2,4-decadienal",CCCCC/C=C/C=C/C=O,FADs,Aliphatics and C5 branched
+"E,E-2,4-Dodecadienal",CCCCCCC/C=C/C=C/C=O,FADs,Aliphatics and C5 branched
+"E,E-2,4-Heptadienal",CC/C=C/C=C/C=O,FADs,Aliphatics and C5 branched
+"E,E-2,4-Hexadienal",C/C=C/C=C/C=O,FADs,Aliphatics and C5 branched
+"E,E-2,6-dimethyl-1,3,5,7-Octatetraene",CC(=C)/C=C/C=C(\C)/C=C,Terpenoids,MT
+"E,E-3,5-octadien-2-one",CC/C=C/C=C/C(=O)C,FADs,Aliphatics and C5 branched
+"E,E-4,8,12-Trimethyltrideca-1,3,7,11-tetraene",CC(=CCC/C(=C/CC/C(=C/C=C)/C)/C)C,Terpenoids,Irregular terpene
+"E,E-a-farnesene",CC(=CCC/C(=C/C/C=C(\C)/C=C)/C)C,Terpenoids,ST
+"E,E-farnesal",CC(=CCC/C(=C/CC/C(=C/C=O)/C)/C)C,Terpenoids,ST
+"E,E-farnesol",CC(=CCC/C(=C/CC/C(=C/CO)/C)/C)C,Terpenoids,ST
+"E,E-farnesyl acetate",CC(=CCC/C(=C/CC/C(=C/COC(=O)C)/C)/C)C,Terpenoids,ST
+"E,Z-2,4-heptadienal",CC/C=C\C=C\C=O,FADs,Aliphatics and C5 branched
+"E,Z-2,6-Nonadien-1-ol",CC/C=C\CC/C=C/CO,FADs,Aliphatics and C5 branched
+"E,Z-2,6-Nonadienal",CC/C=C\CC/C=C/C=O,FADs,Aliphatics and C5 branched
+"E,Z-farnesol",CC(=CCC/C(=C\CC/C(=C/CO)/C)/C)C,Terpenoids,ST
+E-12-norcaryophyll-5-en-2-one,C/C/1=C\CCC(=O)C2CC(C2CC1)(C)C,Terpenoids,ST
+E-1-propenyl propyl disulfide,CCCSS/C=C/C,Others,NonAromatic_N/S
+E-1-propenyl propyl tetrasulfide,CCCSSS/C=C/C,Others,NonAromatic_N/S
+E-1-propenyl propyl trisulfide,CCCSSSS/C=C/C,Others,NonAromatic_N/S
+E-2(3)-Dihydrofarnesal,CC(CC/C=C(\C)/CCC=C(C)C)CC=O,Terpenoids,ST
+E-2(3)-Dihydrofarnesol,CC(CC/C=C(\C)/CCC=C(C)C)CCO,Terpenoids,ST
+"E-2,6-dimethyl-1,3,5,7-octatetrane",CC(=C)/C=C/C=C(/C)\C=C,Terpenoids,Aliphatics and C5 branched
+E-2-heptenal,CCCC/C=C/C=O,FADs,Aliphatics and C5 branched
+E-2-Hexenal,CCC/C=C/C=O,FADs,Aliphatics and C5 branched
+E-2-hexene-1-ol,CCC/C=C/CO,FADs,Aliphatics and C5 branched
+E-2-Hexenyl acetate,CCC/C=C/COC(=O)C,FADs,Aliphatics and C5 branched
+E-2-hexenyl benzoate,CCC/C=C/COC(=O)C1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+E-2-Hexenyl butyrate,CCC/C=C/COC(=O)CCC,FADs,Aliphatics and C5 branched
+E-2-methyl-2-butenyl angelate,C/C=C(\C)/COC(=O)/C(=C\C)/C,FADs,Aliphatics and C5 branched
+E-2-methyl-2-butenyl isobutyrate,C/C=C(\C)/COC(=O)C(=C)C,FADs,Aliphatics and C5 branched
+E-2-methyl-2-butenyl methacrylate,C/C=C(\C)/COC(=O)C(C)C,FADs,Aliphatics and C5 branched
+E-2-Methylbut-2-enal,C/C=C(\C)/C=O,FADs,Aliphatics and C5 branched
+E-2-nonenal,CCCCCC/C=C/C=O,FADs,Aliphatics and C5 branched
+E-2-octen-1-al,CCCCC/C=C/C=O,FADs,Aliphatics and C5 branched
+E-2-octenol,CCCCC/C=C/CO,FADs,Aliphatics and C5 branched
+E-2-penten-1-al,CC/C=C/C=O,FADs,Aliphatics and C5 branched
+E-2-Tetradecen-1-ol,CCCCCCCCCCC/C=C/CO,FADs,Aliphatics and C5 branched
+E-2-tetradecenal,CCCCCCCCCCC/C=C/C=O,FADs,Aliphatics and C5 branched
+E-3-caren-2-ol,CC1=CCC2C(C1O)C2(C)C,Terpenoids,MT
+E-3-hexen-1-ol,CC/C=C/CCO,FADs,Aliphatics and C5 branched
+E-3-hexen-1-ol acetate,CC/C=C/CCOC(=O)C,FADs,Aliphatics and C5 branched
+E-3-Methyl-2-pentenoic acid,CC/C(=C/C(=O)O)/C,FADs,Aliphatics and C5 branched
+E-3-octen-2-one,CCCC/C=C/C(=O)C,FADs,Aliphatics and C5 branched
+"E-4,8-Dimethyl-1,3,7-nonatriene",CC(=CCC/C(=C/C=C)/C)C,Terpenoids,Irregular terpene
+"E-4,8-Dimethyl-1,3,9-nonatriene",CC(=C)CCC/C(=C/C=C)/C,Terpenoids,Irregular terpene
+E-4-hexen-1-ol,C/C=C/CCCO,FADs,Aliphatics and C5 branched
+"E-6,10-Dimethyl-5,9-undecadien-2-ol",CC(CC/C=C(\C)/CCC=C(C)C)O,Terpenoids,Irregular terpene
+"E-6,7-Epoxy-2,6-dimethylnon-8-en-4-one",CC(C)CC(=O)C[C@]1([C@@H](O1)C=C)C,Terpenoids,MT
+E-8-oxolinalool,C/C(=C\CCC(C)(C=C)O)/C=O,Terpenoids,MT
+E-a-bergamotene,CC1=CC[C@@H]2C[C@H]1[C@@]2(C)CCC=C(C)C,Terpenoids,ST
+E-a-bisabolene,CC1=CCC(CC1)/C(=C/CC=C(C)C)/C,Terpenoids,ST
+E-a-ionone,CC1=CCCC(C1/C=C/C(=O)C)(C)C,Terpenoids,ST
+E-anethole,C/C=C/C1=CC=C(C=C1)OC,Shikimate_derived_Aromatics,BP
+E-Asarone,C/C=C/C1=CC(=C(C=C1OC)OC)OC,Shikimate_derived_Aromatics,BP
+E-b- guaiene,C[C@@H]1CC[C@H](CC2=C1CC[C@H]2C)C(=C)C,Terpenoids,ST
+E-b-bergamotene,CC(=CCCC1([C@H]2CCC(=C)[C@@H]1C2)C)C,Terpenoids,ST
+E-b-damascenone,C/C=C/C(=O)C1=C(C=CCC1(C)C)C,Terpenoids,Irregular terpene
+E-b-damascone,C/C=C/C(=O)C1=C(CCCC1(C)C)C,Terpenoids,Irregular terpene
+E-b-Elemenone,CC(=C1C[C@H]([C@](CC1=O)(C)C=C)C(=C)C)C,Terpenoids,ST
+E-b-farnesene,CC(=CCC/C(=C/CCC(=C)C=C)/C)C,Terpenoids,ST
+E-b-ionone,CC1=C(C(CCC1)(C)C)/C=C/C(=O)C,Terpenoids,Irregular terpene
+E-b-ocimene,CC(=CC/C=C(\C)/C=C)C,Terpenoids,MT
+E-b-santalol,C/C(=C\CC[C@@]1([C@H]2CC[C@H](C2)C1=C)C)/CO,Terpenoids,ST
+E-b-terpineol,CC(=C)C1CCC(CC1)(C)O,Terpenoids,MT
+"E-Cadina-1(2),4-diene",C[C@H]1CC[C@@H]([C@@H]2C1=CCC(=C2)C)C(C)C,Terpenoids,ST
+E-calamenene,C[C@@H]1CC[C@H](C2=C1C=CC(=C2)C)C(C)C,Terpenoids,ST
+E-Carveol,CC1=CC[C@@H](C[C@H]1O)C(=C)C,Terpenoids,MT
+E-carvyl acetate,CC1=CC[C@@H](C[C@H]1OC(=O)C)C(=C)C,Terpenoids,MT
+E-caryophyllene,C/C/1=C\CCC(=C)[C@H]2CC([C@@H]2CC1)(C)C,Terpenoids,ST
+E-Chrysanthenol,CC1=CC[C@H]2[C@H]([C@@H]1C2(C)C)O,Terpenoids,MT
+E-cinnamaldehyde,C1=CC=C(C=C1)/C=C/C=O,Shikimate_derived_Aromatics,BP
+E-Cinnamic acid,C1=CC=C(C=C1)/C=C/C(=O)O,Shikimate_derived_Aromatics,BP
+E-cinnamic alcohol,C1=CC=C(C=C1)/C=C/CO,Shikimate_derived_Aromatics,BP
+E-cinnamyl acetate,CC(=O)OC/C=C/C1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+E-citral,CC(=CCC/C(=C/C=O)/C)C,Terpenoids,MT
+E-Cyclanthone,CC(C)CC(=O)C/C(=C/C=C)/C,Terpenoids,Irregular terpene
+E-Dec-2-enal,CCCCCCC/C=C/C=O,FADs,Aliphatics and C5 branched
+E-dihydro-a-terpineol,CC1CCC(CC1)C(C)(C)O,Terpenoids,MT
+E-dihydrocarvone,C[C@@H]1CC[C@H](CC1=O)C(=C)C,Terpenoids,MT
+E-farnesol,CC(=CCCC(=CCC/C(=C/CO)/C)C)C,Terpenoids,ST
+E-g-cadinene,CC1=CC[C@@H](C2C1CCC(=C)C2)C(C)C,Terpenoids,ST
+E-geraniol,CC(=CCC/C(=C/CO)/C)C,Terpenoids,MT
+Eicosan-1-ol,CCCCCCCCCCCCCCCCCCCCO,FADs,Aliphatics and C5 branched
+eicosanal,CCCCCCCCCCCCCCCCCCCC=O,FADs,Aliphatics and C5 branched
+eicosane,CCCCCCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+Eicosene,CCCCCCCCCCCCCCCCCCC=C,FADs,Aliphatics and C5 branched
+E-isocroweacin,C/C=C/C1=C(C2=C(C=C1)OCO2)OC,Shikimate_derived_Aromatics,BP
+E-Isoeugenol,C/C=C/C1=CC(=C(C=C1)O)OC,Shikimate_derived_Aromatics,BP
+E-Isogeraniol,CC(=CC/C=C(\C)/CCO)C,Terpenoids,MT
+E-isovalencenal,CC1CCC=C2C1(C/C(=C(\C)/C=O)/CC2)C,Terpenoids,ST
+E-Jasmone,CC/C=C/CC1=C(CCC1=O)C,Others,Others
+elemicin,COC1=CC(=CC(=C1OC)OC)CC=C,Shikimate_derived_Aromatics,BP
+E-limonene epoxide,CC(=C)[C@@H]1CC[C@@]2(C(C1)O2)C,Terpenoids,MT
+E-linalool oxide (furan),C[C@@]1(CC[C@@H](O1)C(C)(C)O)C=C,Terpenoids,MT
+E-linalool oxide (furanoid),C[C@]1(CC[C@H](C(O1)(C)C)O)C=C,Terpenoids,MT
+E-linalool oxide (pyranoid),C[C@]1(CC[C@H](O1)C(C)(C)O)C=C,Terpenoids,MT
+Elsholtzia ketone,CC1=C(OC=C1)C(=O)CC(C)C,Terpenoids,MT
+E-methyl cinnamate,C/C=C/C1=CC(=C(C=C1)OC)OC,Shikimate_derived_Aromatics,BP
+E-methyl isoeugenol,CC/C=C/C[C@H]1[C@@H](CCC1=O)CC(=O)OC,Shikimate_derived_Aromatics,BP
+E-methyl jasmonate,COC(=O)/C=C/C1=CC=CC=C1,Others,Others
+e-muurolene,CC(C)C1CCC(=C)C2C1CC(=C)CC2,Terpenoids,ST
+Endo-1-bourbonanol,CC(C)[C@@H]1CC[C@@]2([C@H]1[C@@H]3[C@H]2CC[C@]3(C)O)C,Terpenoids,ST
+endo-borneol,C[C@@]12CC[C@@H](C1(C)C)C[C@@H]2O,Terpenoids,MT
+endo-Fenchol,C[C@@]12CC[C@@H](C1)C([C@@H]2O)(C)C,Terpenoids,MT
+E-nerolidol,CC(=CCCC(=CCCC(C)(C=C)O)C)C,Terpenoids,ST
+E-nerolidol acetate,CC(=CCC/C(=C/CCC(C)(C=C)OC(=O)C)/C)C,Terpenoids,ST
+E-nuciferol,CC1=CC=C(C=C1)CCCC/C=C(\C)/CO,Terpenoids,ST
+E-Ocimenol,CC(=C)C(C/C=C(\C)/C=C)O,Terpenoids,MT
+E-Oct-2-en-1-ol,CCCCC/C=C/CO,FADs,Aliphatics and C5 branched
+"E-p-2,8-menthadien-1-ol",CC(=C)[C@H]1CC[C@](C=C1)(C)O,Terpenoids,MT
+E-Phytol,C[C@@H](CCC[C@@H](C)CCC/C(=C/CO)/C)CCCC(C)C,Terpenoids,Diterpenes
+epi- a-Muurolol,CC1=C[C@H]2[C@@H](CC[C@]([C@H]2CC1)(C)O)C(C)C,Terpenoids,ST
+epi-a-cadinol,CC1=C[C@H]2[C@@H](CC[C@]([C@@H]2CC1)(C)O)C(C)C,Terpenoids,ST
+epi-a-cubenol,C[C@H]1CC[C@@H]([C@@H]2[C@]1(CCC(=C2)C)O)C(C)C,Terpenoids,ST
+epi-bicyclosesquiphellandrene,C[C@@H]1CC[C@H](C2=CC(=C)CC[C@@H]12)C(C)C,Terpenoids,ST
+epi-b-santalene,CC(=CCC[C@]1([C@H]2CC[C@H](C2)C1=C)C)C,Terpenoids,ST
+epi-cubebol,C[C@H]1C=C[C@@H]([C@@H]2[C@@]13C2[C@@](CC3)(C)O)C(C)C,Terpenoids,ST
+Epi-cubenol,C[C@@H]1CC[C@H]([C@H]2[C@@]1(CCC(=C2)C)O)C(C)C,Terpenoids,ST
+epi-globulol,C[C@H]1CC[C@@H]2[C@H]1[C@@H]3[C@@H](C3(C)C)CC[C@@]2(C)O,Terpenoids,ST
+E-pinane,C[C@H]1CC[C@@H]2C[C@@H]1C2(C)C,Terpenoids,MT
+E-Pinocamphone,CC1C2CC(C2(C)C)CC1=O,Terpenoids,MT
+E-pinocarveol,CC1([C@H]2C[C@@H]1C(=C)[C@@H](C2)O)C,Terpenoids,MT
+E-piperitol,CC1=C[C@@H]([C@H](CC1)C(C)C)O,Terpenoids,MT
+epi-sesquithujene,CC1=CC[C@@]2([C@H]1C2)[C@H](C)CCC=C(C)C,Terpenoids,ST
+E-p-menth-2-en- 1-ol,CC(C)[C@@H]1CC[C@@](C=C1)(C)O,Terpenoids,MT
+"E-p-mentha-1(7),8-dien-2-ol",CC(=C)[C@@H]1CCC(=C)[C@H](C1)O,Terpenoids,MT
+Eremoligenol,C[C@H]1CCC=C2[C@@]1(C[C@@H](CC2)C(C)(C)O)C,Terpenoids,ST
+eremophyllene,CC1=CCCC2C1(CC(CC2)C(=C)C)C,Terpenoids,ST
+E-rose oxide,C[C@@H]1CCO[C@H](C1)C=C(C)C,Terpenoids,MT
+Erucic acid,CCCCCCCC/C=C\CCCCCCCCCCCC(=O)O,FADs,Aliphatics and C5 branched
+E-sabinene hydrate,CC(C)[C@@]12CC[C@@]([C@@H]1C2)(C)O,Terpenoids,MT
+E-sabinyl acetate,CC(C)[C@@]12C[C@@H](C(=C)C1C2)OC(=O)C,Terpenoids,MT
+E-sesquisabinene hydrate,CC(CCC=C(C)C)C12CCC(C1C2)(C)O,Terpenoids,ST
+Estragole,COC1=CC=C(C=C1)CC=C,Shikimate_derived_Aromatics,BP
+E-tagetenone,CC(=CC(=O)/C=C(\C)/C=C)C,Terpenoids,MT
+E-tagetone,CC(C)CC(=O)/C=C(\C)/C=C,Terpenoids,MT
+ethanol,CCO,FADs,Aliphatics and C5 branched
+Ethanone,CC=O,FADs,Aliphatics and C5 branched
+Ethenyl-4-ethyl benzene,CCC1=CC=C(C=C1)C=C,Shikimate_derived_Aromatics,BP
+Ethoxyethylbenzene,CCOC(C)C1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+Ethyl 2-methylbutanoate,CC/C=C\C/C=C\C/C=C\CCCCCCCC(=O)OCC,FADs,Aliphatics and C5 branched
+Ethyl 3-Hexanoate,CCC(C)C(=O)OCC,FADs,Aliphatics and C5 branched
+ethyl 3-phenylpropionate,CCC=CCC(=O)OCC,Shikimate_derived_Aromatics,BP
+Ethyl 4-(4-methylphenyl)-4-pentenoate,CCCC(=O)OCC,Shikimate_derived_Aromatics,BP
+ethyl acetate,CCCCC(=O)OCC,FADs,Aliphatics and C5 branched
+Ethyl benzoate,CCCCC/C=C\C/C=C\CCCCCCCC(=O)OCC,Shikimate_derived_Aromatics,BP
+Ethyl butanoate,CCCCCC(=O)OCC,FADs,Aliphatics and C5 branched
+ethyl decanoate,CCCCCCCC/C=C/CCCCCCCC(=O)OCC,FADs,Aliphatics and C5 branched
+ethyl dodecanote,CCCCCCCC/C=C\CCCCCCCC(=O)OCC,FADs,Aliphatics and C5 branched
+Ethyl hexadecanoate,CCCCCCCCCC(=O)OCC,FADs,Aliphatics and C5 branched
+ethyl hexanoate,CCCCCCCCCCCC(=O)OCC,FADs,Aliphatics and C5 branched
+Ethyl isobutanoate,CCCCCCCCCCCCCC(=O)OCC,FADs,Aliphatics and C5 branched
+Ethyl isovalerate,CCCCCCCCCCCCCCCC(=O)OCC,FADs,Aliphatics and C5 branched
+Ethyl linolate,CCCCCCCCCCCCCCCCCC(=O)OCC,FADs,Aliphatics and C5 branched
+Ethyl linolenate,CCOC(=O)/C(=C/C)/C,FADs,Aliphatics and C5 branched
+Ethyl myristate,CCOC(=O)C,FADs,Aliphatics and C5 branched
+Ethyl octadec-9-enoate,CCOC(=O)C(C)C,FADs,Aliphatics and C5 branched
+Ethyl octanoate,CCOC(=O)C1=CC=CC=C1,FADs,Aliphatics and C5 branched
+Ethyl oleate,CCOC(=O)C1=CC=CC=C1O,FADs,Aliphatics and C5 branched
+Ethyl phenylacetate,CCOC(=O)CC(C)C,Shikimate_derived_Aromatics,BP
+Ethyl salicylate,CCOC(=O)CC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+Ethyl stearate,CCOC(=O)CCC(=C)C1=CC=C(C=C1)C,FADs,Aliphatics and C5 branched
+Ethyl tiglate,CCOC(=O)CCC1=CC=CC=C1,FADs,Aliphatics and C5 branched
+ethyl valerate,CCCCCCCC(=O)OCC,FADs,Aliphatics and C5 branched
+Ethyl-2-methyl-benzene,CCC1=CC=CC=C1C,Shikimate_derived_Aromatics,BP
+Ethyl-3-methyl-benzene,CCC1=CC=CC(=C1)C,Shikimate_derived_Aromatics,BP
+Ethyl-4-methyl-benzene,CCC1=CC=C(C=C1)C,Shikimate_derived_Aromatics,BP
+Ethylbenzene,CCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+Ethylcyclobutane,CCC1CCC1,Others,Others
+ethylcyclohexane,CCC1CCCCC1,Others,Others
+Ethyl-E-geranate,CCOC(=O)/C=C(\C)/CCC=C(C)C,Terpenoids,MT
+ethylpyrazine,CCC1=NC=CN=C1,Others,Aromatic_N/S
+Ethyl-Z-geranate,[2H]/C(=C(\C([2H])([2H])[2H])/C([2H])([2H])CC=C(C)C)/C(=O)OCC,Terpenoids,MT
+eucarvone,CC1=CC=CC(CC1=O)(C)C,Terpenoids,MT
+Eugenol,COC1=C(C=CC(=C1)CC=C)O,Shikimate_derived_Aromatics,BP
+eugenyl acetate,CC(=O)OC1=C(C=C(C=C1)CC=C)OC,Shikimate_derived_Aromatics,BP
+E-Undec-2-enal,CCCCCCCC/C=C/C=O,FADs,Aliphatics and C5 branched
+E-verbenol,CC1=CC(C2CC1C2(C)C)O,Terpenoids,MT
+exo-2-hydroxycineole,CC(=O)OC1CC2CCC1(OC2(C)C)C,Terpenoids,MT
+Exo-2-hydroxycineole acetate,CC1(C2CCC(O1)(C(C2)O)C)C,Terpenoids,MT
+Farnesane,CCC(C)CCCC(C)CCCC(C)C,Terpenoids,ST
+farnesyl acetone,CC(=CCC/C(=C/CC/C(=C/CCC(=O)C)/C)/C)C,Terpenoids,ST
+Fenchol,CC1(C2CCC(C2)(C1O)C)C,Terpenoids,MT
+Fenchone,CC1(C2CCC(C2)(C1=O)C)C,Terpenoids,MT
+Fenchyl acetate,CC(=O)OC1C(C2CCC1(C2)C)(C)C,Terpenoids,MT
+fokienol,CC(=C)/C=C/CCC/C(=C/CCC(C)(C=C)O)/C,Terpenoids,ST
+formamide,C(=O)N,Others,NonAromatic_N/S
+Fragranol,CC(=C)[C@H]1CC[C@]1(C)CCO,Terpenoids,MT
+Funebren-15-al,CC1=CC[C@]23C[C@H]1C([C@@H]2CC[C@H]3C=O)(C)C,Terpenoids,ST
+Furanodiene,C/C/1=C\CC2=C(C/C(=C/CC1)/C)OC=C2C,Terpenoids,ST
+furfural,C1=COC(=C1)C=O,Others,Others
+Furfuryl alcohol,C1=COC(=C1)CO,Others,Others
+furyl propyl ketone,CCCC(=O)C1=CC=CO1,Others,Others
+g- Cadinene,CC1=C[C@H]2[C@H](CC1)C(=C)CC[C@@H]2C(C)C,Terpenoids,ST
+g-butyrolactone,C1CC(=O)OC1,Others,Others
+g-Cadinol,CC1=CCC2C(C1)[C@H](CC[C@]2(C)O)C(C)C,Terpenoids,ST
+g-calacorene,C[C@H]1CC=C(C2=C1C=CC(=C2)C)C(C)C,Terpenoids,ST
+g-Caprolactone,CCC1CCC(=O)O1,Others,Others
+g-Cedrene,C/C=C(/C)\C1CC2([C@@H](CC[C@]2(C1(C)C)C)C)C,Terpenoids,ST
+g-curcumene,CC1=CC=C(CC1)[C@H](C)CCC=C(C)C,Terpenoids,ST
+g-decalactone,CCCCCCC1CCC(=O)O1,Others,Others
+g-elemene,CC(=C1CC[C@@]([C@@H](C1)C(=C)C)(C)C=C)C,Terpenoids,ST
+Geosmin,C[C@H]1CCC[C@@]2([C@@]1(CCCC2)O)C,Terpenoids,Irregular terpene
+Geranyl acetate,C/C=C(\C)/C(=O)OC/C=C(\C)/CCC=C(C)C,Terpenoids,MT
+geranyl acetone,CC(=CCC/C(=C/CC/C(=C/CC/C(=C/CO)/C)/C)/C)C,Terpenoids,Irregular terpene
+geranyl butyrate,CC(=CCC/C(=C/CC/C(=C/CCC(C)(C=C)O)/C)/C)C,Terpenoids,MT
+Geranyl formate,CC(=CCC/C(=C/CCC(=O)C)/C)C,Terpenoids,MT
+Geranyl geraniol,CC(=CCC/C(=C/COC(=O)C)/C)C,Terpenoids,MT
+Geranyl hexanolate,CC(=CCC/C(=C/COC)/C)C,Terpenoids,MT
+geranyl isobutyrate,CC(=CCC/C(=C/COC=O)/C)C,Terpenoids,MT
+Geranyl isovalerate,CC(C)C(=O)OC/C=C(\C)/CCC=C(C)C,Terpenoids,MT
+Geranyl linalool,CC(C)CC(=O)OC/C=C(\C)/CCC=C(C)C,Terpenoids,Diterpenes
+Geranyl methyl ether,CCC(=O)OC/C=C(\C)/CCC=C(C)C,Terpenoids,MT
+Geranyl propionate,CCCC(=O)OC/C=C(\C)/CCC=C(C)C,Terpenoids,MT
+Geranyl tiglate,CCCCCCOC(=O)/C=C(\C)/CCC=C(C)C,Terpenoids,Aliphatics and C5 branched
+Geranyl-2-methylbutyrate,CCC(C)C(=O)OC/C=C(\C)/CCC=C(C)C,Terpenoids,MT
+Germacren-4-ol,C/C/1=C\CC[C@@](/C=C/[C@@H](CC1)C(C)C)(C)O,Terpenoids,ST
+Germacrene A,C/C/1=C\CC/C(=C/CC(=C(C)C)CC1)/C,Terpenoids,ST
+germacrene B,C/C/1=C\CC/C(=C/C[C@@H](CC1)C(=C)C)/C,Terpenoids,ST
+Germacrene D,C/C/1=C\CCC(/C=C/C(CC1)C(C)C)(C)O,Terpenoids,ST
+germacrene D-4-ol,C/C/1=C\CCC(=C)/C=C/[C@@H](CC1)C(C)C,Terpenoids,ST
+germacrone,C/C/1=C\CC(=C(C)C)C(=O)C/C(=C/CC1)/C,Terpenoids,ST
+g-eudesmol,CC1=C2C[C@@H](CC[C@]2(CCC1)C)C(C)(C)O,Terpenoids,ST
+g-guaiene,C[C@@H]1CCC(=CC2=C1CC[C@H]2C)C(C)C,Terpenoids,ST
+g-gurjunene,CC1CCC(C=C2C1CCC2C)C(=C)C,Terpenoids,ST
+g-himachalene,CC1=CC2C(CC1)C(=CCCC2(C)C)C,Terpenoids,ST
+g-Jasmolactone,CC/C=C\CCC1CCC(=O)O1,Others,Others
+Gleenol,C[C@@H]1CC[C@H]([C@H]([C@@]12CCC(=C2)C)O)C(C)C,Terpenoids,ST
+Globulol,C[C@@H]1CC[C@@H]2[C@@H]1[C@H]3[C@H](C3(C)C)CC[C@@]2(C)O,Terpenoids,ST
+"Glycerol-1,3-Dihexadecanoate",CCCCCCCCCCCCCCCC(=O)OCC(COC(=O)CCCCCCCCCCCCCCC)O,FADs,Aliphatics and C5 branched
+g-muurolene,CC1=C[C@@H]2[C@H](CC1)C(=C)CC[C@H]2C(C)C,Terpenoids,ST
+g-Nonalactone,CCCCCC1CCC(=O)O1,Others,Others
+gossonorol,CC1=CC=C(C=C1)C(C)(CCC=C(C)C)O,Terpenoids,MT
+g-Patchoulene,C[C@@H]1CC[C@@]23[C@@H]1C[C@H](C2(C)C)CCC3=C,Terpenoids,ST
+grandisol,CC(=C)[C@@H]1CC[C@]1(C)CCO,Terpenoids,MT
+g-Selinene,CC(=C1CC[C@]2(CCCC(=C)[C@@H]2C1)C)C,Terpenoids,ST
+g-terpinene,CC1=CCC(=CC1)C(C)C,Terpenoids,MT
+g-terpineol,CC(=C1CCC(CC1)(C)O)C,Terpenoids,MT
+"guaia-3,10(14)-dien-11-ol",CC1=CC[C@H]2[C@H]1C[C@H](CCC2=C)C(C)(C)O,Terpenoids,ST
+"Guaia-6,9-diene",CC1CCC2C1C=C(CC=C2C)C(C)C,Terpenoids,ST
+Guaiazulene,CC1=C2C=CC(=C2C=C(C=C1)C(C)C)C,Terpenoids,ST
+guaiol,C[C@H]1CC[C@H](CC2=C1CC[C@@H]2C)C(C)(C)O,Terpenoids,ST
+Guaiyl acetate,C[C@H]1CC[C@H](CC2=C1CC[C@@H]2C)C(C)(C)OC(=O)C,Terpenoids,ST
+hedycaryol,C/C/1=C/CC/C(=C\C[C@H](CC1)C(C)(C)O)/C,Terpenoids,ST
+Helifolen-12-al,CC1CCC2C13CCC(C2(C)C=O)(C=C3)C,Terpenoids,ST
+heneicosane,CCCCCCCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+Heneicosene,CCCCCCCCCCCCCCCCCCCC=C,FADs,Aliphatics and C5 branched
+Hentriacontane,CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+Hentriacontene,CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC=C,FADs,Aliphatics and C5 branched
+Heptacosane,CCCCCCCCCCCCCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+Heptacosene,CCCCCCCCCCCCCCCCCCCCCCCCCC=C,FADs,Aliphatics and C5 branched
+Heptadecadiene,CCCCCCCCCCCCC/C=C/C=C,FADs,Aliphatics and C5 branched
+heptadecane,CCCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+"Heptadecane,2,6,10,15-tetramethyl",CCC(C)CCCCC(C)CCCC(C)CCCC(C)C,Terpenoids,ST
+Heptadecanol,CCCCCCCCCCCCCCCCCO,FADs,Aliphatics and C5 branched
+Heptadecanone,CCCCCCCCCCC(=O)CCCCCC,FADs,Aliphatics and C5 branched
+Heptadecene,CCCCCCCCCCCCCCCC=C,FADs,Aliphatics and C5 branched
+heptanal,CCCCCCC=O,FADs,Aliphatics and C5 branched
+Heptane,CCCCCCC,FADs,Aliphatics and C5 branched
+heptanoic acid,CCCCCCC(=O)O,FADs,Aliphatics and C5 branched
+Heptanol,CCCCCCCO,FADs,Aliphatics and C5 branched
+Heptene,CCCCCC=C,FADs,Aliphatics and C5 branched
+Heptyl acetate,CCCCCCCC(=O)OCCCCCCC,FADs,Aliphatics and C5 branched
+Heptyl butanoate,CCCCCCCOC(=O)C(C)C,FADs,Aliphatics and C5 branched
+heptyl isobutyrate,CCCCCCCOC(=O)CCC,FADs,Aliphatics and C5 branched
+heptyl octanoate,CCCCCCCOC(=O)C,FADs,Aliphatics and C5 branched
+Hexacosane,CCCCCCCCCCCCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+hexadecanal,CCCCCCCCCCCCCCCC=O,FADs,Aliphatics and C5 branched
+hexadecane,CCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+hexadecanoate,CCCCCCCCCCCCCCCC(=O)[O-],FADs,Aliphatics and C5 branched
+hexadecanoic acid,CCCCCCCCCCCCCCCC(=O)O,FADs,Aliphatics and C5 branched
+"Hexadecanoic acid, 2-hydroxy-1- (hydroxymethyl) ethyl ester",CCCCCCCCCCCCCCCC(=O)OC(CO)CO,FADs,Aliphatics and C5 branched
+Hexadecanol,CCCCCCCCCCCCCCCCO,FADs,Aliphatics and C5 branched
+Hexadecene,CCCCCCCCCCCCCCC=C,FADs,Aliphatics and C5 branched
+Hexadecyl acetate,CCCCCCCCCCCCCCCCOC(=O)C,FADs,Aliphatics and C5 branched
+Hexadecylvinylether,CCCCCCCCCCCCCCCCOC=C,FADs,Aliphatics and C5 branched
+Hexan-2-ol,CCCCC(C)O,FADs,Aliphatics and C5 branched
+Hexan-3-ol,CCCC(CC)O,FADs,Aliphatics and C5 branched
+hexanal,CCCCCC=O,FADs,Aliphatics and C5 branched
+Hexanoic acid,CCCCCC(=O)O,FADs,Aliphatics and C5 branched
+"hexanoic acid, 3-hexenyl ester, (z)-",CCCCCC(=O)OCC/C=C\CC,FADs,Aliphatics and C5 branched
+Hexanol,CCCCCCO,FADs,Aliphatics and C5 branched
+Hexen-3-ol,CCCC(C=C)O,FADs,Aliphatics and C5 branched
+hexenal,CCCC=CC=O,FADs,Aliphatics and C5 branched
+Hexene,CCCCC=C,FADs,Aliphatics and C5 branched
+Hexenol acetate,CCCCC=COC(=O)C,FADs,Aliphatics and C5 branched
+Hexenyl 2-methylbutanoate,CCCCC=COC(=O)C(C)CC,FADs,Aliphatics and C5 branched
+Hexyl acetate,CCCCCCOC(=O)/C(=C/C)/C,FADs,Aliphatics and C5 branched
+hexyl benzoate,CCCCCCOC(=O)C,Shikimate_derived_Aromatics,BP
+Hexyl butyrate,CCCCCCOC(=O)C(C)C,FADs,Aliphatics and C5 branched
+hexyl hexanoate,CCCCCCOC(=O)C1=CC=CC=C1,FADs,Aliphatics and C5 branched
+Hexyl isobutyrate,CCCCCCOC(=O)CCC,FADs,Aliphatics and C5 branched
+hexyl tiglate,CCCCCCOC(=O)CCCCC,FADs,Aliphatics and C5 branched
+hexyl-2-methyl butyrate,CCCCCCOC(=O)C(C)CC,FADs,Aliphatics and C5 branched
+Himachalol,CC1=C[C@H]2[C@@H](CC1)[C@](CCCC2(C)C)(C)O,Terpenoids,ST
+hinesol,C[C@H]1CCC=C([C@]12CC[C@H](C2)C(C)(C)O)C,Terpenoids,ST
+Humuladienol,CC1C/C=C/C(C/C=C(/CCC1O)\C)(C)C,Terpenoids,ST
+"Humulane-1,6-dien-3-ol",CC\1CC(/C=C(\CCCC(/C=C1)(C)C)/C)O,Terpenoids,ST
+Humulene epoxide,C/C/1=C\CC(/C=C/C[C@@]2([C@H](O2)CC1)C)(C)C,Terpenoids,ST
+humulene epoxide II,C/C/1=C\CC(/C=C\CC2(C(O2)CC1)C)(C)C,Terpenoids,ST
+humulene epoxide-I,C/C/1=C\CC(/C=C\C[C@@]2([C@H](O2)CC1)C)(C)C,Terpenoids,ST
+humulene oxide,C/C/1=C\CCC2(C(O2)CC(/C=C/C1)(C)C)C,Terpenoids,ST
+humulene oxide II,CC,Terpenoids,ST
+Hydroquinone,C1=CC(=CC=C1O)O,Shikimate_derived_Aromatics,BP
+Indole,C1=CC=C2C(=C1)C=CN2,Others,Aromatic_N/S
+Intermedeol,CC(=C)[C@@H]1CC[C@@]2(CCC[C@]([C@H]2C1)(C)O)C,Terpenoids,ST
+Ipsdienol,CC(=C[C@H](CC(=C)C=C)O)C,Terpenoids,MT
+Ipsdienone,CC(=CC(=O)CC(=C)C=C)C,Terpenoids,MT
+Ipsdienyl acetate,CC(=CC(CC(=C)C=C)OC(=O)C)C,Terpenoids,MT
+ishwarane,CC1CCCC23C1(CC4C(C2)C4(C3)C)C,Terpenoids,ST
+isoabienol,C[C@]12CCCC([C@@H]1CC[C@@]([C@@H]2CCC(=C)C=C)(C)O)(C)C,Terpenoids,Diterpenes
+Isoamyl alcohol,C/C=C(/C)\C(=O)OCCC(C)C,FADs,Aliphatics and C5 branched
+isoamyl angelate,CC(C)CCO,FADs,Aliphatics and C5 branched
+Isoamyl butyrate,CC(C)CCOC(=O)C(C)C,FADs,Aliphatics and C5 branched
+isoamyl isobutyrate,CCC(=O)OCCC(C)C,FADs,Aliphatics and C5 branched
+isoamyl laurate,CCCC(=O)OCCC(C)C,FADs,Aliphatics and C5 branched
+Isoamyl propanoate,CCCCCCCCCCCC(=O)OCCC(C)C,FADs,Aliphatics and C5 branched
+Isoborneol,C[C@@]12CC[C@@H](C1(C)C)C[C@H]2O,Terpenoids,MT
+isobornyl acetate,CC(=O)O[C@H]1C[C@@H]2CC[C@]1(C2(C)C)C,Terpenoids,MT
+isobornyl propionate,CCC(=O)OC1CC2CCC1(C2(C)C)C,Terpenoids,MT
+isobutanal,CC(C)C=O,FADs,Aliphatics and C5 branched
+Isobutanol,CC(C)CO,FADs,Aliphatics and C5 branched
+Isobutyl 2-hydroxybenzoate,C/C=C(/C)\C(=O)OCC(C)C,Shikimate_derived_Aromatics,BP
+isobutyl 2-methylbutyrate,CC(C)CC(=O)OCC(C)C,FADs,Aliphatics and C5 branched
+Isobutyl acetate,CC(C)COC(=O)C,FADs,Aliphatics and C5 branched
+isobutyl angelate,CC(C)COC(=O)C(=C)C,FADs,Aliphatics and C5 branched
+Isobutyl benzoate,CC(C)COC(=O)C(C)C,Shikimate_derived_Aromatics,BP
+Isobutyl hexanoate,CC(C)COC(=O)C1=CC=CC=C1,FADs,Aliphatics and C5 branched
+Isobutyl isobutanoate,CC(C)COC(=O)C1=CC=CC=C1O,FADs,Aliphatics and C5 branched
+Isobutyl isovalerate,CC(C)COC=C,FADs,Aliphatics and C5 branched
+isobutyl methacrylate,CCC(C)C(=O)OCC(C)C,FADs,Aliphatics and C5 branched
+isobutyl valerate,CCCCC(=O)OCC(C)C,FADs,Aliphatics and C5 branched
+Isobutyl vinyl ether,CCCCCC(=O)OCC(C)C,FADs,Aliphatics and C5 branched
+Isobutyraldehyde oxime,CC(C)/C=N/O,Others,NonAromatic_N/S
+Isobutyric acid,CC(C)C(=O)O,FADs,Aliphatics and C5 branched
+Isobutyronitrile,CC(C)C#N,Others,NonAromatic_N/S
+Isocaryophyllene,C/C/1=C/CCC(=C)[C@H]2CC([C@@H]2CC1)(C)C,Terpenoids,ST
+Isocomene,C[C@@H]1CC[C@@]2(C13CCC[C@]3(C=C2C)C)C,Terpenoids,ST
+Isodaucene,CC1=CCC2(CCC(C2CC1)C(=C)C)C,Terpenoids,ST
+Isofenchon,CC1(CC2(CC1CC2=O)C)C,Terpenoids,MT
+isogermacrene D,C/C/1=C/CCC(=C)/C=C\[C@@H](CC1)C(C)C,Terpenoids,ST
+Isohibaene,C[C@]12CCC3[C@@](C1)(CCC4C3(CCCC4(C)C)C)C=C2,Terpenoids,ST
+isokaurene,CC1=CC23CCC4C(CCCC4(C2CCC1C3)C)(C)C,Terpenoids,Diterpenes
+Isoledene,CC1CCC2C(C2(C)C)C3=C1CCC3C,Terpenoids,ST
+Isoleucine methyl ester,CC[C@H](C)[C@@H](C(=O)OC)N,Others,NonAromatic_N/S
+Isomenthol,C[C@H]1CC[C@H]([C@@H](C1)O)C(C)C,Terpenoids,MT
+isomenthone,C[C@H]1CC[C@H](C(=O)C1)C(C)C,Terpenoids,MT
+isomenthyl acetate,C[C@@H]1CC[C@@H]([C@H](C1)OC(=O)C)C(C)C,Terpenoids,MT
+Isopentanal,CC(C)CC=O,FADs,Aliphatics and C5 branched
+Isopentyl 2-hydroxybenzoate,CC(C)CCOC(=O)C,Shikimate_derived_Aromatics,BP
+Isopentyl acetate,CC(C)CCOC(=O)C1=CC=CC=C1,FADs,Aliphatics and C5 branched
+Isopentyl benzoate,CC(C)CCOC(=O)C1=CC=CC=C1O,Shikimate_derived_Aromatics,BP
+Isophorone,CC1=CC(=O)CC(C1)(C)C,Terpenoids,Irregular terpene
+isophytol,CC(C)CCCC(C)CCCC(C)CCCC(C)(C=C)O,Terpenoids,Diterpenes
+isopiperitenone,CC1=CC(=O)C(CC1)C(=C)C,Terpenoids,MT
+Isoprene,CC(=C)C=C,Terpenoids,MT
+Isoprenol,CC(=C)CCO,Terpenoids,MT
+Isopropanol,CC(C)O,FADs,Aliphatics and C5 branched
+Isopropyl acetate,C/C=C(/C)\C(=O)OC(C)C,FADs,Aliphatics and C5 branched
+isopropyl angelate,CC(C)CC(=O)OC(C)C,FADs,Aliphatics and C5 branched
+Isopropyl butyrate,CC(C)OC(=O)C,FADs,Aliphatics and C5 branched
+isopropyl hexadecanoate,CCC(=O)OC(C)C,FADs,Aliphatics and C5 branched
+Isopropyl hexanoate,CCCC(=O)OC(C)C,FADs,Aliphatics and C5 branched
+Isopropyl isovalerate,CCCCCC(=O)OC(C)C,FADs,Aliphatics and C5 branched
+Isopropyl propanoate,CCCCCCCCCCCCCCCC(=O)OC(C)C,FADs,Aliphatics and C5 branched
+Isopropyl tetradecanoate,CCCCCCCCCCCCCC(=O)OC(C)C,FADs,Aliphatics and C5 branched
+isopulegol,CC1CCC(C(C1)O)C(=C)C,Terpenoids,MT
+isopulegone,CC1CCC(C(=O)C1)C(=C)C,Terpenoids,MT
+Isopulegyl acetate,C[C@@H]1CC[C@H]([C@@H](C1)OC(=O)C)C(=C)C,Terpenoids,MT
+isospathulenol,CC1=C2CCC(C2C3C(C3(C)C)CC1)(C)O,Terpenoids,ST
+isothymyl butyrate,CCCC(=O)OC1=C(C=CC(=C1)C(C)C)C,Shikimate_derived_Aromatics,BP
+Isovalericacid,CC(C)CC(=O)O,FADs,Aliphatics and C5 branched
+Isovaleronitrile,CC(C)CC#N,Others,NonAromatic_N/S
+Isovellerdiol,C[C@]12C[C@]1(C(=C[C@H]3[C@@H]2CC(C3)(C)C)CO)CO,Terpenoids,ST
+Junenol,CC(C)[C@@H]1CC[C@]2(CCCC(=C)[C@@H]2[C@H]1O)C,Terpenoids,ST
+Junipene,C[C@]12CCCC([C@@H]3[C@H]1CC[C@@H]3C2=C)(C)C,Terpenoids,ST
+Kaur-16-en-18-oic acid,C[C@@]12CCC[C@@]([C@H]1CC[C@]34[C@H]2CC[C@H](C3)C(=C)C4)(C)C(=O)O,Terpenoids,Diterpenes
+Kaur-16-en-19-ol,C[C@@]12CCCC([C@H]1CC[C@]34[C@H]2CC[C@@H](C3)C(=C)C4)(C)CO,Terpenoids,Diterpenes
+"Kaura-9(11),16-dien-18-oic acid, (4.alpha.)",CC12CCCC(C1CCC34C2=CCC(C3)C(=C)C4)(C)C(=O)O,Terpenoids,Diterpenes
+Kauran-16-ol,CC1(CCCC2(C1CCC34C2CCC(C3)C(C4)(C)O)C)C,Terpenoids,Diterpenes
+kaurene,C[C@H]1CC23CC[C@H]4[C@]([C@@H]2CC[C@H]1C3)(C=CCC4(C)C)C,Terpenoids,Diterpenes
+Kessane,C[C@@H]1CC[C@@H]2[C@@H]1C[C@H]3CC[C@@]2(OC3(C)C)C,Terpenoids,ST
+Khusimone,CC1([C@@H]2CC[C@@]3(C2)C(C1=C)CCC3=O)C,Terpenoids,ST
+Khusinol acetate,CC1=CC2[C@@H](CCC(=C)C2[C@H](C1)OC(=O)C)C(C)C,Terpenoids,MT
+Kongol,CC(=C)C1CCC2(CCC[C@@](C2C1)(C)O)C,Terpenoids,ST
+Lavandulol,CC(=CC[C@@H](CO)C(=C)C)C,Terpenoids,MT
+Lavandulyl acetate,CC(=CCC(COC(=O)C)C(=C)C)C,Terpenoids,MT
+ledol,C[C@@H]1CC[C@H]2[C@@H]1[C@H]3[C@H](C3(C)C)CC[C@@]2(C)O,Terpenoids,ST
+Lepidozene,C/C/1=C\CC/C(=C\[C@H]2[C@H](C2(C)C)CC1)/C,Terpenoids,ST
+Leucic acid methyl ester,CC(C)C[C@@H](C(=O)OC)O,FADs,Aliphatics and C5 branched
+Leucine methyl ester,CC(C)C[C@@H](C(=O)OC)N,Others,NonAromatic_N/S
+Ligustilide,CCC/C=C\1/C2=C(C=CCC2)C(=O)O1,Others,Others
+Lilac alcohol,CC(C=O)C1CCC(O1)(C)C=C,Terpenoids,MT
+Lilac aldehyde,CC(CO)C1CCC(O1)(C)C=C,Terpenoids,MT
+Lilac aldehyde A,C[C@@H](C=O)[C@@H]1CC[C@@](O1)(C)C=C,Terpenoids,MT
+Lilac aldehyde B,C[C@H](C=O)[C@@H]1CC[C@@](O1)(C)C=C,Terpenoids,MT
+Lilac aldehyde C,C[C@H](C=O)[C@H]1CC[C@@](O1)(C)C=C,Terpenoids,MT
+Limonene,CC(=C)C1CCC2(C(C1)O2)C,Terpenoids,MT
+limonene oxide,CC1=CCC(CC1)C(=C)C,Terpenoids,MT
+Linalool oxide (furanoid),CC1(CCC(O1)C(C)(C)O)C=C,Terpenoids,MT
+linalyl acetate,CC(=CCCC(C)(C=C)OC(=O)C)C,Terpenoids,MT
+Linalyl hexanoate,CC(=CCCC(C)(C=C)OC)C,Terpenoids,MT
+Linalyl methyl ether,CCC(=O)OC(C)(CCC=C(C)C)C=C,Terpenoids,MT
+Linalyl propionate,CCCCCC(=O)OC(C)(CCC=C(C)C)C=C,Terpenoids,MT
+linolenic acid,CC/C=C\C/C=C\C/C=C\CCCCCCCC(=O)O,Terpenoids,MT
+L-limonene,CC1=CC[C@H](CC1)C(=C)C,Terpenoids,MT
+L-linalool,CC(=CCC[C@](C)(C=C)O)C,Terpenoids,MT
+longifolene,CC1(CCCC2(C3C1C(C2=C)CC3)C)C,Terpenoids,ST
+lyratyl acetate,CC(=C)C(C=C)/C=C(\C)/COC(=O)C,Terpenoids,MT
+Maaliol,C[C@@]12CCC[C@]([C@H]1[C@H]3[C@H](C3(C)C)CC2)(C)O,Terpenoids,ST
+manool,C[C@]12CCCC([C@@H]1CCC(=C)[C@@H]2CC[C@](C)(C=C)O)(C)C,Terpenoids,Diterpenes
+m-cresol,CC1=CC(=CC=C1)O,Shikimate_derived_Aromatics,BP
+"mentha-2,8-diene",CC1CCC(C=C1)C(=C)C,Terpenoids,MT
+Menthofuran,CC1CCC2=C(C1)OC=C2C,Terpenoids,MT
+Menthol,CC1CCC(C(C1)O)C(C)C,Terpenoids,MT
+Menthomenthol,C[C@@H]1CC[C@H]([C@@H](C1)O)C(C)C,Terpenoids,MT
+menthone,C[C@@H]1CC[C@H](C(=O)C1)C(C)C,Terpenoids,MT
+menthyl acetate,CC1CCC(C(C1)OC(=O)C)C(C)C,Terpenoids,MT
+Methacrolein,CC(=C)C=O,FADs,Aliphatics and C5 branched
+methanethiol,CS,Others,NonAromatic_N/S
+Methoxy-2-propanone,CC(=O)COC,FADs,Aliphatics and C5 branched
+Methoxy-3-methylene-2-pentanone,CCC(=C)C(=O)COC,FADs,Aliphatics and C5 branched
+Methyl (2R)-2-hydroxy-3-methylbutanoate,C/C=C(/C)\C(=O)OC,FADs,Aliphatics and C5 branched
+Methyl (2R)-2-hydroxy-4-methylpentanoate,CC(=CC(=O)C)C,FADs,Aliphatics and C5 branched
+"Methyl (2R,3S)-2-hydroxy-3-methylpentanoate",CC(=CCC/C(=C/C(=O)OC)/C)C,FADs,Aliphatics and C5 branched
+Methyl (2S)-2-hydroxy-3-methylbutanoate,CC(=O)C(=O)OC,FADs,Aliphatics and C5 branched
+Methyl (2S)-2-methylbutanoate,CC(=O)OC,FADs,Aliphatics and C5 branched
+"Methyl (2S,3S)-2-hydroxy-3-methylpentanoate",CC(=S)OC,FADs,Aliphatics and C5 branched
+"Methyl 2,3-dimethoxybenzoate",CC(C)C(C(=O)OC)O,Shikimate_derived_Aromatics,BP
+"Methyl 2,4-decadienoate",CC(C)CC(=O)C,FADs,Aliphatics and C5 branched
+Methyl 2-hydroxy-3-methylbutyrate,CC(C)CC(=O)OC,FADs,Aliphatics and C5 branched
+Methyl 2-methylbutanoate,CC(C)C[C@H](C(=O)OC)O,FADs,Aliphatics and C5 branched
+methyl 2-propenyl disulfide,CC(C)[C@@H](C(=O)OC)O,Others,NonAromatic_N/S
+Methyl 4-methoxybutyrate,CC(C)[C@H](C(=O)OC)O,FADs,Aliphatics and C5 branched
+"methyl 9,12-octadecadienoate",CC(CCC=C(C)C)CC(=O)OC,FADs,Aliphatics and C5 branched
+Methyl acetate,CC/C=C/CC1C(CCC1=O)CC(=O)OC,FADs,Aliphatics and C5 branched
+Methyl angelate,CC/C=C\C/C=C\C/C=C\CCCCCCCC(=O)OC,FADs,Aliphatics and C5 branched
+Methyl anisate,CC/C=C\C[C@@H]1[C@H](CCC1=O)CC(=O)OC,Shikimate_derived_Aromatics,BP
+Methyl anthranilate,CC1=C(C=C(C=C1)C(C)C)OC,Others,Aromatic_N/S
+methyl benzoate,CC1CCCCC1,Shikimate_derived_Aromatics,BP
+Methyl but-2-enoate,CC=CC(=O)OC,FADs,Aliphatics and C5 branched
+Methyl butanoate,CCC(=O)C,FADs,Aliphatics and C5 branched
+methyl carvacrol,CCC(C)C(=O)OC,Terpenoids,MT
+Methyl citronellate,CCCC(=O)OC,Terpenoids,MT
+Methyl cyclohexane,CCCC=CC(=O)OC,Others,Others
+methyl decanoate,CCCCC/C=C\C/C=C\CCCCCCCC(=O)OC,FADs,Aliphatics and C5 branched
+Methyl decenoate,CCCCCC(=O)OC,FADs,Aliphatics and C5 branched
+Methyl dodecanoate,CCCCCC=CC=CC(=O)OC,FADs,Aliphatics and C5 branched
+Methyl dodecenoate,CCCCCC=CCC=CCCCCCCCC(=O)OC,FADs,Aliphatics and C5 branched
+methyl eicosanoate,CCCCCCC(=O)OC,FADs,Aliphatics and C5 branched
+Methyl epi-jasmonate,CCCCCCC/C=C/C(=O)OC,Others,Others
+Methyl ethyl ketone,CCCCCCCC(=O)OC,FADs,Aliphatics and C5 branched
+methyl eugenol,CCCCCCCC/C=C\CCCCCCCC(=O)OC,Shikimate_derived_Aromatics,BP
+Methyl geranate,CCCCCCCCC(=O)OC,Terpenoids,MT
+methyl guaiacol,CCCCCCCCC/C=C/C(=O)OC,Shikimate_derived_Aromatics,BP
+methyl heptadecanoate,CCCCCCCCCC(=O)OC,FADs,Aliphatics and C5 branched
+methyl heptanoate,CCCCCCCCCCC/C=C/C(=O)OC,FADs,Aliphatics and C5 branched
+methyl hexadecanoate,CCCCCCCCCCCC(=O)OC,FADs,Aliphatics and C5 branched
+Methyl hexanoate,CCCCCCCCCCCCCC(=O)OC,FADs,Aliphatics and C5 branched
+Methyl hexenoate,CCCCCCCCCCCCCCC(=O)OC,FADs,Aliphatics and C5 branched
+Methyl isobutenyl ketone,CCCCCCCCCCCCCCCC(=O)OC,FADs,Aliphatics and C5 branched
+Methyl isobutyl ketone,CCCCCCCCCCCCCCCCC(=O)OC,FADs,Aliphatics and C5 branched
+Methyl isovalerate,CCCCCCCCCCCCCCCCCC(=O)OC,FADs,Aliphatics and C5 branched
+Methyl jasmonate,CCCCCCCCCCCCCCCCCCCC(=O)OC,Others,Others
+Methyl linoleate,CCCCCSSSSC,FADs,Aliphatics and C5 branched
+Methyl linolenate,CCCSSC,FADs,Aliphatics and C5 branched
+Methyl mandelate,CCCSSSC,Shikimate_derived_Aromatics,BP
+Methyl myristate,CC[C@H](C)C(=O)OC,FADs,Aliphatics and C5 branched
+Methyl nicotinate,CC[C@H](C)[C@@H](C(=O)OC)O,Others,Aromatic_N/S
+methyl nonanoate,CC[C@H](C)[C@H](C(=O)OC)O,FADs,Aliphatics and C5 branched
+Methyl octanoate,COC(=O)C(C1=CC=CC=C1)O,FADs,Aliphatics and C5 branched
+Methyl oleate,COC(=O)C1=CC=CC=C1,FADs,Aliphatics and C5 branched
+Methyl pentadecanoate,COC(=O)C1=CC=CC=C1N,FADs,Aliphatics and C5 branched
+methyl pentyl tetrasulfide,COC(=O)C1=CC=CC=C1O,Others,NonAromatic_N/S
+m-Ethyl phenol,COC(=O)C1=CN=CC=C1,Shikimate_derived_Aromatics,BP
+Methyl phenylacetate,COC(=O)CC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+methyl propyl disulfide,COC1=C(C=C(C=C1)CC=C)OC,Others,NonAromatic_N/S
+methyl propyl trisulfide,COC1=CC=C(C=C1)C(=O)OC,Others,NonAromatic_N/S
+Methyl pyruvate,COC1=CC=CC(=C1OC)C(=O)OC,FADs,Aliphatics and C5 branched
+methyl salicylate,COC1=CC=CC=C1OC,Shikimate_derived_Aromatics,BP
+Methyl stearate,COCCCC(=O)OC,FADs,Aliphatics and C5 branched
+Methyl tetradecenoate,CSSCC=C,FADs,Aliphatics and C5 branched
+Methyl thioacetate,CCC1=CC(=CC=C1)O,Others,NonAromatic_N/S
+methyl-2-pentenoate,CC/C=C/C(=O)OC,FADs,Aliphatics and C5 branched
+"Methyl-3,4,5-trimethoxybenzoate",COC1=CC(=CC(=C1OC)OC)C(=O)OC,Shikimate_derived_Aromatics,BP
+"Methyl-3,5-dimethoxybenzoate",COC1=CC(=CC(=C1)C(=O)OC)OC,Shikimate_derived_Aromatics,BP
+Methyl-3-methyl-2-butenoate,CC(=CC(=O)OC)C,FADs,Aliphatics and C5 branched
+Methyl-3-methyloctanoate,CCCCCC(C)CC(=O)OC,FADs,Aliphatics and C5 branched
+Methyl-4-acetylcyclohex-1-ene,CC1=CCC(CC1)C(=O)C,Others,Others
+Methylethylcyclohexane,CCC1(CCCCC1)C,Others,Others
+methylindoline,CN1CCC2=CC=CC=C21,Others,Aromatic_N/S
+methylpyrazine,CC1=NC=CN=C1,Others,Aromatic_N/S
+methylquinoline,CC1=NC2=CC=CC=C2C=C1,Others,Aromatic_N/S
+mintoxide,CC(C)[C@@H]1CC[C@@]2(C1C3C(=C)CCC2O3)C,Terpenoids,MT
+modhephene,C[C@@H]1CC[C@@]23[C@@]1(CCC2)C(=CC3(C)C)C,Terpenoids,ST
+musk ambrette,CC1=C(C(=C(C(=C1[N+](=O)[O-])C(C)(C)C)[N+](=O)[O-])C)[N+](=O)[O-],Others,Aromatic_N/S
+Musk xylene,CC1=C(C=C(C(=C1[N+](=O)[O-])OC)C(C)(C)C)[N+](=O)[O-],Others,Aromatic_N/S
+"Muurola-4,9-diene",CC1=CC2C(CC1)C(=CCC2C(C)C)C,Terpenoids,ST
+Muurolol,CC1=C[C@H]2[C@@H](CC[C@@]([C@H]2CC1)(C)O)C(C)C,Terpenoids,ST
+m-Xylene,CC1=CC(=CC=C1)C,Shikimate_derived_Aromatics,BP
+Myrcene,CC(=CCCC(=C)C=C)C,Terpenoids,MT
+Myrcene epoxide,CC1(C(O1)CCC(=C)C=C)C,Terpenoids,MT
+Myrcenol,CC(C)(CCCC(=C)C=C)O,Terpenoids,MT
+Myristic acid,CCCCCCCCCCCCCC(=O)O,FADs,Aliphatics and C5 branched
+myristicin,COC1=CC(=CC2=C1OCO2)CC=C,Shikimate_derived_Aromatics,BP
+myrtanol,CC1(C2CCC(C1C2)CO)C,Terpenoids,MT
+myrtenal,CC1(C2CC=C(C1C2)C=O)C,Terpenoids,MT
+Myrtenol,CC1(C2CC=C(C1C2)CO)C,Terpenoids,MT
+myrtenyl acetate,CC(=O)OCC1=CCC2CC1C2(C)C,Terpenoids,MT
+N-(2-acetylphenyl)-formamide,CC(=O)C1=CC=CC=C1NC=O,Others,Aromatic_N/S
+"N,N-diphenylformamide",C1=CC=C(C=C1)N(C=O)C2=CC=CC=C2,Others,Aromatic_N/S
+naphthalene,C1=CC=C2C=CC=CC2=C1,Shikimate_derived_Aromatics,BP
+n-Decanal,CCCCCCCCCC=O,FADs,Aliphatics and C5 branched
+n-decane,CCCCCCCCCC,FADs,Aliphatics and C5 branched
+neo-allo-ocimene,C/C=C(/C)\C=C\C=C(C)C,Terpenoids,MT
+neodihydrocarveol,CC1CCC(CC1O)C(=C)C,Terpenoids,MT
+neoisodihydrocarveol,C[C@H]1CC[C@H](C[C@H]1O)C(=C)C,Terpenoids,MT
+neoisomenthol,C[C@@H]1CC[C@@H]([C@@H](C1)O)C(C)C,Terpenoids,MT
+neomenthol,C[C@@H]1CC[C@@H](C(C1)O)C(C)C,Terpenoids,MT
+neomenthyl acetate,C[C@@H]1CC[C@H]([C@H](C1)OC(=O)C)C(C)C,Terpenoids,MT
+Neophytadiene,CC(C)CCCC(C)CCCC(C)CCCC(=C)C=C,Terpenoids,Diterpenes
+Neral,CC(=CCC/C(=C\C=O)/C)C,Terpenoids,MT
+Nerol,CC(=CCC/C(=C\CO)/C)C,Terpenoids,MT
+neryl acetate,CC(=CCC/C(=C\CCC(=O)OC1=CC=CC=C1)/C)C,Terpenoids,MT
+neryl acetone,CC(=CCC/C(=C\COC(=O)C)/C)C,Terpenoids,MT
+neryl formate,CC(=CCC/C(=C\COC)/C)C,Terpenoids,MT
+Neryl methyl ether,CC(=CCC/C(=C\COC=O)/C)C,Terpenoids,MT
+neryl phenylacetate,CC(=CCCC(=CCCC(=O)C)C)C,Terpenoids,MT
+n-Hexane,CCCCCC,FADs,Aliphatics and C5 branched
+n-Hexenol,CCCC/C=C/O,FADs,Aliphatics and C5 branched
+Nitro-2-methylbutane,CCC(C)C[N+](=O)[O-],Others,NonAromatic_N/S
+Nitro-2-phenylethane,C1=CC=C(C=C1)CC[N+](=O)[O-],Others,Aromatic_N/S
+n-methyl-aniline,CNC1=CC=CC=C1,Others,Aromatic_N/S
+N-methyl-N-phenylformamide,CN(C=O)C1=CC=CC=C1,Others,Aromatic_N/S
+nonacosane,CCCCCCCCCCCCCCCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+nonacosene,CCCCCCCCCCCCCCCCCCCCCCCCCCCC=C,FADs,Aliphatics and C5 branched
+Nonadecane,CCCCCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+Nonadecanol,CCCCCCCCCCCCCCCCCCCO,FADs,Aliphatics and C5 branched
+Nonadecene,CCCCCCCCCCCCCCCCCC=C,FADs,Aliphatics and C5 branched
+nonanal,CCCCCCCCC=O,FADs,Aliphatics and C5 branched
+Nonane,CCCCCCCCC,FADs,Aliphatics and C5 branched
+nonanoic acid,CCCCCCCCC(=O)O,FADs,Aliphatics and C5 branched
+Nonanol,CCCCCCCCCO,FADs,Aliphatics and C5 branched
+nonyl acetate,CCCCCCCCCOC(=O)C,FADs,Aliphatics and C5 branched
+Nonylcyclohexane,CCCCCCCCCC1CCCCC1,Others,Others
+Nootkatone,C[C@@H]1CC(=O)C=C2[C@]1(C[C@@H](CC2)C(=C)C)C,Terpenoids,ST
+nopinone,CC1(C2CCC(=O)C1C2)C,Terpenoids,MT
+Norpatchoulenol,C[C@@]12CC[C@H]3C[C@@H]1C=CC[C@]2(C3(C)C)O,Terpenoids,ST
+occidentalol,CC1=CC=C[C@@]2([C@H]1C[C@@H](CC2)C(C)(C)O)C,Terpenoids,ST
+o-cresol,CC1=CC=CC=C1O,Shikimate_derived_Aromatics,BP
+octacosane,CCCCCCCCCCCCCCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+Octadecanal,CCCCCCCCCCCCCCCCCC=O,FADs,Aliphatics and C5 branched
+Octadecane,CCCCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+octadecanoate,CCCCCCCCCCCCCCCCCC(=O)[O-],FADs,Aliphatics and C5 branched
+Octadecanol,CCCCCCCCCCCCCCCCCCO,FADs,Aliphatics and C5 branched
+Octadecene,CCCCCCCCCCCCCCCCC=C,FADs,Aliphatics and C5 branched
+Octadecenoic acid,CCCCCCCCCCCCCCC/C=C/C(=O)O,FADs,Aliphatics and C5 branched
+octanal,CCCCCCCC=O,FADs,Aliphatics and C5 branched
+Octane,CCCCCCCC,FADs,Aliphatics and C5 branched
+octanoic acid,CCCCCCCC(=O)O,FADs,Aliphatics and C5 branched
+Octanol,CCCCCCCCO,FADs,Aliphatics and C5 branched
+Octen-3-ol,CCCCCC(C=C)O,FADs,Aliphatics and C5 branched
+Octen-3-one,CCCCCC(=O)C=C,FADs,Aliphatics and C5 branched
+Octen-3-yl acetate,CCCCCC(C=C)OC(=O)C,FADs,Aliphatics and C5 branched
+Octen-3-yl propionate,CCCCCC(C=C)OC(=O)CC,FADs,Aliphatics and C5 branched
+Octene,CCCCCCC=C,FADs,Aliphatics and C5 branched
+Octyl acetate,CCCCCCCCOC(=O)C,FADs,Aliphatics and C5 branched
+octyl isobutyrate,CCCCCCCCOC(=O)C(C)C,FADs,Aliphatics and C5 branched
+o-cymene,CC1=CC=CC=C1C(C)C,Terpenoids,MT
+o-guaiacol,COC1=CC=CC=C1O,Shikimate_derived_Aromatics,BP
+o-hydroxycumene,CC(C)C1=CC=CC=C1O,Shikimate_derived_Aromatics,BP
+Oleic acid,CCCCCCCC/C=C\CCCCCCCC(=O)O,FADs,Aliphatics and C5 branched
+Oleyl alcohol,CCCCCCCC/C=C\CCCCCCCCO,FADs,Aliphatics and C5 branched
+oplopanone,CC(C)[C@@H]1CC[C@@]([C@H]2[C@H]1[C@H](CC2)C(=O)C)(C)O,Terpenoids,ST
+"Oxalicacid,allylundecylester",CCCCCCCCCCCOC(=O)C(=O)OCC=C,FADs,Aliphatics and C5 branched
+"Oxidoselina-1,3,7(11)-trien-8-one",CC1=CC=C[C@]2(C1CC3(C(=O)C2)C(O3)(C)C)C,Terpenoids,ST
+o-Xylene,CC1=CC=CC=C1C,Shikimate_derived_Aromatics,BP
+"p-1,3,8-menthatriene",CC1=CC=C(CC1)C(=C)C,Terpenoids,MT
+Paeonol,CC(=O)C1=C(C=C(C=C1)OC)O,Shikimate_derived_Aromatics,BP
+Palustrol,CC1CCC2(C1C3C(C3(C)C)CCC2C)O,Terpenoids,ST
+patchouli alcohol,C[C@H]1CC[C@@]2([C@@]3([C@H]1C[C@H](C2(C)C)CC3)C)O,Terpenoids,ST
+p-cresol,CC1=CC=C(C=C1)O,Shikimate_derived_Aromatics,BP
+p-Cymen-8-ol,CC1=CC=C(C=C1)C(C)(C)O,Terpenoids,MT
+p-cymen-9-ol,CC1=CC=C(C=C1)C(C)CO,Terpenoids,MT
+p-cymene,CC1=CC=C(C=C1)C(C)C,Terpenoids,MT
+p-cymenene,CC1=CC=C(C=C1)C(=C)C,Terpenoids,MT
+Pent-2-en-1-ol,CCC=CCO,FADs,Aliphatics and C5 branched
+Pent-4-enenitrile,C=CCCC#N,Others,NonAromatic_N/S
+pentacosane,CCCCCCCCCCCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+Pentacosene,CCCCCCCCCCCCCCCCCCCCCCCC=C,FADs,Aliphatics and C5 branched
+Pentadecan-1-ol,CCCCCCCCCCCCCCCO,FADs,Aliphatics and C5 branched
+Pentadecanal,CCCCCCCCCCCCCCC=O,FADs,Aliphatics and C5 branched
+Pentadecane,CCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+pentadecanoic acid,CCCCCCCCCCCCCCC(=O)O,FADs,Aliphatics and C5 branched
+Pentadecene,CCCCCCCCCCCCCC=C,FADs,Aliphatics and C5 branched
+pentanal,CCCCC=O,FADs,Aliphatics and C5 branched
+pentane,CCCCC,FADs,Aliphatics and C5 branched
+Pentanol,CCCCCO,FADs,Aliphatics and C5 branched
+Penten-3-ol,CCC(C=C)O,FADs,Aliphatics and C5 branched
+pentyl benzene,CCCCCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+perilla alcohol,CC(=C)C1CCC(=CC1)CO,Terpenoids,MT
+perillaldehyde,CC(=C)C1CCC(=CC1)C=O,Terpenoids,MT
+perillene,CC(=CCCC1=COC=C1)C,Terpenoids,MT
+p-Ethylbenzaldehyde,CCC1=CC=C(C=C1)C=O,Shikimate_derived_Aromatics,BP
+Phellandral,CC(C)C1CCC(=CC1)C=O,Terpenoids,MT
+phenanthrene,C1=CC=C2C(=C1)C=CC3=CC=CC=C32,Shikimate_derived_Aromatics,BP
+Phenethyl benzoate,C1=CC=C(C=C1)CCOC(=O)C2=CC=CC=C2,Shikimate_derived_Aromatics,BP
+phenol,C1=CC=C(C=C1)O,Shikimate_derived_Aromatics,BP
+"phenol, 2,6-dimethyl-4-(2-propenyl)-",CC1=CC(=CC(=C1O)C)CC=C,Shikimate_derived_Aromatics,BP
+"Phenol,2,6-bis(1,1-dimethylethyl)-4- (1-methyl-1-phenylethyl)",CC(C)(C)C1=CC(=CC(=C1O)C(C)(C)C)C(C)(C)C2=CC=CC=C2,Shikimate_derived_Aromatics,BP
+Phenoxethol,C1=CC=C(C=C1)OCCO,Shikimate_derived_Aromatics,BP
+Phenyacetic acid,C1=CC=C(C=C1)CC(=O)O,Shikimate_derived_Aromatics,BP
+Phenyl acetate,C1=CC=C(C=C1)C(=O)OC2=CC=CC=C2,Shikimate_derived_Aromatics,BP
+Phenyl Benzoate,CC(=O)OC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+Phenyl ethanol,CC(C1=CC=CC=C1)O,Shikimate_derived_Aromatics,BP
+phenylacetaldehyde,C1=CC=C(C=C1)CC=O,Shikimate_derived_Aromatics,BP
+Phenylacetaldoxime,C1=CC=C(C=C1)CC=NO,Others,Aromatic_N/S
+Phenylethyl isobutyrate,C/C=C(\C)/C(=O)OCCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+Phenylethyl propionate,CC(C)C(=O)OCCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+Phenylethyl tiglate,CCC(=O)OCCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+Phenylmethyl pentanoate,CCCCC(=O)OCC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+pimaradiene,C[C@]1(CC[C@H]2C(=C1)CC[C@@H]3[C@@]2(CCCC3(C)C)C)C=C,Terpenoids,Diterpenes
+pinocamphone,C[C@@H]1[C@@H]2C[C@@H](C2(C)C)CC1=O,Terpenoids,MT
+pinocarveyl acetate,CC(=O)O[C@@H]1C[C@H]2C[C@@H](C1=C)C2(C)C,Terpenoids,MT
+pinocarvone,CC1(C2CC1C(=C)C(=O)C2)C,Terpenoids,MT
+Piperitenone,CC(=C1CC[C@]2([C@@H](C1=O)O2)C)C,Terpenoids,MT
+piperitenone oxide,CC1=CC(=O)C(=C(C)C)CC1,Terpenoids,MT
+piperitol,COC1=C(C=CC(=C1)[C@@H]2[C@H]3CO[C@@H]([C@H]3CO2)C4=CC5=C(C=C4)OCO5)O,Terpenoids,MT
+piperitone,CC(C)C1CCC2(C(C1=O)O2)C,Terpenoids,MT
+Piperitone oxide,CC1=CC(=O)C(CC1)C(C)C,Terpenoids,MT
+p-menth-1-en-9-al,CC1=CCC(CC1)C(C)C=O,Terpenoids,MT
+p-menth-3-ene,CC1CCC(=CC1)C(C)C,Terpenoids,MT
+"p-mentha-1,3-dien-7-al",CC(C)C1=CC=C(CC1)C=O,Terpenoids,MT
+"p-mentha-1,4-dien-7-al",CC(C)C1=CCC(=CC1)C=O,Terpenoids,MT
+"p-mentha-2,4-diene",CC1CC=C(C=C1)C(C)C,Terpenoids,MT
+p-menthene,CC1=CC[C@@H](CC1)C(C)C,Terpenoids,MT
+p-methoxy benzyl alcohol,COC1=CC=C(C=C1)CO,Shikimate_derived_Aromatics,BP
+p-methyl acetophenone,CC1=CC=C(C=C1)C(=O)C,Shikimate_derived_Aromatics,BP
+p-Methyl benzaldehyde,CC1=CC=C(C=C1)C=O,Shikimate_derived_Aromatics,BP
+P-nitrotoluene,CC1=CC=C(C=C1)[N+](=O)[O-],Others,Aromatic_N/S
+Pogostol,CC1CCC2C1CC(CCC2(C)O)C(=C)C,Terpenoids,ST
+Pogostone,CC1=CC(=C(C(=O)O1)C(=O)CCC(C)C)O,Terpenoids,ST
+precocene I,CC1(C=CC2=C(O1)C=C(C=C2)OC)C,Shikimate_derived_Aromatics,BP
+precocene II,CC1(C=CC2=CC(=C(C=C2O1)OC)OC)C,Shikimate_derived_Aromatics,BP
+preisocalamendiol,C/C/1=C\CCC(=C)CC(=O)[C@@H](CC1)C(C)C,Terpenoids,ST
+Prenol,CC(=CCO)C,Terpenoids,Aliphatics and C5 branched
+Prenyl acetate,CC(=CCOC(=O)C)C,Terpenoids,Aliphatics and C5 branched
+presilphiperfol-7-ene,C[C@@H]1CCC2=C3C1CC[C@]3(CC2(C)C)C,Terpenoids,ST
+presilphiperfolan-8-ol,C[C@@H]1CCC2[C@@]3(C1CC[C@]3(CC2(C)C)C)O,Terpenoids,ST
+Preziza-7(15)-en-12-ol,C[C@H]1CCC2[C@]13CC[C@H](C3)C(=C)C2(C)CO,Terpenoids,ST
+Prezizaan-15-al,C[C@H]1CCC2[C@]13CC[C@H](C3)C(C2(C)C)C=O,Terpenoids,ST
+Propanoic acid,CCC(=O)O,FADs,Aliphatics and C5 branched
+Propanol,CCCO,FADs,Aliphatics and C5 branched
+propyl 2-propenyl trisulfide,CCCC(=O)OCCC,Others,NonAromatic_N/S
+Propyl acetate,CCCCC(=O)OCCC,FADs,Aliphatics and C5 branched
+Propyl benzoate,CCCCCC(=O)OCCC,Shikimate_derived_Aromatics,BP
+Propyl butanoate,CCCCCCCCCCCCCCCC(=O)OCCC,FADs,Aliphatics and C5 branched
+Propyl caproate,CCCOC(=O)C,FADs,Aliphatics and C5 branched
+Propyl palmitate,CCCOC(=O)C1=CC=CC=C1,FADs,Aliphatics and C5 branched
+Propyl valerate,CCCSSSCC=C,FADs,Aliphatics and C5 branched
+Protoanemonin,C=C1C=CC(=O)O1,Others,Others
+pseudocumene,CC1=CC(=C(C=C1)C)C,Shikimate_derived_Aromatics,BP
+pseudolimonene,CC(=C)C1CCC(=C)CC1,Terpenoids,MT
+"p-tolyl-1,2-propanediol",CC1=CC=C(C=C1)C(C)(CO)O,Shikimate_derived_Aromatics,BP
+p-tolyl-2-propanone,CC1=CC=C(C=C1)CC(=O)C,Shikimate_derived_Aromatics,BP
+pulegol,CC1CCC(=C(C)C)C(C1)O,Terpenoids,MT
+pulegone,C[C@@H]1CCC(=C(C)C)C(=O)C1,Terpenoids,MT
+p-Xylene,CC1=CC=C(C=C1)C,Shikimate_derived_Aromatics,BP
+Pyrazole,C1=CNN=C1,Others,Aromatic_N/S
+Pyridin-2-ylpropan-1-one,CCC(=O)C1=CC=CC=N1,Others,Aromatic_N/S
+Pyridin-3-carboxaldehyde,C1=CC(=CN=C1)C=O,Others,Aromatic_N/S
+quinoline,C1=CC=C2C(=C1)C=CC=N2,Others,Aromatic_N/S
+R-(-)-14- methyl-8 hexadecyn-1-ol,CC[C@@H](C)CCCCC#CCCCCCCCO,FADs,Aliphatics and C5 branched
+Rosefuran,CC1=C(OC=C1)CC=C(C)C,Terpenoids,MT
+rosefuranepoxide,CC1=C(OC=C1)CC2C(O2)(C)C,Terpenoids,MT
+sabina ketone,CC(C)C12CCC(=O)C1C2,Terpenoids,MT
+Sabinene,CC(C)C12CCC(=C)C1C2,Terpenoids,MT
+sabinol,CC(C)[C@@]12C[C@@H]1C(=C)[C@@H](C2)O,Terpenoids,MT
+Sabinyl acetate,CC(C)C12CC1C(=C)C(C2)OC(=O)C,Terpenoids,MT
+Safranal,CC1=C(C(CC=C1)(C)C)C=O,Terpenoids,Irregular terpene
+safrole,C=CCC1=CC2=C(C=C1)OCO2,Terpenoids,Irregular terpene
+Salicyl aldehyde,C1=CC=C(C(=C1)C=O)O,Shikimate_derived_Aromatics,BP
+salvene,C/C=C/CC(=C)C(C)C,Terpenoids,ST
+salviadienol,CC(C)[C@H]1CC[C@]2(C1=CC(=C)CC[C@@H]2O)C,Terpenoids,ST
+salvial-4(14)en-1-one,CC(C)[C@@H]1CC[C@@]2([C@H]1CC(=C)CCC2=O)C,Terpenoids,ST
+Sandaracopimaradiene,C[C@@]1(CC[C@H]2C(=C1)CC[C@@H]3[C@@]2(CCCC3(C)C)C)C=C,Terpenoids,Diterpenes
+Santalene,CC(=CCCC1(C2CC3C1(C3C2)C)C)C,Terpenoids,ST
+santene,CC1=C(C2CCC1C2)C,Terpenoids,MT
+santolina alcohol,CC(=CC(C=C)C(C)(C)O)C,Terpenoids,ST
+santolinyl acetate,CC(=CC(C=C)C(C)(C)OC(=O)C)C,Terpenoids,ST
+Sativen,CC(C)C1CCC2(C3C1C(C2=C)CC3)C,Terpenoids,ST
+sclareol,CC1=CC[C@@H]2[C@]3(CCCC([C@@H]3CC[C@]2(O1)C)(C)C)C,Terpenoids,Diterpenes
+sclareol oxide,C[C@]12CCCC([C@@H]1CC[C@@]([C@@H]2CC[C@](C)(C=C)O)(C)O)(C)C,Terpenoids,Diterpenes
+"Selina-1,3,7(11)-trien-8-one",CC1=CC=C[C@]2(C1CC(=C(C)C)C(=O)C2)C,Terpenoids,ST
+"Selina-3,7(11)-diene",CC1=CCC[C@]2([C@H]1CC(=C(C)C)CC2)C,Terpenoids,ST
+sesquicineol,CC(=CCCC1(C2CCC(O1)(CC2)C)C)C,Terpenoids,ST
+Sesquirosefuran,CC1=C(OC=C1)C/C=C(\C)/CCC=C(C)C,Terpenoids,ST
+sesquisabinene,CC(CCC=C(C)C)C12CCC(=C)C1C2,Terpenoids,ST
+seychellene,CC1CCC2(C(=C)C3CCC2(C1C3)C)C,Terpenoids,ST
+Shyobunol,CC(C)C1CCC(C(C1O)C(=C)C)(C)C=C,Terpenoids,ST
+shyobunone,CC(C)[C@@H]1CC[C@@]([C@@H](C1=O)C(=C)C)(C)C=C,Terpenoids,ST
+sigma-cadinene,CC1=C[C@@H]2[C@H](CCC(=C2CC1)C)C(C)C,Terpenoids,ST
+silphin-1-ene,C[C@@H]1CC[C@@H]2[C@]13C=CC[C@]3(CC2(C)C)C,Terpenoids,ST
+"silphiperfol-4,7(14)-diene",CC1CCC23C1CCC2(C=C(C3=C)C)C,Terpenoids,ST
+"silphiperfola-5,7(14)-diene (c)",C[C@@H]1CC[C@]23C1CC[C@]2(C=C(C3=C)C)C,Terpenoids,ST
+S-Methyl thioacetate,CC(=O)SC,Others,NonAromatic_N/S
+Spathulenol,C[C@@H]1CC(=O)C=C([C@]12CC[C@H](C2)C(=C)C)C,Terpenoids,ST
+Stearic acid,CCCCCCCCCCCCCCCCCC(=O)O,FADs,Aliphatics and C5 branched
+Styrene,C=CC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+Sylvestrene,CC1=CCC[C@H](C1)C(=C)C,Terpenoids,MT
+terpinen-1-ol,CC(C)C1=CCC(CC1)(C)O,Terpenoids,MT
+Terpinen-4-yl acetate,CC1=CCC(CC1)(C(C)C)OC(=O)C,Terpenoids,MT
+Terpinolene epoxide,CC1=CCC2(CC1)C(O2)(C)C,Terpenoids,MT
+terpinylacetate,CC1=CCC(CC1)C(C)(C)OC(=O)C,Terpenoids,MT
+Tetrachloroethene,C(=C(Cl)Cl)(Cl)Cl,Others,Others
+Tetracosanal,CCCCCCCCCCCCCCCCCCCCCCCC=O,FADs,Aliphatics and C5 branched
+Tetracosane,CCCCCCCCCCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+Tetracosanol,CCCCCCCCCCCCCCCCCCCCCCCCO,FADs,Aliphatics and C5 branched
+Tetradecadiene,CCCCCCCCCC/C=C/C=C,FADs,Aliphatics and C5 branched
+tetradecanal,CCCCCCCCCCCCCC=O,FADs,Aliphatics and C5 branched
+Tetradecane,CCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+Tetradecanol,CCCCCCCCCCCCCCO,FADs,Aliphatics and C5 branched
+Tetradecene,CCCCCCCCCCCCC=C,FADs,Aliphatics and C5 branched
+Tetradecyl acetate,CCCCCCCCCCCCCCOC(=O)C,FADs,Aliphatics and C5 branched
+theaspirane (1),CC1CCC2(O1)C(=CCCC2(C)C)C,Terpenoids,Irregular terpene
+Thiophene,C1=CSC=C1,Others,Aromatic_N/S
+"thuja-2,4(10)-diene",CC(C)C12CC1C(=C)C=C2,Terpenoids,MT
+Thujone,C[C@@H]1[C@H]2C[C@]2(CC1=O)C(C)C,Terpenoids,MT
+Thujopsene,CC1=CC[C@@]2(CCCC([C@]23[C@H]1C3)(C)C)C,Terpenoids,MT
+Thymol,CC1=CC(=C(C=C1)C(C)C)O,Terpenoids,MT
+thymol acetate,CC1=CC(=C(C=C1)C(C)C)OC,Terpenoids,MT
+thymol isobutyrate,CC1=CC(=C(C=C1)C(C)C)OC(=O)C,Terpenoids,MT
+thymol methyl ether,CC1=CC(=C(C=C1)C(C)C)OC(=O)C(C)C,Terpenoids,MT
+Thymoquinone,CC1=CC(=O)C(=CC1=O)C(C)C,Terpenoids,MT
+thymyl valerate,CCCCC(=O)OC1=C(C=CC(=C1)C)C(C)C,Terpenoids,MT
+toluene,CC1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+torilenol,CC(C)[C@@H]1C2C1[C@H]3C(=C)CC[C@H]([C@]3(C2)C)O,Terpenoids,ST
+Torreyol,CC1=C[C@@H]2[C@H](CC[C@]([C@@H]2CC1)(C)O)C(C)C,Terpenoids,ST
+trans-2-hexenyl benzoate,CCCC=CCOC(=O)C1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+trans-a-bergamotene,CC1=CC[C@H]2C[C@@H]1[C@]2(C)CCC=C(C)C,Terpenoids,ST
+trans-a-bisabolene,CC1=CC[C@H](CC1)/C(=C/CC=C(C)C)/C,Terpenoids,ST
+trans-b- guaiene,C[C@H]1CCC(=C(C)C)CC2=C1CC[C@H]2C,Terpenoids,ST
+trans-b-bergamotene,CC(=CCC[C@@]1([C@H]2CCC(=C)[C@@H]1C2)C)C,Terpenoids,ST
+trans-calamenene,C[C@H]1CC[C@@H](C2=C1C=CC(=C2)C)C(C)C,Terpenoids,ST
+trans-carveol,CC1=CC[C@H](C[C@@H]1O)C(=C)C,Terpenoids,MT
+trans-carvyl acetate,CC1=CC[C@H](C[C@@H]1OC(=O)C)C(=C)C,Terpenoids,MT
+trans-cinnamic alcohol,C1=CC=C(C=C1)C=CCO,Shikimate_derived_Aromatics,BP
+trans-dihydrocarveol,C[C@@H]1CC[C@@H](C[C@H]1O)C(=C)C,Terpenoids,MT
+trans-dihydrocarvone,C[C@H]1CC[C@@H](CC1=O)C(C)C,Terpenoids,MT
+trans-farnesol,CC(=CCC/C(=C/CC/C(=C/CO)/C)/C)C,Terpenoids,ST
+trans-isolimonene,C[C@H]1CC[C@@H](C=C1)C(=C)C,Terpenoids,MT
+trans-isopulegone,C[C@H]1CC[C@@H](C(=O)C1)C(=C)C,Terpenoids,MT
+trans-limonene epoxide,CC(=C)[C@@H]1CC[C@]2([C@@H](C1)O2)C,Terpenoids,MT
+trans-linalool oxide (furan),C[C@]1(CC[C@H](O1)C(C)(C)O)C=C,Terpenoids,MT
+trans-methyl isoeugenol,C/C=C\C1=CC(=C(C=C1)OC)OC,Shikimate_derived_Aromatics,BP
+trans-nerolidol,CC(=CCC/C(=C/CCC(C)(C=C)O)/C)C,Terpenoids,ST
+trans-nuciferol,CC1=CC=C(C=C1)C(C)CC/C=C(\C)/CO,Terpenoids,ST
+trans-Ocimenol,CC(=CC(/C=C(\C)/C=C)O)C,Terpenoids,MT
+"trans-p-2,8-menthadien-1-ol",CC(=C)C1CCC(C=C1)(C)O,Terpenoids,MT
+trans-pinane,C[C@@H]1CC[C@@H]2C[C@H]1C2(C)C,Terpenoids,MT
+trans-Pinocamphone,C[C@@H]1[C@@H]2C[C@@H](C2(C)C)CC1=O,Terpenoids,MT
+trans-pinocarveol,CC1([C@@H]2C[C@H]1C(=C)[C@H](C2)O)C,Terpenoids,MT
+trans-piperitol,CC1=C[C@@H]([C@H](CC1)C(C)C)O,Terpenoids,MT
+trans-Piperitone epoxide,CC(C)[C@H]1CC[C@@]2([C@H](C1=O)O2)C,Terpenoids,MT
+trans-p-menth-2-en-1-ol,CC(C)[C@H]1CC[C@@](C=C1)(C)O,Terpenoids,MT
+trans-sesquisabinene hydrate,CC(CCC=C(C)C)[C@@]12CC[C@](C1C2)(C)O,Terpenoids,ST
+trans-thujone,C[C@H]1[C@H]2C[C@]2(CC1=O)C(C)C,Terpenoids,MT
+trans-verbenol,CC1=C[C@@H]([C@@H]2C[C@H]1C2(C)C)O,Terpenoids,MT
+trans-Z-a-bisabolene epoxide,CC(=CC/C=C(/C)\C1CCC2(C(C1)O2)C)C,Terpenoids,ST
+Triacontane,CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+tricosane,CCCCCCCCCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+Tricosene,CCCCCCCCCCCCCCCCCCCCCC=C,FADs,Aliphatics and C5 branched
+Tricyclene,CC1(C2CC3C1(C3C2)C)C,Terpenoids,MT
+tridecanal,CCCCCCCCCCCCC=O,FADs,Aliphatics and C5 branched
+tridecane,CCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+tridecanoic acid,CCCCCCCCCCCCC(=O)O,FADs,Aliphatics and C5 branched
+Tridecene,CCCCCCCCCCCC=C,FADs,Aliphatics and C5 branched
+trimethylindoline,CC1(CC2=CC=CC=C2N1C)C,Others,Aromatic_N/S
+Tritriacontane,CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC,FADs,Aliphatics and C5 branched
+umbellulone,CC1=CC(=O)[C@@]2([C@H]1C2)C(C)C,Terpenoids,MT
+undecanal,CCCCCCCCCCC=O,FADs,Aliphatics and C5 branched
+undecane,CCCCCCCCCCC,FADs,Aliphatics and C5 branched
+Undecanoic acid,CCCCCCCCCCC(=O)O,FADs,Aliphatics and C5 branched
+Undecanol,CCCCCCCCCCCO,FADs,Aliphatics and C5 branched
+Undecene,CCCCCCCCCC=C,FADs,Aliphatics and C5 branched
+Undecyl acetate,CCCCCCCCCCCOC(=O)C,FADs,Aliphatics and C5 branched
+valencene,C[C@@H]1CCC=C2[C@]1(C[C@@H](CC2)C(=C)C)C,Terpenoids,ST
+Valenceneisomer,C[C@@H]1CCC=C2[C@]1(CC(CC2)C(=C)C)C,Terpenoids,ST
+Valeranone,CC(C)[C@H]1CC[C@]2(CCCC(=O)[C@]2(C1)C)C,Terpenoids,ST
+Valerianol,C[C@@H]1CCC=C2[C@]1(C[C@@H](CC2)C(C)(C)O)C,Terpenoids,ST
+Valeric acid,CCCCC(=O)O,FADs,Aliphatics and C5 branched
+Valine methyl ester,CC(C)[C@@H](C(=O)OC)N,Others,NonAromatic_N/S
+Vanillin,COC1=C(C=CC(=C1)C=O)O,Shikimate_derived_Aromatics,BP
+Verbenene,CC1(C2CC1C(=C)C=C2)C,Terpenoids,MT
+Verbenone,CC1=CC(=O)C2CC1C2(C)C,Terpenoids,MT
+Vetiselinenol,CC(CO)C1=CCC2(CCCC(=C)C2C1)C,Terpenoids,ST
+Viridiflorene,C[C@@H]1CCC2=C(CC[C@@H]3[C@H]([C@H]12)C3(C)C)C,Terpenoids,ST
+Viridiflorol,C[C@@H]1CC[C@H]2[C@@H]1[C@H]3[C@H](C3(C)C)CC[C@]2(C)O,Terpenoids,ST
+Vulgarol B,CC1=CC([C@H]2C3C1C2(CCCC3(C)C)C)O,Terpenoids,MT
+vulgarone B,CC1=CC(=O)C2C3C1C2(CCCC3(C)C)C,Terpenoids,MT
+Widdrol,C[C@@]12CCCC(C1=CC[C@@](CC2)(C)O)(C)C,Terpenoids,ST
+Xanthorrhizol,CC1=C(C=C(C=C1)[C@H](C)CCC=C(C)C)O,Terpenoids,ST
+yomogi alcohol,CC(C)(C=C)/C=C/C(C)(C)O,Terpenoids,MT
+"Z,b-Farnesene",CC(=CCC/C(=C\CCC(=C)C=C)/C)C,Terpenoids,ST
+"Z,E-a-bergamotol",CC1=CCC2CC1C2(C)CC/C=C(/C)\CO,Terpenoids,ST
+"Z,E-a-farnesene",CC(=CCC/C(=C/C/C=C(/C)\C=C)/C)C,Terpenoids,ST
+"Z,E-farnesal",CC(=CCC/C(=C/CC/C(=C\C=O)/C)/C)C,Terpenoids,ST
+"Z,E-farnesol",CC(=CCC/C(=C/CC/C(=C\CO)/C)/C)C,Terpenoids,ST
+"Z,E-farnesyl acetate",CC(=CCC/C(=C/CC/C(=C\COC(=O)C)/C)/C)C,Terpenoids,ST
+"Z,Z- 3,6-nonadienol",CC/C=C\C/C=C\CCO,FADs,Aliphatics and C5 branched
+"Z,Z-3,6-Dodecadienol",CCCCC/C=C\C/C=C\CCO,FADs,Aliphatics and C5 branched
+"Z,Z-9,12-octadecadienoic acid",CCCCC/C=C\C/C=C\CCCCCCCC(=O)O,FADs,Aliphatics and C5 branched
+"Z,Z-farnesol",CC(=CCC/C(=C\CC/C(=C\CO)/C)/C)C,Terpenoids,ST
+Z-1 -propenyl propyl trisulfide,CCCSSS/C=C\C,Others,NonAromatic_N/S
+Z-11-nonacosene,CCCCCCCCCCCCCCCCC/C=C\CCCCCCCCCC,FADs,Aliphatics and C5 branched
+Z-14-nor-Muurol-5-en-4-one,C[C@@H]1CC[C@@H](C2=CC(=O)CC[C@@H]12)C(C)C,Terpenoids,ST
+Z-1-propenyl methyl trisulfide,C/C=C\SSSC,Others,NonAromatic_N/S
+Z-1-propenyl propyl pentasulfide,CCCSSSS/C=C\C,Others,NonAromatic_N/S
+Z-1-propenyl propyl tetrasulfide,CCCSSSSS/C=C\C,Others,NonAromatic_N/S
+"Z-2,6-Dimethyl-2,6-octadiene",C/C=C(/C)\CCC=C(C)C,Terpenoids,MT
+Z-2-decenal,CCCCCCC/C=C\C=O,FADs,Aliphatics and C5 branched
+Z-2-Dodecenol,CCCCCCCCC/C=C\CO,FADs,Aliphatics and C5 branched
+Z-2-Octen-1-al,CCCCCC=CC=O,FADs,Aliphatics and C5 branched
+Z-3-hexenal,CC/C=C\CC=O,FADs,Aliphatics and C5 branched
+Z-3-Hexenol,CC/C=C\CCO,FADs,Aliphatics and C5 branched
+Z-3-Hexenyl acetate,CC/C=C\CCOC(=O)/C(=C\C)/C,FADs,Aliphatics and C5 branched
+Z-3-hexenyl angelate,CC/C=C\CCOC(=O)C,FADs,Aliphatics and C5 branched
+Z-3-hexenyl benzoate,CC/C=C\CCOC(=O)C1=CC=CC=C1,Shikimate_derived_Aromatics,BP
+Z-3-Hexenyl butyrate,CC/C=C\CCOC(=O)CC,FADs,Aliphatics and C5 branched
+Z-3-hexenyl isovalerate,CC/C=C\CCOC(=O)CC(C)C,FADs,Aliphatics and C5 branched
+Z-3-Hexenyl propanoate,CCC/C=C\COC(=O)/C(=C/C)/C,FADs,Aliphatics and C5 branched
+Z-3-hexenyl tiglate,CCCC(=O)OCC/C=C\CC,FADs,Aliphatics and C5 branched
+Z-3-Methyl-2-pentenoic acid,CC/C(=C\C(=O)O)/C,FADs,Aliphatics and C5 branched
+Z-3-Tricosene,CCCCCCCCCCCCCCCCCCC/C=C\CC,FADs,Aliphatics and C5 branched
+"Z-4,8-Dimethylnona-1,3,7-triene",C/C=C(\C)/CC/C(=C\C=C)/C,Terpenoids,MT
+Z-4-Hexen-1-ol,C/C=C\CCCO,FADs,Aliphatics and C5 branched
+Z-5-pentacosene,CCCCCCCCCCCCCCCCCCC/C=C\CCCC,FADs,Aliphatics and C5 branched
+"Z-6,7-Epoxy-2,6-dimethylnon-8-en-4-one",CC(C)CC(=O)C[C@]1([C@H](O1)C=C)C,Terpenoids,MT
+Z-7-Heneicosene,CCCCCCCCCCCCC/C=C\CCCCCC,FADs,Aliphatics and C5 branched
+Z-7-Heptacosene,CCCCCCCCCCCCCCCCCCC/C=C\CCCCCC,FADs,Aliphatics and C5 branched
+Z-7-nonacosene,CCCCCCCCCCCCCCCCCCCCC/C=C\CCCCCC,FADs,Aliphatics and C5 branched
+Z-7-pentacosene,CCCCCCCCCCCCCCCCC/C=C\CCCCCC,FADs,Aliphatics and C5 branched
+Z-9-Hentriacontene,CCCCCCCCCCCCCCCCCCCCC/C=C\CCCCCCCC,FADs,Aliphatics and C5 branched
+Z-9-Heptacosene,CCCCCCCCCCCCCCCCC/C=C\CCCCCCCC,FADs,Aliphatics and C5 branched
+Z-9-nonacosene,CCCCCCCCCCCCCCCCCCC/C=C\CCCCCCCC,FADs,Aliphatics and C5 branched
+Z-9-pentacosene,CCCCCCCCCCCCCCC/C=C\CCCCCCCC,FADs,Aliphatics and C5 branched
+Z-9-tetracosene,CCCCCCCCCCCCCC/C=C\CCCCCCCC,FADs,Aliphatics and C5 branched
+Z-a-bergamotene,CC1=CC[C@H]2C[C@@H]1C2(C)CCC=C(C)C,Terpenoids,ST
+Z-a-Bisabolene,CC1=CCC(CC1)/C(=C\CC=C(C)C)/C,Terpenoids,ST
+Z-a-damascenone,C/C=C\C(=O)C1C(=CC=CC1(C)C)C,Terpenoids,Irregular terpene
+Z-anethole,C/C=C\C1=CC=C(C=C1)OC,Shikimate_derived_Aromatics,BP
+Z-a-ocimene,CC(=C)CC/C=C(/C)\C=C,Terpenoids,MT
+Z-a-santalol,C/C(=C/CC[C@@]1(C2C[C@H]3C1([C@H]3C2)C)C)/CO,Terpenoids,ST
+Z-Asarone,C/C=C\C1=CC(=C(C=C1OC)OC)OC,Shikimate_derived_Aromatics,BP
+Z-b-damascone,C/C=C\C(=O)C1=C(CCCC1(C)C)C,Terpenoids,Irregular terpene
+Z-b-elemenone,CC(=C1C[C@H]([C@@](CC1=O)(C)C=C)C(=C)C)C,Terpenoids,ST
+Z-b-guaiene,C[C@@H]1CC[C@@H](CC2=C1CC[C@H]2C)C(=C)C,Terpenoids,ST
+Z-b-ocimene,CC(=CC/C=C(/C)\C=C)C,Terpenoids,MT
+Z-b-santalol,C/C(=C/CC[C@@]1([C@@H]2CC[C@@H](C2)C1=C)C)/CO,Terpenoids,ST
+Z-b-terpineol,CC(=C)C1CCC(CC1)(C)O,Terpenoids,MT
+Z-calamenene,CC1CCC(C2=C1C=CC(=C2)C)C(C)C,Terpenoids,ST
+Z-carveol,CC1=CCC(CC1O)C(=C)C,Terpenoids,MT
+Z-carvone oxide,CC(=C)[C@@H]1C[C@H]2[C@](O2)(C(=O)C1)C,Terpenoids,MT
+Z-carvyl acetate,CC1=CC[C@H](C[C@H]1OC(=O)C)C(=C)C,Terpenoids,MT
+Z-caryophyllene,C/C/1=C\CCC(=C)[C@H]2CC([C@H]2CC1)(C)C,Terpenoids,ST
+Z-Cembrene A,C/C/1=C/CC/C(=C/C/C=C(\C=C\C(CC1)C(C)C)/C)/C,Terpenoids,Diterpenes
+Z-Chrysanthenol,CC1=CCC2C(C1C2(C)C)O,Terpenoids,MT
+Z-chrysanthenyl acetate,CC1=CC[C@@H]2C([C@H]1C2(C)C)OC(=O)C,Terpenoids,MT
+Z-Cinnamaldehyde,C1=CC=C(C=C1)/C=C\C=O,Shikimate_derived_Aromatics,BP
+Z-Cyclanthone,CC(C)CC(=O)C/C(=C\C=C)/C,Terpenoids,Irregular terpene
+Z-dihydrocarvone,C[C@@H]1CC[C@@H](CC1=O)C(=C)C,Terpenoids,MT
+Z-ene-yne-Dicycloether,CC#CC#C/C=C\1/C=CC2(O1)CCCO2,Terpenoids,MT
+zerumbone,C/C/1=C\CC(/C=C/C(=O)/C(=C/CC1)/C)(C)C,Terpenoids,ST
+Z-g-bisabolene,CC1=CC/C(=C(/C)\CCC=C(C)C)/CC1,Terpenoids,ST
+Z-Hex-2-enal,CCC/C=C\C=O,FADs,Aliphatics and C5 branched
+Z-Hex-3-en-1-yl tiglate,CC/C=C/CCOC(=O)/C(=C\C)/C,FADs,Aliphatics and C5 branched
+zingiberene,CC1=CC[C@@H](C=C1)[C@@H](C)CCC=C(C)C,Terpenoids,ST
+zingiberenol,CC(CCC=C(C)C)C1CCC(C=C1)(C)O,Terpenoids,ST
+zingiberone,CC(=O)CCC1=CC(=C(C=C1)O)OC,Terpenoids,ST
+Z-isocitral,CC(=CC/C=C(/C)\CC=O)C,Terpenoids,MT
+Z-Isoelimicin,C/C=C\C1=CC(=C(C(=C1)OC)OC)OC,Shikimate_derived_Aromatics,BP
+Z-Isoeugenol,C/C=C\C1=CC(=C(C=C1)O)OC,Shikimate_derived_Aromatics,BP
+Z-Isogeraniol,CC(=CC/C=C(/C)\CCO)C,Terpenoids,MT
+Z-Isopulegone,CC(=C)C1CCC(CC1)CO,Terpenoids,MT
+Ziza-6(13)-en-12-ol (khusimol),CC1([C@@H]2CC[C@]3(C2)[C@H](CC[C@@H]3C1=C)CO)C,Terpenoids,ST
+Z-jasmone,CC/C=C\CC1=C(CCC1=O)C,Others,Others
+Z-lanceol,CC1=CC[C@H](CC1)C(=C)CC/C=C(\C)/CO,Terpenoids,ST
+Z-Linalool oxide (furanoid),CC1(C(CCC(O1)(C)C=C)O)C,Terpenoids,MT
+Z-linalool oxide (pyranoid),C[C@]1(CC[C@@H](O1)C(C)(C)O)C=C,Terpenoids,MT
+Z-methyl cinnamate,C/C=C\C1=CC(=C(C=C1)OC)OC,Shikimate_derived_Aromatics,BP
+Z-methyl geranate,CC(=CCC/C(=C\C(=O)OC)/C)C,Terpenoids,MT
+Z-methyl hexadec-9-enoate,CC/C=C\C[C@@H]1[C@H](CCC1=O)C(=O)OC,FADs,Aliphatics and C5 branched
+Z-Methyl isoeugenol,CCCCCC/C=C\CCCCCCCC(=O)OC,Shikimate_derived_Aromatics,BP
+Z-methyl jasmonate,COC(=O)/C=C\C1=CC=CC=C1,Others,Others
+"Z-muurola-4(14),5-diene",C[C@H]1CCC2[C@H](CCC(=C(C)C)C2=C1)C,Terpenoids,ST
+Z-nerolidol,CC(=CCCC(=CCCC(C)(C=C)O)C)C,Terpenoids,ST
+Z-nerolidyl acetate,CC(=CCC/C(=C\CCC(C)(C=C)OC(=O)C)/C)C,Terpenoids,ST
+Z-nuciferol,CC1=CC=C(C=C1)CCCC/C=C(/C)\CO,Terpenoids,ST
+Zonarene,C[C@H]1CCC(=C2C1CCC(=C2)C)C(C)C,Terpenoids,ST
+Z-Phytol,C[C@@H](CCC[C@@H](C)CCC/C(=C\CO)/C)CCCC(C)C,Terpenoids,Diterpenes
+Z-pinocarveol,CC1(C2CC1C(=C)C(C2)O)C,Terpenoids,MT
+Z-piperitol,CC1=C[C@@H]([C@@H](CC1)C(C)C)O,Terpenoids,MT
+Z-p-menth-2-en-1-ol,CC(C)[C@@H]1CC[C@](C=C1)(C)O,Terpenoids,MT
+"Z-p-mentha-1(7),8-dien-2-ol",CC(=C)[C@H]1CCC(=C)[C@@H](C1)O,Terpenoids,MT
+Z-rose oxide,CC1CCOC(C1)C=C(C)C,Terpenoids,MT
+Z-sabinene hydrate,CC(C)C12CCC(C1C2)(C)O,Terpenoids,MT
+Z-Sabinyl acetate,CC(C)[C@]12C[C@@H](C(=C)C1C2)OC(=O)C,Terpenoids,MT
+Z-Sesquisabinene hydrate,CC(CCC=C(C)C)[C@@]12CC[C@@](C1C2)(C)O,Terpenoids,ST
+Z-tagetenone,CC(=CC(=O)/C=C(/C)\C=C)C,Terpenoids,MT
+Z-tagetone,CC(C)CC(=O)/C=C(/C)\C=C,Terpenoids,MT
+Z-thujone,C[C@H]1[C@@H]2C[C@@]2(CC1=O)C(C)C,Terpenoids,MT
+Z-thujopsene,CC1=CCC2(CCCC(C23C1C3)(C)C)C,Terpenoids,ST
+Z-verbenol,CC1=CC([C@H]2C[C@H]1C2(C)C)O,Terpenoids,MT
