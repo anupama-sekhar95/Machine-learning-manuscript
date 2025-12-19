@@ -1,1 +1,12 @@
-Metadata
+Description of supplementary data files
+File Name: Supplementary_Data_1
+Description: List of plant species selected for the study, including details of the plant part used, extraction method, and corresponding references. The database(s) referred to for data collection are also included. 
+File Name: Supplementary_Data_2
+Description: Dataset of plant volatile metabolites used for clustering analyses, including SMILES representations and biosynthetic and structural class annotations.
+File Name: Supplementary_Data_3
+Description: Plant species-volatile metabolite binary dataset used for training classification models, including taxonomic ranks employed as classification labels.
+File Name: Supplementary_Data_5
+Description: Details of the plant species used for phylogenetic reconstruction, including accession numbers obtained from NCBI.
+File Name: Supplementary_Data_6
+Description: Information on fossil calibrations used for phylogenetic reconstruction, along with relevant references.
+
