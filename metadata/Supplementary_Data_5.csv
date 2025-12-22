@@ -1,0 +1,35 @@
+"Supplementary_Data_5. Information on fossil calibrations used for phylogenetic reconstruction, along with relevant references.",,,,
+Sl No,Priors,Calibration_age (mya),Reference,doi
+1,Verbanaceae,40,"Phylogeny and biogeography in Solanaceae, Verbenaceae and Bignoniaceae: a comparison of continental and intercontinental diversification patterns | Botanical Journal of the Linnean Society | Oxford Academic [Internet]. [cited 2025 Sept 12]. Available from: https://academic.oup.com/botlinnean/article/171/1/80/2557483",https://academic.oup.com/botlinnean/article/171/1/80/2557483
+2,Arecales,65,"Bell CD, Soltis DE, Soltis PS. The age and diversification of the angiosperms re-revisited. American Journal of Botany. 2010;97(8):1296–303.",https://bsapubs.onlinelibrary.wiley.com/doi/full/10.3732/ajb.0900346
+3,Caryophyllales,83.5,,
+4,Ericales,91.2,,
+5,Fabales,59.9,,
+6,Lamiales,44.3,,
+7,Malphigiales,49,,
+8,Myrtales,88.2,,
+9,Poales,68.1,,
+10,Sapindales,65,,
+11,Vitales,57.9,,
+12,Gentianales,96,"Wikström N, Kainulainen K, Razafimandimbison SG, Smedmark JEE, Bremer B. A Revised Time Tree of the Asterids: Establishing a Temporal Framework For Evolutionary Studies of the Coffee Family (Rubiaceae). PLOS ONE. 2015 May 21;10(5):e0126690.",https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0126690
+13,Rubiaceae,87,"Tu T, Cai J, Razafimandimbison SG, Hu X, Xia Q, Yang H, et al. Biphyly of the genus Wendlandia and establishment of a new tribe Clavistigmateae and a new genus Clavistigma of Rubiaceae from Asia. Biological Diversity. 2024;1(2):58–74.",https://onlinelibrary.wiley.com/doi/10.1002/bod2.12013
+14,Orchidaceae,101.5,"Zhang G, Hu Y, Huang MZ, Huang WC, Liu DK, Zhang D, et al. Comprehensive phylogenetic analyses of Orchidaceae using nuclear genes and evolutionary insights into epiphytism. Journal of Integrative Plant Biology. 2023;65(5):1204–25.",https://onlinelibrary.wiley.com/doi/full/10.1111/jipb.13462
+15,Primulaceae,66,Revisiting the phylogeny of Primulaceae s.l. using whole plastid genomes: Highlighting phylogenetic conflicts and their implications - Yan - 2025 - Journal of Systematics and Evolution - Wiley Online Library [Internet]. [cited 2025 Sept 12]. Available from: https://onlinelibrary.wiley.com/doi/full/10.1111/jse.13154,https://onlinelibrary.wiley.com/doi/full/10.1111/jse.13154
+16,Geraniaceae,28,"Dimitrov D, Xu X, Su X, Shrestha N, Liu Y, Kennedy JD, et al. Diversification of flowering plants in space and time. Nat Commun. 2023 Nov 22;14(1):7609.",https://www.nature.com/articles/s41467-023-43396-8
+17,Annonaceae,113,"Zuntini AR, Carruthers T, Maurin O, Bailey PC, Leempoel K, Brewer GE, et al. Phylogenomics and the rise of the angiosperms. Nature. 2024 May 23;629(8013):843–50.",https://www.nature.com/articles/s41586-024-07324-0
+18,Apiaceae,66,,
+19,Apocynaceae,48.5,,
+20,Asterales,47.46,,
+21,Ranunculales-Proteales,110.8,,
+22,Zingiberales,72.1,,
+23,Boraginaceae,5.33,,
+24,Lamiaceae,27.82,,
+25,Lythraceae,72.1,,
+26,Magnoliaceae,96.5,,
+27,Moraceae,47.8,,
+28,Myrtaceae,44.3,,
+29,Oleaceae,27.82,,
+30,Rhizophoraceae,33.9,,
+31,Rosaceae,47.8,,
+32,Salicaceae,48.5,,
+33,Malvaceae,70.7,"Wang JH, Moore MJ, Wang H, Zhu ZX, Wang HF. Plastome evolution and phylogenetic relationships among Malvaceae subfamilies. Gene. 2021 Jan 10;765:145103.",https://www.sciencedirect.com/science/article/pii/S0378111920307721
